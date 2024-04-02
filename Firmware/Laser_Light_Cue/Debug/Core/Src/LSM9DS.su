@@ -1,0 +1,7 @@
+../Core/Src/LSM9DS.c:4:6:CS_Enable	8	static
+../Core/Src/LSM9DS.c:8:6:CS_Disable	8	static
+../Core/Src/LSM9DS.c:12:6:writeByte	16	static
+../Core/Src/LSM9DS.c:20:9:readByte	32	static
+../Core/Src/LSM9DS.c:30:6:Gyro_Init	24	static
+../Core/Src/LSM9DS.c:40:6:XL_Init	24	static
+../Core/Src/LSM9DS.c:50:9:LSM9DS_Init	24	static
