@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=LED1 Pin=Driver1-1
+Removed Pin From Net: NetName=LED2 Pin=Driver1-2
+Removed Pin From Net: NetName=LED3 Pin=Driver1-3
+Removed Pin From Net: NetName=Vibrator Pin=Driver1-4
+Removed Pin From Net: NetName=+V_Bat Pin=S1-1
+Added Component: Designator=D?(SOD3715X145N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "{'manufacturer': u'Diodes Inc.'}"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "1N5819HW-7-F"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+V_Bat Pin=D?-A
+Added Pin To Net: NetName=Vibrator Pin=Driver1-1
+Added Pin To Net: NetName=LED3 Pin=Driver1-2
+Added Pin To Net: NetName=LED2 Pin=Driver1-3
+Added Pin To Net: NetName=LED1 Pin=Driver1-4
+Change Net Name : Old Net Name=+V_Bat New Net Name=NetBatterry1_1
+Added Pin To Net: NetName=+V_Bat Pin=D?-C
+Added Pin To Net: NetName=+V_Bat Pin=S1-1
+Added Net: Name=+V_Bat
+Added Member To Class: ClassName=PWR_SRC Member=Component D? 1N5819HW-7-F

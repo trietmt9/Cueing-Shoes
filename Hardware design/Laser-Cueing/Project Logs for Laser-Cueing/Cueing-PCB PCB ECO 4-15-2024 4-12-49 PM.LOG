@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=PA0 Pin=I/O2-1
+Removed Pin From Net: NetName=PA1 Pin=I/O2-2
+Removed Pin From Net: NetName=PC0 Pin=I/O2-3
+Removed Pin From Net: NetName=PC1 Pin=I/O2-4
+Change Component Designator: OldDesignator=I2C NewDesignator=I1
+Change Component Designator: OldDesignator=UART NewDesignator=UART1
+Added Pin To Net: NetName=PA1 Pin=I/O2-1
+Added Pin To Net: NetName=PA0 Pin=I/O2-2
+Added Pin To Net: NetName=PC1 Pin=I/O2-3
+Added Pin To Net: NetName=PC0 Pin=I/O2-4

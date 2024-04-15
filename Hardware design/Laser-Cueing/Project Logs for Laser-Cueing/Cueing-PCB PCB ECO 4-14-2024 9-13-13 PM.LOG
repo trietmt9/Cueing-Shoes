@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=GND Pin=J1-6
+Removed Pin From Net: NetName=GND Pin=J1-7
+Removed Pin From Net: NetName=GND Pin=J1-8
+Removed Pin From Net: NetName=GND Pin=J1-9
+Removed Pin From Net: NetName=GND Pin=J1-10
+Removed Pin From Net: NetName=GND Pin=J1-11
+Removed Pin From Net: NetName=GND Pin=J1-S1
+Change Component Designator: OldDesignator=I2C NewDesignator=I1
+Change Component Description : Designator=U7 Old Description=Accelerometer, Gyroscope, Magnetometer, 9 Axis Sensor I²C, SPI Output New Description=Accelerometer, Gyroscope, Magnetometer, 9 Axis Sensor I²C, SPI Output 
+Change Component Description : Designator=Boot1 Old Description=Slide Switch, EG Series, SPDT, Non-Shorting, ON-ON, 200mA DC, 30VDC, PC Pin New Description=Slide Switch, EG Series, SPDT, Non-Shorting, ON-ON, 200mA DC, 30VDC, PC Pin | E-Switch EG1218
+Change Component Description : Designator=S1 Old Description=Slide Switch, EG Series, SPDT, Non-Shorting, ON-ON, 200mA DC, 30VDC, PC Pin New Description=Slide Switch, EG Series, SPDT, Non-Shorting, ON-ON, 200mA DC, 30VDC, PC Pin | E-Switch EG1218
+Added Member To Class: ClassName=PWR_SRC Member=Component D2 LESD5D5.0CT1G
+Added Member To Class: ClassName=Driver Member=Component Q3 SI2312
+Added Member To Class: ClassName=Driver Member=Component R18 1k
+Added Member To Class: ClassName=Driver Member=Component R20 10k

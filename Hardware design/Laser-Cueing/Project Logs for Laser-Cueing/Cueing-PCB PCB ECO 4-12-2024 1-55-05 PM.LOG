@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=UART_Tx Pin=U1-16
+Removed Pin From Net: NetName=UART_Rx Pin=U1-17
+Change Component Designator: OldDesignator=I2C NewDesignator=I1
+Change Component Designator: OldDesignator=SWD/JTAG NewDesignator=SWD/JTAG1
+Change Component Designator: OldDesignator=UART NewDesignator=UART1
+Added Pin To Net: NetName=UART_Tx Pin=U1-42
+Added Pin To Net: NetName=UART_Rx Pin=U1-43

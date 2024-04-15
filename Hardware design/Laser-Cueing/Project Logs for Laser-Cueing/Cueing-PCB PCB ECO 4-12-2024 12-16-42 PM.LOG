@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=NetJ1_1 Pin=J1-1
+Removed Pin From Net: NetName=GND Pin=J1-2
+Removed Pin From Net: NetName=Boot Pin=J1-COM
+Removed Member From Class: ClassName=STM32_MCU Member=J1
+Added Component: Designator=S1(SW_EG1218)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/EG1218/E-Switch/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "E-Switch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "EG1218"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/EG1218/E-Switch/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetJ1_1 Pin=S1-1
+Added Pin To Net: NetName=Boot Pin=S1-2
+Added Pin To Net: NetName=GND Pin=S1-3
+Change Net Name : Old Net Name=NetJ1_1 New Net Name=NetR2_1
+Added Member To Class: ClassName=STM32_MCU Member=Component S1 EG1218

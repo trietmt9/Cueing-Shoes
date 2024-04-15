@@ -1,0 +1,7 @@
+Change Component Designator: OldDesignator=Batterry NewDesignator=Batterry?
+Change Component Designator: OldDesignator=Reset NewDesignator=Reset1
+Added Pin To Net: NetName=+AVCC Pin=C14-1
+Added Pin To Net: NetName=+AVCC Pin=U2-8
+Added Pin To Net: NetName=+AVCC Pin=U3-4
+Change Net Name : Old Net Name=V_Bat New Net Name=+V_Bat
+Change Net Name : Old Net Name=V_USB New Net Name=+V_USB

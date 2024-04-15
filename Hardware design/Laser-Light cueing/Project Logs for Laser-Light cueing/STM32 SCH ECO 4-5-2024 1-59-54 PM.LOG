@@ -1,8 +1,0 @@
-Change Component Designator: Old Designator=I2C New Designator=I1
-Change Component Designator: Old Designator=JTAG/SWD New Designator=JTAG/SWD1
-Change Component Designator: Old Designator=R1 New Designator=R2
-Change Component Designator: Old Designator=R2 New Designator=R3
-Change Component Designator: Old Designator=R3 New Designator=R1
-Change Component Designator: Old Designator=S1 New Designator=S2
-Change Component Designator: Old Designator=S3 New Designator=S1
-Change Component Designator: Old Designator=UART New Designator=UART1
