@@ -3,7 +3,7 @@
 #include "stm32f446xx.h"
 #include "stm32f4xx_hal.h"
 
-/*********************** IMU REGISTERS MACROS ***********************/
+/*********************** GYROSCOPE, ACCELEROMETER AND TEMPERATURE REGISTERS MACROS ***********************/
         /************* USER BANK 0 REGISTERS MAP *************/
 #define WHO_AM_I                                0x00U 
 #define USER_CTRL                               0x03U
@@ -134,6 +134,7 @@
 #define I2C_SLV4_DO                             0x16U
 #define I2C_SLV4_DI                             0x17U 
 
+
 /*============== USER BANK 0 DESCRIPTIONS MACROS ==============*/
 #define ICM20948_AVAILABLE                      0xEAU
 
@@ -219,120 +220,6 @@
             /*====== DELAY TIME LOW REGISTER ======*/
 #define DELAY_TIME_L                            0x00U
 
-            /*====== ACCELEROMETER X AXIS OUTPUT HIGH REGISTER ======*/
-#define ACCEL_XOUT_HIGH                         0x00U
-
-            /*====== ACCELEROMETER X AXIS OUTPUT LOW REGISTER ======*/
-#define ACCEL_XOUT_LOW                          0x00U
-
-            /*====== ACCELEROMETER Y AXIS OUTPUT HIGH REGISTER ======*/
-#define ACCEL_YOUT_HIGH                         0x00U
-
-            /*====== ACCELEROMETER Y AXIS OUTPUT LOW REGISTER ======*/
-#define ACCEL_YOUT_LOW                          0x00U
-
-            /*====== ACCELEROMETER Z AXIS OUTPUT HIGH REGISTER ======*/
-#define ACCEL_ZOUT_HIGH                         0x00U
-
-            /*====== ACCELEROMETER Z AXIS OUTPUT LOW REGISTER ======*/
-#define ACCEL_ZOUT_LOW                          0x00U
-
-            /*====== GYROSCOPE X AXIS OUTPUT HIGH REGISTER ======*/
-#define GYRO_XOUT_HIGH                          0x00U
-
-            /*====== GYROSCOPE X AXIS OUTPUT LOW REGISTER ======*/
-#define GYRO_XOUT_LOW                           0x00U
-
-            /*====== GYROSCOPE Y AXIS OUTPUT HIGH REGISTER ======*/
-#define GYRO_YOUT_HIGH                          0x00U
-
-            /*====== GYROSCOPE Y AXIS OUTPUT LOW REGISTER ======*/
-#define GYRO_YOUT_LOW                           0x00U
-
-            /*====== GYROSCOPE Z AXIS OUTPUT HIGH REGISTER ======*/
-#define GYRO_ZOUT_HIGH                          0x00U
-
-            /*====== GYROSCOPE Z AXIS OUTPUT LOW REGISTER ======*/
-#define GYRO_ZOUT_LOW                           0x00U
-
-            /*====== TEMPERATURE OUTPUT HIGH REGISTER ======*/
-#define TEMP_OUT_HIGH                           0x00U
-
-            /*====== TEMPERATURE OUTPUT LOW REGISTER ======*/
-#define TEMP_OUT_LOW                            0x00U
-
-            /*====== EXTERNAL SLAVE 0 SENSOR DATA REGISTER ======*/
-#define EXT_SLV_SENS_DATA_00                    0x00U
-
-            /*====== EXTERNAL SLAVE 1 SENSOR DATA REGISTER ======*/
-#define EXT_SLV_SENS_DATA_01                    0x00U
-
-            /*====== EXTERNAL SLAVE 2 SENSOR DATA REGISTER ======*/
-#define EXT_SLV_SENS_DATA_02                    0x00U
-
-            /*====== EXTERNAL SLAVE 3 SENSOR DATA REGISTER ======*/
-#define EXT_SLV_SENS_DATA_03                    0x00U
-
-            /*====== EXTERNAL SLAVE 4 SENSOR DATA REGISTER ======*/
-#define EXT_SLV_SENS_DATA_04                    0x00U
-
-            /*====== EXTERNAL SLAVE 5 SENSOR DATA REGISTER ======*/
-#define EXT_SLV_SENS_DATA_05                    0x00U
-
-            /*====== EXTERNAL SLAVE 6 SENSOR DATA REGISTER ======*/
-#define EXT_SLV_SENS_DATA_06                    0x00U
-
-            /*====== EXTERNAL SLAVE 7 SENSOR DATA REGISTER ======*/
-#define EXT_SLV_SENS_DATA_07                    0x00U
-
-            /*====== INTERNAL SLAVE 8 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_08                    0x00U
-
-            /*====== INTERNAL SLAVE 9 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_09                    0x00U
-
-            /*====== INTERNAL SLAVE 10 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_10                    0x00U
-
-            /*====== INTERNAL SLAVE 11 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_11                    0x00U
-
-            /*====== INTERNAL SLAVE 12 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_12                    0x00U
-
-            /*====== INTERNAL SLAVE 13 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_13                    0x00U
-
-            /*====== INTERNAL SLAVE 14 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_14                    0x00U
-
-            /*====== INTERNAL SLAVE 15 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_15                    0x00U
-
-            /*====== INTERNAL SLAVE 16 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_16                    0x00U
-
-            /*====== INTERNAL SLAVE 17 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_17                    0x00U
-
-            /*====== INTERNAL SLAVE 18 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_18                    0x00U
-
-            /*====== INTERNAL SLAVE 19 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_19                    0x00U
-
-            /*====== INTERNAL SLAVE 20 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_20                    0x00U
-
-            /*====== INTERNAL SLAVE 21 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_21                    0x00U
-
-            /*====== INTERNAL SLAVE 22 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_22                    0x00U
-
-            /*====== INTERNAL SLAVE 23 SENSOR DATA REGISTER ======*/
-#define INT_SLV_SENS_DATA_23                    0x00U
-
             /*====== FIRST IN FIRST OUT ENABLE 1 REGISTER ======*/
 #define SLV_1_FIFO_EN                           0x00U
 #define SLV_2_FIFO_EN                           0x01U
@@ -373,7 +260,7 @@
             /*====== USER BANK SELECT REGISTER ======*/
 #define REG_BANK_SEL                            0x00U   
 
-/*============== USER BANK 1 DESCRIPTIONS MACROS ==============*/
+/*============== USER BANK 1 R/W DESCRIPTIONS MACROS ==============*/
             /*====== SELF TEST X AXIS GYROSCOPE REGISTER ======*/
 #define XG_ST_DATA                              0x00U
 
@@ -413,7 +300,7 @@
             /*====== TIME BASE CORRECTION PLL CONTROL REGISTER ======*/
 #define TBC_PLL                                 0x00U
 
-/*============== USER BANK 2 DESCRIPTIONS MACROS ==============*/
+/*============== USER BANK 2 R/W DESCRIPTIONS MACROS ==============*/
             /*====== GYROSCOPE SAMPLE RATE DIVIDE REGISTER ======*/
 #define GYRO_SMPLRT_DIV_R                       0x00U
 
@@ -485,7 +372,7 @@
             /*====== USER CONTROL MODE REGISTER ======*/
 #define REG_LP_DMP_EN                           0x00U
 
-/*============== USER BANK 3 DESCRIPTIONS MACROS ==============*/
+/*============== USER BANK 3 R/W DESCRIPTIONS MACROS ==============*/
             /*====== I2C MASTER OUTPUT DATA RATE CONFIGURATION REGISTER ======*/
 #define I2C_MST_ODR_CONFIG_R                    0x00U
 
@@ -529,5 +416,92 @@
             /*====== I2C SLAVE 1 CONTROL REGISTER ======*/
 #define I2C_SLV1_LENG                           0x00U
 #define I2C_SLV1_GRP                            0x04U
+#define I2C_SLV1_REG_DIS                        0x05U
+#define I2C_SLV1_BYTE_SW                        0x06U
+#define I2C_SLV1_EN                             0x07U
+
+            /*====== I2C SLAVE 1 DIGITAL OUTPUT REGISTER ======*/
+#define I2C_SLV1_DO_R                           0x00U
+
+            /*====== I2C SLAVE 2 ADDRESS REGISTER ======*/
+#define I2C_ID_2                                0x00U
+#define I2C_SLV2_RNW                            0x07U
+
+            /*====== I2C SLAVE 2 REGISTER READ AND WRITE REGISTER ======*/
+#define I2C_SLV2_REG                            0x00U
+
+            /*====== I2C SLAVE 2 CONTROL REGISTER ======*/
+#define I2C_SLV2_LENG                           0x00U
+#define I2C_SLV2_GRP                            0x04U
+#define I2C_SLV2_REG_DIS                        0x05U
+#define I2C_SLV2_BYTE_SW                        0x06U
+#define I2C_SLV2_EN                             0x07U
+
+            /*====== I2C SLAVE 2 DIGITAL OUTPUT REGISTER ======*/
+#define I2C_SLV2_DO_R                           0x00U
+
+            /*====== I2C SLAVE 3 ADDRESS REGISTER ======*/
+#define I2C_ID_3                                0x00U
+#define I2C_SLV3_RNW                            0x07U
+
+            /*====== I2C SLAVE 3 REGISTER READ AND WRITE REGISTER ======*/
+#define I2C_SLV3_REG                            0x00U
+
+            /*====== I2C SLAVE 3 CONTROL REGISTER ======*/
+#define I2C_SLV3_LENG                           0x00U
+#define I2C_SLV3_GRP                            0x04U
+#define I2C_SLV3_REG_DIS                        0x05U
+#define I2C_SLV3_BYTE_SW                        0x06U
+#define I2C_SLV3_EN                             0x07U
+
+            /*====== I2C SLAVE 3 DIGITAL OUTPUT REGISTER ======*/
+#define I2C_SLV3_DO_R                           0x00U
+
+            /*====== I2C SLAVE 4 ADDRESS REGISTER ======*/
+#define I2C_ID_4                                0x00U
+#define I2C_SLV4_RNW                            0x07U
+
+            /*====== I2C SLAVE 4 REGISTER READ AND WRITE REGISTER ======*/
+#define I2C_SLV4_REG                            0x00U
+
+            /*====== I2C SLAVE 4 CONTROL REGISTER ======*/
+#define I2C_SLV4_DLY                            0x00U
+#define I2C_SLV4_REG_DIS                        0x05U
+#define I2C_SLV4_INT_EN                         0x06U
+#define I2C_SLV4_EN                             0x07U
+
+            /*====== I2C SLAVE 4 DIGITAL OUTPUT REGISTER ======*/
+#define I2C_SLV4_DO_R                           0x00U
+
+            /*====== I2C SLAVE 4 DIGITAL INPUT REGISTER ======*/
+#define I2C_SLV4_DI                             0x00U
+
+/*********************** MAGNETOMETER REGISTERS MACROS ***********************/
+#define WIA                                     0x01U
+#define ST1                                     0x10U 
+#define HXL                                     0x11U
+#define HXH                                     0x12U
+#define HYL                                     0x13U
+#define HYH                                     0x14U
+#define HZL                                     0x15U
+#define HZH                                     0x16U
+#define ST2                                     0x18U
+#define CNTL2                                   0x31U
+#define CNTL3                                   0x32U
+#define TS1                                     0x33U
+#define TS2                                     0x34U
+
+/*============== DETAILS R/W DESCRIPTIONS MACROS FOR MAGNETOMETER ==============*/
+#define DEVICE_MAGNETOMETER_ID                  0x09U
+
+            /*====== CONTROL 2 REGISTER ======*/  
+#define MODE_0                                  0x00U
+#define MODE_1                                  0x01U
+#define MODE_2                                  0x02U
+#define MODE_3                                  0x03U
+#define MPDE_4                                  0x04U
+
+            /*====== CONTROL 3 REGISTER ======*/
+#define SRST                                    0x00U     
 
 #endif
