@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\pc\Documents\Lazer-light-cueing\Hardware design\Laser-Cueing\Cueing-PCB.PcbDoc
-Date     : 4/15/2024
-Time     : 9:57:46 PM
+Date     : 4/16/2024
+Time     : 10:03:57 AM
 
 Processing Rule : Clearance Constraint (Gap=0.1mm) (All),(All)
 Rule Violations :0
@@ -22,10 +22,10 @@ Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (
 Rule Violations :0
 
 Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
-   Violation between Hole Size Constraint: (3mm > 2.54mm) Pad Free-2(79.883mm,109.601mm) on Multi-Layer Actual Hole Size = 3mm
-   Violation between Hole Size Constraint: (3mm > 2.54mm) Pad Free-3(146.685mm,42.799mm) on Multi-Layer Actual Hole Size = 3mm
-   Violation between Hole Size Constraint: (3mm > 2.54mm) Pad Free-4(77.724mm,57.531mm) on Multi-Layer Actual Hole Size = 3mm
-   Violation between Hole Size Constraint: (3mm > 2.54mm) Pad Free-5(147.32mm,100.584mm) on Multi-Layer Actual Hole Size = 3mm
+   Violation between Hole Size Constraint: (3mm > 2.54mm) Pad Free-2(77.978mm,109.728mm) on Multi-Layer Actual Hole Size = 3mm
+   Violation between Hole Size Constraint: (3mm > 2.54mm) Pad Free-3(147.32mm,42.672mm) on Multi-Layer Actual Hole Size = 3mm
+   Violation between Hole Size Constraint: (3mm > 2.54mm) Pad Free-4(77.978mm,57.531mm) on Multi-Layer Actual Hole Size = 3mm
+   Violation between Hole Size Constraint: (3mm > 2.54mm) Pad Free-5(147.32mm,100.203mm) on Multi-Layer Actual Hole Size = 3mm
 Rule Violations :4
 
 Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
@@ -143,26 +143,21 @@ Rule Violations :106
 Processing Rule : Silk To Solder Mask (Clearance=0.254mm) (IsText),(All)
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C21-1(89.662mm,92.075mm) on Bottom Layer And Text "U4" (89.586mm,90.5mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad C21-2(88.162mm,92.075mm) on Bottom Layer And Text "U4" (89.586mm,90.5mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Pad Q4-2(138.135mm,82.738mm) on Bottom Layer And Text "Power Options" (137.795mm,101.216mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.148mm < 0.254mm) Between Pad Q3-3(141.011mm,76.769mm) on Bottom Layer And Text "Driver" (141.986mm,74.042mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.148mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.243mm < 0.254mm) Between Text "ADC" (87.161mm,55.156mm) on Top Overlay And Via (88.392mm,56.769mm) from Top Layer to Bottom Layer [Top Overlay] to [Top Solder] clearance [0.243mm]
    Violation between Silk To Solder Mask Clearance Constraint: (0.229mm < 0.254mm) Between Text "CS" (106.172mm,40.529mm) on Bottom Overlay And Track (105.664mm,41.656mm)(111.125mm,41.656mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0.229mm]
    Violation between Silk To Solder Mask Clearance Constraint: (0.236mm < 0.254mm) Between Text "CS" (106.172mm,40.529mm) on Bottom Overlay And Via (105.664mm,41.656mm) from Top Layer to Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0.236mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.116mm < 0.254mm) Between Text "Driver" (141.986mm,74.042mm) on Bottom Overlay And Track (141.011mm,76.769mm)(143.444mm,76.769mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0.116mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "Driver" (141.986mm,74.042mm) on Bottom Overlay And Via (141.986mm,80.772mm) from Top Layer to Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "Driver" (141.986mm,74.042mm) on Bottom Overlay And Via (142.494mm,73.787mm) from Top Layer to Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0mm]
    Violation between Silk To Solder Mask Clearance Constraint: (0.249mm < 0.254mm) Between Text "IMU SPI SIGNAL" (117.602mm,42.942mm) on Bottom Overlay And Via (117.983mm,42.926mm) from Top Layer to Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0.249mm]
    Violation between Silk To Solder Mask Clearance Constraint: (0.147mm < 0.254mm) Between Text "PB10" (130.302mm,63.258mm) on Bottom Overlay And Track (129.794mm,62.865mm)(129.794mm,74.373mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0.147mm]
    Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Text "PB10" (130.302mm,63.258mm) on Bottom Overlay And Via (129.794mm,62.865mm) from Top Layer to Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0.25mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.038mm < 0.254mm) Between Text "Power Options" (137.795mm,101.216mm) on Bottom Overlay And Track (133.604mm,99.314mm)(137.414mm,99.314mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0.038mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "Power Options" (137.795mm,101.216mm) on Bottom Overlay And Track (137.033mm,83.84mm)(137.585mm,83.288mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.21mm < 0.254mm) Between Text "Power Options" (137.795mm,101.216mm) on Bottom Overlay And Track (137.268mm,84.436mm)(137.776mm,84.436mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0.21mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "Power Options" (137.795mm,101.216mm) on Bottom Overlay And Track (137.585mm,83.088mm)(137.585mm,83.288mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "Power Options" (137.795mm,101.216mm) on Bottom Overlay And Track (137.585mm,83.088mm)(137.935mm,82.738mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.238mm < 0.254mm) Between Text "Power Options" (137.795mm,101.216mm) on Bottom Overlay And Track (137.776mm,84.436mm)(137.795mm,84.455mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0.238mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "Power Options" (137.795mm,101.216mm) on Bottom Overlay And Track (137.935mm,82.738mm)(138.135mm,82.738mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.101mm < 0.254mm) Between Text "Power Options" (137.795mm,101.216mm) on Bottom Overlay And Via (137.414mm,99.314mm) from Top Layer to Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0.101mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.22mm < 0.254mm) Between Text "Power Options" (137.795mm,101.216mm) on Bottom Overlay And Via (137.795mm,84.455mm) from Top Layer to Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0.22mm]
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "U4" (89.586mm,90.5mm) on Bottom Overlay And Track (86.907mm,92.075mm)(88.162mm,92.075mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0mm]
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "U4" (89.586mm,90.5mm) on Bottom Overlay And Track (89.662mm,92.075mm)(89.687mm,92.075mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0mm]
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "U4" (89.586mm,90.5mm) on Bottom Overlay And Track (89.687mm,92.075mm)(90.068mm,92.456mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0mm]
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.254mm) Between Text "U4" (89.586mm,90.5mm) on Bottom Overlay And Track (89.687mm,92.075mm)(90.606mm,91.156mm) on Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0mm]
-Rule Violations :21
+Rule Violations :16
 
 Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
    Violation between Silk To Silk Clearance Constraint: (0.193mm < 0.254mm) Between Text "PA8" (137.922mm,63.385mm) on Bottom Overlay And Track (135.763mm,62.357mm)(135.763mm,75.057mm) on Bottom Overlay Silk Text to Silk Clearance [0.193mm]
@@ -264,7 +259,7 @@ Processing Rule : Room STM32_MCU (Bounding Region = (189.713mm, 118.728mm, 371.7
    Violation between Room Definition: Between Component Reset-SKQGAFE010 (117.349mm,104.859mm) on Top Layer And Room STM32_MCU (Bounding Region = (189.713mm, 118.728mm, 371.704mm, 147.176mm) (InComponentClass('STM32_MCU')) 
    Violation between Room Definition: Between DIP Component I/O1-JP 2x5 2.54 (133.223mm,68.707mm) on Top Layer And Room STM32_MCU (Bounding Region = (189.713mm, 118.728mm, 371.704mm, 147.176mm) (InComponentClass('STM32_MCU')) 
    Violation between Room Definition: Between DIP Component I/O2-JP 2x6 2.54 (83.439mm,70.104mm) on Top Layer And Room STM32_MCU (Bounding Region = (189.713mm, 118.728mm, 371.704mm, 147.176mm) (InComponentClass('STM32_MCU')) 
-   Violation between Room Definition: Between DIP Component SWD/JTAG-JP 2x10 2.54 (111.1mm,115.426mm) on Top Layer And Room STM32_MCU (Bounding Region = (189.713mm, 118.728mm, 371.704mm, 147.176mm) (InComponentClass('STM32_MCU')) 
+   Violation between Room Definition: Between DIP Component SWD/JTAG DEBUG-JP 2x10 2.54 (111.1mm,115.426mm) on Top Layer And Room STM32_MCU (Bounding Region = (189.713mm, 118.728mm, 371.704mm, 147.176mm) (InComponentClass('STM32_MCU')) 
    Violation between Room Definition: Between LCC Component U1-STM32F446RET6 (109.826mm,75.456mm) on Top Layer And Room STM32_MCU (Bounding Region = (189.713mm, 118.728mm, 371.704mm, 147.176mm) (InComponentClass('STM32_MCU')) 
    Violation between Room Definition: Between Room STM32_MCU (Bounding Region = (189.713mm, 118.728mm, 371.704mm, 147.176mm) (InComponentClass('STM32_MCU')) And Small Component Boot-EG1218 (87.323mm,115.426mm) on Top Layer 
    Violation between Room Definition: Between Room STM32_MCU (Bounding Region = (189.713mm, 118.728mm, 371.704mm, 147.176mm) (InComponentClass('STM32_MCU')) And Small Component I2C-JP 1x2 2.54 (132.08mm,86.821mm) on Top Layer 
@@ -311,6 +306,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Al
 Rule Violations :0
 
 
-Violations Detected : 253
+Violations Detected : 248
 Waived Violations : 0
 Time Elapsed        : 00:00:01
