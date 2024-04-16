@@ -3,6 +3,7 @@
     "files.associations": {
         "spi.h": "c",
         "stm32f446xx.h": "c",
-        "lsm9ds.h": "c"
+        "lsm9ds.h": "c",
+        "stdint.h": "c"
     }
 }
