@@ -6515,9 +6515,9 @@ typedef struct
   *         the SAI clock.
   * @param  __SOURCE__ specifies the SAI Block A clock source.
   *         This parameter can be one of the following values:
-  *            @arg RCC_SAIACLKSOURCE_PLLI2SR: PLLI2S_R clock divided (R2) used as SAI1 Block A clock.
+  *            @arg RCC_SAIACLKSOURCE_PLLI2SR: PLLI2S_REGclock divided (R2) used as SAI1 Block A clock.
   *            @arg RCC_SAIACLKSOURCE_EXT: External clock mapped on the I2S_CKIN pinused as SAI1 Block A clock.
-  *            @arg RCC_SAIACLKSOURCE_PLLR: PLL_R clock divided (R1) used as SAI1 Block A clock.
+  *            @arg RCC_SAIACLKSOURCE_PLLR: PLL_REGclock divided (R1) used as SAI1 Block A clock.
   *            @arg RCC_SAIACLKSOURCE_PLLSRC: HSI or HSE depending from PLL source Clock.
   */
 #define __HAL_RCC_SAI_BLOCKACLKSOURCE_CONFIG(__SOURCE__) (MODIFY_REG(RCC->DCKCFGR, RCC_DCKCFGR_SAI1ASRC, (__SOURCE__)))
@@ -6525,9 +6525,9 @@ typedef struct
 /** @brief  Macro to Get SAI1 BlockA clock source selection.
   * @note   This configuration is only available with STM32F413xx/STM32F423xx Devices.      
   * @retval The clock source can be one of the following values:
-  *            @arg RCC_SAIACLKSOURCE_PLLI2SR: PLLI2S_R clock divided (R2) used as SAI1 Block A clock.
+  *            @arg RCC_SAIACLKSOURCE_PLLI2SR: PLLI2S_REGclock divided (R2) used as SAI1 Block A clock.
   *            @arg RCC_SAIACLKSOURCE_EXT: External clock mapped on the I2S_CKIN pinused as SAI1 Block A clock.
-  *            @arg RCC_SAIACLKSOURCE_PLLR: PLL_R clock divided (R1) used as SAI1 Block A clock.
+  *            @arg RCC_SAIACLKSOURCE_PLLR: PLL_REGclock divided (R1) used as SAI1 Block A clock.
   *            @arg RCC_SAIACLKSOURCE_PLLSRC: HSI or HSE depending from PLL source Clock.
   */
 #define __HAL_RCC_GET_SAI_BLOCKA_SOURCE() (READ_BIT(RCC->DCKCFGR, RCC_DCKCFGR_SAI1ASRC))
@@ -6538,9 +6538,9 @@ typedef struct
   *         the SAI clock.
   * @param  __SOURCE__ specifies the SAI Block B clock source.
   *         This parameter can be one of the following values:
-  *            @arg RCC_SAIBCLKSOURCE_PLLI2SR: PLLI2S_R clock divided (R2) used as SAI1 Block A clock.
+  *            @arg RCC_SAIBCLKSOURCE_PLLI2SR: PLLI2S_REGclock divided (R2) used as SAI1 Block A clock.
   *            @arg RCC_SAIBCLKSOURCE_EXT: External clock mapped on the I2S_CKIN pin used as SAI1 Block A clock.
-  *            @arg RCC_SAIBCLKSOURCE_PLLR: PLL_R clock divided (R1) used as SAI1 Block A clock.
+  *            @arg RCC_SAIBCLKSOURCE_PLLR: PLL_REGclock divided (R1) used as SAI1 Block A clock.
   *            @arg RCC_SAIBCLKSOURCE_PLLSRC: HSI or HSE depending from PLL source Clock.
   */
 #define __HAL_RCC_SAI_BLOCKBCLKSOURCE_CONFIG(__SOURCE__) (MODIFY_REG(RCC->DCKCFGR, RCC_DCKCFGR_SAI1BSRC, (__SOURCE__)))
@@ -6548,9 +6548,9 @@ typedef struct
 /** @brief  Macro to Get SAI1 BlockB clock source selection.
   * @note   This configuration is only available with STM32F413xx/STM32F423xx Devices.      
   * @retval The clock source can be one of the following values:
-  *            @arg RCC_SAIBCLKSOURCE_PLLI2SR: PLLI2S_R clock divided (R2) used as SAI1 Block A clock.
+  *            @arg RCC_SAIBCLKSOURCE_PLLI2SR: PLLI2S_REGclock divided (R2) used as SAI1 Block A clock.
   *            @arg RCC_SAIBCLKSOURCE_EXT: External clock mapped on the I2S_CKIN pin used as SAI1 Block A clock.
-  *            @arg RCC_SAIBCLKSOURCE_PLLR: PLL_R clock divided (R1) used as SAI1 Block A clock.
+  *            @arg RCC_SAIBCLKSOURCE_PLLR: PLL_REGclock divided (R1) used as SAI1 Block A clock.
   *            @arg RCC_SAIBCLKSOURCE_PLLSRC: HSI or HSE depending from PLL source Clock.
   */
 #define __HAL_RCC_GET_SAI_BLOCKB_SOURCE() (READ_BIT(RCC->DCKCFGR, RCC_DCKCFGR_SAI1BSRC))

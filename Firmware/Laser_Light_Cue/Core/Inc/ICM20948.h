@@ -237,7 +237,7 @@
 #define FIFO_RESET                              0x00U
 
             /*====== FIRST IN FIRST OUT MODE REGISTER ======*/
-#define FIFO_MODE                               0x00U
+#define FIFO_MODE_REG                           0x00U
 
             /*====== FIRST IN FIRST OUT COUNT HIGH REGISTER ======*/
 #define FIFO_CNT_H                              0x00U
@@ -246,7 +246,7 @@
 #define FIFO_CNT_L                              0x00U
 
             /*====== FIRST IN FIRST OUT READ WRITE REGISTER ======*/
-#define FIFO_R_W                                0x00U
+#define FIFO_R_W_REG                            0x00U
 
             /*====== INTERRUPT SOURCE REGISTER ======*/
 #define INT_SOURCE                              0x00U
@@ -255,10 +255,10 @@
 #define RAW_DATA_RDY                            0x00U   
 
             /*====== FIRST IN FIRST OUT CONFIG REGISTER ======*/
-#define FIFO_CFG_R                              0x00U
+#define FIFO_CFG_REG                            0x00U
 
             /*====== USER BANK SELECT REGISTER ======*/
-#define REG_BANK_SEL                            0x00U   
+#define REG_BANK_SEL_REG                        0x00U   
 
 /*============== USER BANK 1 R/W DESCRIPTIONS MACROS ==============*/
             /*====== SELF TEST X AXIS GYROSCOPE REGISTER ======*/
@@ -280,29 +280,29 @@
 #define ZA_ST_DATA                              0x00U
 
             /*====== ACCELEROMETER X AXIS OFFSET REGISTER ======*/
-#define XA_OFFS_H                               0x00U
+#define XA_OFFS_H_REG                           0x00U
 
             /*====== ACCELEROMETER X AXIS OFFSET REGISTER ======*/
-#define XA_OFFS_L                               0x01U
+#define XA_OFFS_L_REG                           0x01U
 
             /*====== ACCELEROMETER Y AXIS OFFSET REGISTER ======*/
-#define YA_OFFS_H                               0x00U
+#define YA_OFFS_H_REG                           0x00U
 
             /*====== ACCELEROMETER Y AXIS OFFSET REGISTER ======*/
-#define YA_OFFS_L                               0x01U
+#define YA_OFFS_L_REG                           0x01U
 
             /*====== ACCELEROMETER Z AXIS OFFSET REGISTER ======*/
-#define ZA_OFFS_H                               0x00U
+#define ZA_OFFS_H_REG                           0x00U
 
             /*====== ACCELEROMETER Z AXIS OFFSET REGISTER ======*/
-#define ZA_OFFS_L                               0x01U
+#define ZA_OFFS_L_REG                           0x01U
 
             /*====== TIME BASE CORRECTION PLL CONTROL REGISTER ======*/
 #define TBC_PLL                                 0x00U
 
 /*============== USER BANK 2 R/W DESCRIPTIONS MACROS ==============*/
             /*====== GYROSCOPE SAMPLE RATE DIVIDE REGISTER ======*/
-#define GYRO_SMPLRT_DIV_R                       0x00U
+#define GYRO_SMPLRT_DIV_REG                      0x00U
 
             /*====== GYROSCOPE CONFIGURATIONS 1 REGISTER ======*/           
 #define GYRO_FCHOICE                            0x00U
@@ -334,7 +334,7 @@
 #define ZG_OFFS_USER_L                          0x00U
 
             /*====== OUTPUT DATA RATE TIME ALIGNMENT ENABLE REGISTER ======*/
-#define ODR_ALIGN_EN                            0x00U
+#define ODR_ALIGN_EN_REG                        0x00U
 
             /*====== ACCELEROMETER SAMPLE RATE DIVIDE 1 REGISTER ======*/
 #define ACCEL_SMPLRT_DIV_1                      0x00U
@@ -374,7 +374,7 @@
 
 /*============== USER BANK 3 R/W DESCRIPTIONS MACROS ==============*/
             /*====== I2C MASTER OUTPUT DATA RATE CONFIGURATION REGISTER ======*/
-#define I2C_MST_ODR_CONFIG_R                    0x00U
+#define I2C_MST_ODR_CONFIG_REG                   0x00U
 
             /*====== I2C MASTER CONTROL REGISTER ======*/
 #define I2C_MST_CLK                             0x00U
@@ -391,10 +391,10 @@
 
             /*====== I2C SLAVE 0 ADDRESS REGISTER ======*/
 #define I2C_ID_0                                0x00U
-#define I2C_SLV0_RNW                             0x07U
+#define I2C_SLV0_RNW                            0x07U
 
             /*====== I2C SLAVE 0 REGISTER READ AND WRITE REGISTER ======*/
-#define I2C_SLV0_REG                            0x00U
+#define I2C_SLV0_REG_REG                        0x00U
 
             /*====== I2C SLAVE 0 CONTROL REGISTER ======*/
 #define I2C_SLV0_LENG                           0x00U
@@ -404,14 +404,14 @@
 #define I2C_SLV0_EN                             0x07U
 
             /*====== I2C SLAVE 0 DIGITAL OUTPUT REGISTER ======*/
-#define I2C_SLV0_DO_R                           0x00U
+#define I2C_SLV0_DO_REG                          0x00U
 
             /*====== I2C SLAVE 1 ADDRESS REGISTER ======*/
 #define I2C_ID_1                                0x00U
 #define I2C_SLV1_RNW                            0x07U
 
             /*====== I2C SLAVE 1 REGISTER READ AND WRITE REGISTER ======*/
-#define I2C_SLV1_REG                            0x00U
+#define I2C_SLV1_REG_REG                        0x00U
 
             /*====== I2C SLAVE 1 CONTROL REGISTER ======*/
 #define I2C_SLV1_LENG                           0x00U
@@ -421,14 +421,14 @@
 #define I2C_SLV1_EN                             0x07U
 
             /*====== I2C SLAVE 1 DIGITAL OUTPUT REGISTER ======*/
-#define I2C_SLV1_DO_R                           0x00U
+#define I2C_SLV1_DO_REG                          0x00U
 
             /*====== I2C SLAVE 2 ADDRESS REGISTER ======*/
 #define I2C_ID_2                                0x00U
 #define I2C_SLV2_RNW                            0x07U
 
             /*====== I2C SLAVE 2 REGISTER READ AND WRITE REGISTER ======*/
-#define I2C_SLV2_REG                            0x00U
+#define I2C_SLV2_REG_REG                        0x00U
 
             /*====== I2C SLAVE 2 CONTROL REGISTER ======*/
 #define I2C_SLV2_LENG                           0x00U
@@ -438,14 +438,14 @@
 #define I2C_SLV2_EN                             0x07U
 
             /*====== I2C SLAVE 2 DIGITAL OUTPUT REGISTER ======*/
-#define I2C_SLV2_DO_R                           0x00U
+#define I2C_SLV2_DO_REG                          0x00U
 
             /*====== I2C SLAVE 3 ADDRESS REGISTER ======*/
 #define I2C_ID_3                                0x00U
 #define I2C_SLV3_RNW                            0x07U
 
             /*====== I2C SLAVE 3 REGISTER READ AND WRITE REGISTER ======*/
-#define I2C_SLV3_REG                            0x00U
+#define I2C_SLV3_REG_REG                        0x00U
 
             /*====== I2C SLAVE 3 CONTROL REGISTER ======*/
 #define I2C_SLV3_LENG                           0x00U
@@ -455,14 +455,14 @@
 #define I2C_SLV3_EN                             0x07U
 
             /*====== I2C SLAVE 3 DIGITAL OUTPUT REGISTER ======*/
-#define I2C_SLV3_DO_R                           0x00U
+#define I2C_SLV3_DO_REG                          0x00U
 
             /*====== I2C SLAVE 4 ADDRESS REGISTER ======*/
 #define I2C_ID_4                                0x00U
 #define I2C_SLV4_RNW                            0x07U
 
             /*====== I2C SLAVE 4 REGISTER READ AND WRITE REGISTER ======*/
-#define I2C_SLV4_REG                            0x00U
+#define I2C_SLV4_REG_REG                        0x00U
 
             /*====== I2C SLAVE 4 CONTROL REGISTER ======*/
 #define I2C_SLV4_DLY                            0x00U
@@ -471,10 +471,10 @@
 #define I2C_SLV4_EN                             0x07U
 
             /*====== I2C SLAVE 4 DIGITAL OUTPUT REGISTER ======*/
-#define I2C_SLV4_DO_R                           0x00U
+#define I2C_SLV4_DO_REG                         0x00U
 
             /*====== I2C SLAVE 4 DIGITAL INPUT REGISTER ======*/
-#define I2C_SLV4_DI                             0x00U
+#define I2C_SLV4_DI_REG                         0x00U
 
 /*********************** MAGNETOMETER REGISTERS MACROS ***********************/
 #define WIA                                     0x01U

@@ -304,6 +304,7 @@ Discarded input sections
  .group         0x00000000        0xc CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
  .text          0x00000000        0x0 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
@@ -982,7 +983,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .debug_macro   0x00000000      0x126 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .debug_line    0x00000000      0xb4f CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
- .debug_str     0x00000000    0xc3d5a CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+ .debug_str     0x00000000    0xc3d2f CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .comment       0x00000000       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .debug_frame   0x00000000      0x274 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
  .ARM.attributes
@@ -1118,7 +1119,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
  .debug_macro   0x00000000      0x126 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
  .debug_line    0x00000000      0xc52 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
- .debug_str     0x00000000    0xc3e7d CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+ .debug_str     0x00000000    0xc3e52 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
  .comment       0x00000000       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
  .debug_frame   0x00000000      0x334 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
  .ARM.attributes
@@ -1211,7 +1212,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
  .debug_macro   0x00000000      0x126 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
  .debug_line    0x00000000      0x7cd CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
- .debug_str     0x00000000    0xc3bb7 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
+ .debug_str     0x00000000    0xc3b8c CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
  .comment       0x00000000       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
  .debug_frame   0x00000000       0xb0 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
  .ARM.attributes
@@ -1402,7 +1403,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
  .debug_macro   0x00000000      0x126 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
  .debug_line    0x00000000     0x1405 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
- .debug_str     0x00000000    0xc3d3e CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
+ .debug_str     0x00000000    0xc3d13 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
  .comment       0x00000000       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
  .debug_frame   0x00000000       0xac CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
  .ARM.attributes
@@ -1526,7 +1527,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .debug_macro   0x00000000      0x126 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .debug_line    0x00000000      0xfe8 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
- .debug_str     0x00000000    0xc3f84 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+ .debug_str     0x00000000    0xc3f59 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .comment       0x00000000       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .debug_frame   0x00000000      0x250 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
  .ARM.attributes
@@ -1652,7 +1653,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
  .debug_macro   0x00000000      0x126 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
  .debug_line    0x00000000      0x98a CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
- .debug_str     0x00000000    0xc3dc5 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
+ .debug_str     0x00000000    0xc3d9a CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
  .comment       0x00000000       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
  .debug_frame   0x00000000      0x264 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
  .ARM.attributes
@@ -2111,7 +2112,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
  .debug_macro   0x00000000      0x126 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
  .debug_line    0x00000000      0xa84 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
- .debug_str     0x00000000    0xc3be5 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
+ .debug_str     0x00000000    0xc3bba CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
  .comment       0x00000000       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
  .debug_frame   0x00000000      0x174 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
  .ARM.attributes
@@ -2201,7 +2202,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .debug_macro   0x00000000      0x126 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .debug_line    0x00000000      0x780 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_str     0x00000000    0xc39a5 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_str     0x00000000    0xc397a CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .comment       0x00000000       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
@@ -2290,7 +2291,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x2aa CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
  .debug_macro   0x00000000      0x126 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
  .debug_line    0x00000000      0x783 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_str     0x00000000    0xc39a8 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_str     0x00000000    0xc397d CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
  .comment       0x00000000       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
@@ -2628,7 +2629,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6a CMakeFiles/Laser_Light_Cue.dir/Core/Src/sysmem.c.obj
  .debug_macro   0x00000000      0x1df CMakeFiles/Laser_Light_Cue.dir/Core/Src/sysmem.c.obj
  .debug_line    0x00000000      0x35c CMakeFiles/Laser_Light_Cue.dir/Core/Src/sysmem.c.obj
- .debug_str     0x00000000     0x5b5f CMakeFiles/Laser_Light_Cue.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x00000000     0x5b34 CMakeFiles/Laser_Light_Cue.dir/Core/Src/sysmem.c.obj
  .comment       0x00000000       0x44 CMakeFiles/Laser_Light_Cue.dir/Core/Src/sysmem.c.obj
  .debug_frame   0x00000000       0x34 CMakeFiles/Laser_Light_Cue.dir/Core/Src/sysmem.c.obj
  .ARM.attributes
@@ -2759,7 +2760,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 CMakeFiles/Laser_Light_Cue.dir/Core/Src/syscalls.c.obj
  .debug_macro   0x00000000       0xce CMakeFiles/Laser_Light_Cue.dir/Core/Src/syscalls.c.obj
  .debug_line    0x00000000      0x68b CMakeFiles/Laser_Light_Cue.dir/Core/Src/syscalls.c.obj
- .debug_str     0x00000000     0x93ec CMakeFiles/Laser_Light_Cue.dir/Core/Src/syscalls.c.obj
+ .debug_str     0x00000000     0x93c1 CMakeFiles/Laser_Light_Cue.dir/Core/Src/syscalls.c.obj
  .comment       0x00000000       0x44 CMakeFiles/Laser_Light_Cue.dir/Core/Src/syscalls.c.obj
  .debug_frame   0x00000000      0x2ac CMakeFiles/Laser_Light_Cue.dir/Core/Src/syscalls.c.obj
  .ARM.attributes
@@ -3379,58 +3380,59 @@ LOAD C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_rnglists
                 0x000006b5       0x19 CMakeFiles/Laser_Light_Cue.dir/startup_stm32f446xx.s.obj
 
-.debug_macro    0x00000000    0x207bf
- .debug_macro   0x00000000      0x1e1 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x000001e1      0xab4 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x00000c95      0x29b CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x00000f30       0x2e CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x00000f5e       0x28 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x00000f86       0x22 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x00000fa8       0x8e CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x00001036       0x51 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x00001087      0x103 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0000118a       0x6a CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x000011f4      0x1df CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x000013d3       0x1c CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x000013ef       0x22 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x00001411       0xfb CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0000150c     0x1011 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0000251d      0x11f CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0000263c    0x16749 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x00018d85       0x6d CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x00018df2     0x368c CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001c47e      0x189 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001c607       0x5c CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001c663      0xca5 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001d308      0x9e9 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001dcf1      0x115 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001de06      0x1a0 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001dfa6       0xa5 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001e04b      0x16d CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001e1b8      0x287 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001e43f       0x5f CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001e49e      0x236 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001e6d4      0x132 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001e806      0x29c CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001eaa2       0x2e CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001ead0      0x127 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001ebf7       0xe8 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001ecdf       0x89 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001ed68      0x225 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001ef8d      0x2aa CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001f237      0x126 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001f35d       0x1c CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_macro   0x0001f379      0x1dd CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_macro   0x0001f556      0x1d3 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_macro   0x0001f729      0x1d3 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_macro   0x0001f8fc      0x1e8 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_macro   0x0001fae4      0x1c4 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
- .debug_macro   0x0001fca8      0x1ca CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_macro   0x0001fe72      0x1dc CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
- .debug_macro   0x0002004e      0x1c4 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_macro   0x00020212      0x224 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_macro   0x00020436      0x1c5 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_macro   0x000205fb      0x1c4 CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
+.debug_macro    0x00000000    0x20fd1
+ .debug_macro   0x00000000      0x1e6 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x000001e6      0xab4 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x00000c9a      0x29b CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x00000f35       0x2e CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x00000f63       0x28 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x00000f8b       0x22 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x00000fad       0x8e CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0000103b       0x51 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0000108c      0x103 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0000118f       0x6a CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x000011f9      0x1df CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x000013d8       0x1c CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x000013f4       0x22 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x00001416       0xfb CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x00001511     0x1011 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x00002522      0x11f CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x00002641    0x16749 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x00018d8a       0x6d CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x00018df7     0x368c CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001c483      0x189 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001c60c       0x5c CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001c668      0xca5 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001d30d      0x9e9 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001dcf6      0x115 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001de0b      0x1a0 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001dfab       0xa5 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001e050      0x16d CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001e1bd      0x287 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001e444       0x5f CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001e4a3      0x236 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001e6d9      0x132 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001e80b      0x29c CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001eaa7       0x2e CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001ead5      0x127 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001ebfc       0xe8 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001ece4       0x89 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001ed6d      0x225 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001ef92      0x2aa CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001f23c      0x126 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001f362       0x1c CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001f37e      0x80d CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001fb8b      0x1dd CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_macro   0x0001fd68      0x1d3 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_macro   0x0001ff3b      0x1d3 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+ .debug_macro   0x0002010e      0x1e8 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_macro   0x000202f6      0x1c4 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_macro   0x000204ba      0x1ca CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_macro   0x00020684      0x1dc CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+ .debug_macro   0x00020860      0x1c4 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_macro   0x00020a24      0x224 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_macro   0x00020c48      0x1c5 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_macro   0x00020e0d      0x1c4 CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
 
 .debug_line     0x00000000     0xb85e
  .debug_line    0x00000000      0x8d6 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
@@ -3447,32 +3449,32 @@ LOAD C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_line    0x0000afd5      0x80f CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
  .debug_line    0x0000b7e4       0x7a CMakeFiles/Laser_Light_Cue.dir/startup_stm32f446xx.s.obj
 
-.debug_str      0x00000000    0xc6849
- .debug_str     0x00000000    0xc40fa CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
-                              0xc4418 (size before relaxing)
- .debug_str     0x000c40fa      0x108 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
-                              0xc3aa2 (size before relaxing)
- .debug_str     0x000c4202       0xcc CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                              0xc4211 (size before relaxing)
- .debug_str     0x000c42ce      0x608 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
-                              0xc442e (size before relaxing)
- .debug_str     0x000c48d6      0x2cf CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                              0xc3fc8 (size before relaxing)
- .debug_str     0x000c4ba5      0x363 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
-                              0xc3ffb (size before relaxing)
- .debug_str     0x000c4f08      0x160 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                              0xc3d0a (size before relaxing)
- .debug_str     0x000c5068      0x1c0 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
-                              0xc3d67 (size before relaxing)
- .debug_str     0x000c5228      0x909 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                              0xc4479 (size before relaxing)
- .debug_str     0x000c5b31      0x5bd CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                              0xc4754 (size before relaxing)
- .debug_str     0x000c60ee      0x65e CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                              0xc457f (size before relaxing)
- .debug_str     0x000c674c       0x89 CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
-                              0xc3b8f (size before relaxing)
- .debug_str     0x000c67d5       0x74 CMakeFiles/Laser_Light_Cue.dir/startup_stm32f446xx.s.obj
+.debug_str      0x00000000    0xc7fc1
+ .debug_str     0x00000000    0xc5872 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
+                              0xc5b90 (size before relaxing)
+ .debug_str     0x000c5872      0x108 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
+                              0xc3a77 (size before relaxing)
+ .debug_str     0x000c597a       0xcc CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                              0xc41e6 (size before relaxing)
+ .debug_str     0x000c5a46      0x608 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                              0xc4403 (size before relaxing)
+ .debug_str     0x000c604e      0x2cf CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                              0xc3f9d (size before relaxing)
+ .debug_str     0x000c631d      0x363 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+                              0xc3fd0 (size before relaxing)
+ .debug_str     0x000c6680      0x160 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                              0xc3cdf (size before relaxing)
+ .debug_str     0x000c67e0      0x1c0 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+                              0xc3d3c (size before relaxing)
+ .debug_str     0x000c69a0      0x909 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                              0xc444e (size before relaxing)
+ .debug_str     0x000c72a9      0x5bd CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                              0xc4729 (size before relaxing)
+ .debug_str     0x000c7866      0x65e CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                              0xc4554 (size before relaxing)
+ .debug_str     0x000c7ec4       0x89 CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
+                              0xc3b64 (size before relaxing)
+ .debug_str     0x000c7f4d       0x74 CMakeFiles/Laser_Light_Cue.dir/startup_stm32f446xx.s.obj
                                  0xc2 (size before relaxing)
 
 .comment        0x00000000       0x43

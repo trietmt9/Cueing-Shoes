@@ -4286,7 +4286,7 @@ __STATIC_INLINE uint32_t LL_RCC_PLL_IsReady(void)
   * @param  PLLN Between 50/192(*) and 432
   *
   *         (*) value not defined in all devices.
-  * @param  PLLP_R This parameter can be one of the following values:
+  * @param  PLLP_REGThis parameter can be one of the following values:
   *         @arg @ref LL_RCC_PLLP_DIV_2
   *         @arg @ref LL_RCC_PLLP_DIV_4
   *         @arg @ref LL_RCC_PLLP_DIV_6
@@ -5243,7 +5243,7 @@ __STATIC_INLINE uint32_t LL_RCC_PLLI2S_IsReady(void)
   * @param  PLLN Between 50/192(*) and 432
   *
   *         (*) value not defined in all devices.
-  * @param  PLLQ_R This parameter can be one of the following values:
+  * @param  PLLQ_REGThis parameter can be one of the following values:
   *         @arg @ref LL_RCC_PLLI2SQ_DIV_2 (*)
   *         @arg @ref LL_RCC_PLLI2SQ_DIV_3 (*)
   *         @arg @ref LL_RCC_PLLI2SQ_DIV_4 (*)
@@ -5266,7 +5266,7 @@ __STATIC_INLINE uint32_t LL_RCC_PLLI2S_IsReady(void)
   *         @arg @ref LL_RCC_PLLI2SR_DIV_7 (*)
   *
   *         (*) value not defined in all devices.
-  * @param  PLLDIVQ_R This parameter can be one of the following values:
+  * @param  PLLDIVQ_REGThis parameter can be one of the following values:
   *         @arg @ref LL_RCC_PLLI2SDIVQ_DIV_1 (*)
   *         @arg @ref LL_RCC_PLLI2SDIVQ_DIV_2 (*)
   *         @arg @ref LL_RCC_PLLI2SDIVQ_DIV_3 (*)
