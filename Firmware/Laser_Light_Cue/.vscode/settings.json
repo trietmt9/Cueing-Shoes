@@ -4,6 +4,9 @@
         "spi.h": "c",
         "stm32f446xx.h": "c",
         "lsm9ds.h": "c",
-        "stdint.h": "c"
-    }
+        "stdint.h": "c",
+        "icm20948.h": "c",
+        "main.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

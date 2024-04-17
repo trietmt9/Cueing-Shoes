@@ -2,7 +2,11 @@
 #define __ICM20948__H
 #include "stm32f446xx.h"
 #include "stm32f4xx_hal.h"
+#include "stdint.h"
+#include "stdio.h"
 
+/*********************** GENERAL MACROS ***********************/
+#define SPI_TIMEOUT                             100
 /*********************** GYROSCOPE, ACCELEROMETER AND TEMPERATURE REGISTERS MACROS ***********************/
         /************* USER BANK 0 REGISTERS MAP *************/
 #define WHO_AM_I                                0x00U 
@@ -258,7 +262,7 @@
 #define FIFO_CFG_REG                            0x00U
 
             /*====== USER BANK SELECT REGISTER ======*/
-#define REG_BANK_SEL_REG                        0x00U   
+#define USER_BANK                               0x04U   
 
 /*============== USER BANK 1 R/W DESCRIPTIONS MACROS ==============*/
             /*====== SELF TEST X AXIS GYROSCOPE REGISTER ======*/
@@ -503,5 +507,11 @@
 
             /*====== CONTROL 3 REGISTER ======*/
 #define SRST                                    0x00U     
+
+/********************* Gyroscope and Accelerometer control functions *********************/
+
+uint8_t WHO_AM_I_CHECK(SPI_HandleTypeDef *SPIx);
+void ICM20948_Init();
+float ICM20948_Read();
 
 #endif
