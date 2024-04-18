@@ -385,7 +385,7 @@ Discarded input sections
  .data          0x00000000        0x0 CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
  .bss           0x00000000        0x0 CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
  .text.SPI_WriteRegisters
-                0x00000000       0x3a CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
+                0x00000000       0x40 CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
  .debug_macro   0x00000000      0xab4 CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
  .debug_macro   0x00000000       0x28 CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
  .debug_macro   0x00000000       0x22 CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
@@ -2983,7 +2983,7 @@ LOAD C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x08000000                g_pfnVectors
                 0x080001c4                        . = ALIGN (0x4)
 
-.text           0x080001c4     0x2cac
+.text           0x080001c4     0x2cb4
                 0x080001c4                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001c4       0x40 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -3019,315 +3019,315 @@ LOAD C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .text.CS_DEACTIVATE
                 0x0800084c       0x18 CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
  .text.USER_BANK_SELECTION
-                0x08000864       0x4e CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
+                0x08000864       0x52 CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
                 0x08000864                USER_BANK_SELECTION
  .text.SPI_ReadRegisters
-                0x080008b2       0x4a CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
+                0x080008b6       0x4e CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
  .text.WHO_AM_I_CHECK
-                0x080008fc       0x28 CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
-                0x080008fc                WHO_AM_I_CHECK
+                0x08000904       0x28 CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
+                0x08000904                WHO_AM_I_CHECK
  .text.NMI_Handler
-                0x08000924        0x8 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000924                NMI_Handler
- .text.HardFault_Handler
                 0x0800092c        0x8 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
-                0x0800092c                HardFault_Handler
- .text.MemManage_Handler
+                0x0800092c                NMI_Handler
+ .text.HardFault_Handler
                 0x08000934        0x8 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000934                MemManage_Handler
- .text.BusFault_Handler
+                0x08000934                HardFault_Handler
+ .text.MemManage_Handler
                 0x0800093c        0x8 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
-                0x0800093c                BusFault_Handler
- .text.UsageFault_Handler
+                0x0800093c                MemManage_Handler
+ .text.BusFault_Handler
                 0x08000944        0x8 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000944                UsageFault_Handler
+                0x08000944                BusFault_Handler
+ .text.UsageFault_Handler
+                0x0800094c        0x8 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0800094c                UsageFault_Handler
  .text.SVC_Handler
-                0x0800094c        0xe CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
-                0x0800094c                SVC_Handler
+                0x08000954        0xe CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000954                SVC_Handler
  .text.DebugMon_Handler
-                0x0800095a        0xe CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
-                0x0800095a                DebugMon_Handler
+                0x08000962        0xe CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000962                DebugMon_Handler
  .text.PendSV_Handler
-                0x08000968        0xe CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000968                PendSV_Handler
+                0x08000970        0xe CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08000970                PendSV_Handler
  .text.SysTick_Handler
-                0x08000976        0xc CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08000976                SysTick_Handler
- *fill*         0x08000982        0x2 
+                0x0800097e        0xc CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
+                0x0800097e                SysTick_Handler
+ *fill*         0x0800098a        0x2 
  .text.HAL_MspInit
-                0x08000984       0x50 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08000984                HAL_MspInit
+                0x0800098c       0x50 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x0800098c                HAL_MspInit
  .text.HAL_SPI_MspInit
-                0x080009d4       0x90 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x080009d4                HAL_SPI_MspInit
+                0x080009dc       0x90 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x080009dc                HAL_SPI_MspInit
  .text.HAL_UART_MspInit
-                0x08000a64       0x90 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08000a64                HAL_UART_MspInit
+                0x08000a6c       0x90 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08000a6c                HAL_UART_MspInit
  .text.HAL_SPI_Init
-                0x08000af4      0x112 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
-                0x08000af4                HAL_SPI_Init
+                0x08000afc      0x112 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x08000afc                HAL_SPI_Init
  .text.HAL_SPI_Transmit
-                0x08000c06      0x286 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
-                0x08000c06                HAL_SPI_Transmit
+                0x08000c0e      0x286 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x08000c0e                HAL_SPI_Transmit
  .text.HAL_SPI_Receive
-                0x08000e8c      0x230 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
-                0x08000e8c                HAL_SPI_Receive
+                0x08000e94      0x230 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x08000e94                HAL_SPI_Receive
  .text.HAL_SPI_TransmitReceive
-                0x080010bc      0x360 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
-                0x080010bc                HAL_SPI_TransmitReceive
+                0x080010c4      0x360 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x080010c4                HAL_SPI_TransmitReceive
  .text.SPI_WaitFlagStateUntilTimeout
-                0x0800141c      0x110 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x08001424      0x110 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .text.SPI_EndRxTransaction
-                0x0800152c       0xca CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- *fill*         0x080015f6        0x2 
+                0x08001534       0xca CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+ *fill*         0x080015fe        0x2 
  .text.SPI_EndRxTxTransaction
-                0x080015f8       0xa8 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+                0x08001600       0xa8 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .text.HAL_RCC_ClockConfig
-                0x080016a0      0x1cc CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x080016a0                HAL_RCC_ClockConfig
+                0x080016a8      0x1cc CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x080016a8                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetHCLKFreq
-                0x0800186c       0x18 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x0800186c                HAL_RCC_GetHCLKFreq
+                0x08001874       0x18 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x08001874                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x08001884       0x28 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x08001884                HAL_RCC_GetPCLK1Freq
+                0x0800188c       0x28 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x0800188c                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x080018ac       0x28 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
-                0x080018ac                HAL_RCC_GetPCLK2Freq
+                0x080018b4       0x28 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+                0x080018b4                HAL_RCC_GetPCLK2Freq
  .text.HAL_RCC_GetSysClockFreq
-                0x080018d4      0x354 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
-                0x080018d4                HAL_RCC_GetSysClockFreq
+                0x080018dc      0x354 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+                0x080018dc                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_OscConfig
-                0x08001c28      0x53c CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
-                0x08001c28                HAL_RCC_OscConfig
+                0x08001c30      0x53c CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+                0x08001c30                HAL_RCC_OscConfig
  .text.HAL_GPIO_Init
-                0x08002164      0x328 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x08002164                HAL_GPIO_Init
+                0x0800216c      0x328 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x0800216c                HAL_GPIO_Init
  .text.HAL_GPIO_WritePin
-                0x0800248c       0x32 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-                0x0800248c                HAL_GPIO_WritePin
- *fill*         0x080024be        0x2 
+                0x08002494       0x32 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+                0x08002494                HAL_GPIO_WritePin
+ *fill*         0x080024c6        0x2 
  .text.HAL_PWREx_EnableOverDrive
-                0x080024c0       0xa0 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
-                0x080024c0                HAL_PWREx_EnableOverDrive
+                0x080024c8       0xa0 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+                0x080024c8                HAL_PWREx_EnableOverDrive
  .text.__NVIC_SetPriorityGrouping
-                0x08002560       0x48 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x08002568       0x48 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .text.__NVIC_GetPriorityGrouping
-                0x080025a8       0x1c CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x080025b0       0x1c CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .text.__NVIC_SetPriority
-                0x080025c4       0x54 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x080025cc       0x54 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .text.NVIC_EncodePriority
-                0x08002618       0x66 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- *fill*         0x0800267e        0x2 
+                0x08002620       0x66 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ *fill*         0x08002686        0x2 
  .text.SysTick_Config
-                0x08002680       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x08002688       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
  .text.HAL_NVIC_SetPriorityGrouping
-                0x080026c4       0x16 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x080026c4                HAL_NVIC_SetPriorityGrouping
+                0x080026cc       0x16 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x080026cc                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x080026da       0x38 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x080026da                HAL_NVIC_SetPriority
+                0x080026e2       0x38 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x080026e2                HAL_NVIC_SetPriority
  .text.HAL_SYSTICK_Config
-                0x08002712       0x18 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
-                0x08002712                HAL_SYSTICK_Config
- *fill*         0x0800272a        0x2 
+                0x0800271a       0x18 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+                0x0800271a                HAL_SYSTICK_Config
+ *fill*         0x08002732        0x2 
  .text.HAL_Init
-                0x0800272c       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x0800272c                HAL_Init
+                0x08002734       0x44 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x08002734                HAL_Init
  .text.HAL_InitTick
-                0x08002770       0x60 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x08002770                HAL_InitTick
+                0x08002778       0x60 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x08002778                HAL_InitTick
  .text.HAL_IncTick
-                0x080027d0       0x28 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x080027d0                HAL_IncTick
+                0x080027d8       0x28 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x080027d8                HAL_IncTick
  .text.HAL_GetTick
-                0x080027f8       0x18 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x080027f8                HAL_GetTick
+                0x08002800       0x18 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x08002800                HAL_GetTick
  .text.HAL_Delay
-                0x08002810       0x48 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x08002810                HAL_Delay
+                0x08002818       0x48 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x08002818                HAL_Delay
  .text.HAL_UART_Init
-                0x08002858       0xa0 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-                0x08002858                HAL_UART_Init
+                0x08002860       0xa0 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x08002860                HAL_UART_Init
  .text.UART_SetConfig
-                0x080028f8      0x4e8 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+                0x08002900      0x4e8 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .text.SystemInit
-                0x08002de0       0x24 CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08002de0                SystemInit
+                0x08002de8       0x24 CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
+                0x08002de8                SystemInit
  .text.Reset_Handler
-                0x08002e04       0x50 CMakeFiles/Laser_Light_Cue.dir/startup_stm32f446xx.s.obj
-                0x08002e04                Reset_Handler
+                0x08002e0c       0x50 CMakeFiles/Laser_Light_Cue.dir/startup_stm32f446xx.s.obj
+                0x08002e0c                Reset_Handler
  .text.Default_Handler
-                0x08002e54        0x2 CMakeFiles/Laser_Light_Cue.dir/startup_stm32f446xx.s.obj
-                0x08002e54                RTC_Alarm_IRQHandler
-                0x08002e54                EXTI2_IRQHandler
-                0x08002e54                TIM8_CC_IRQHandler
-                0x08002e54                FMPI2C1_EV_IRQHandler
-                0x08002e54                SPI4_IRQHandler
-                0x08002e54                TIM1_CC_IRQHandler
-                0x08002e54                DMA2_Stream5_IRQHandler
-                0x08002e54                DMA1_Stream5_IRQHandler
-                0x08002e54                PVD_IRQHandler
-                0x08002e54                SDIO_IRQHandler
-                0x08002e54                TAMP_STAMP_IRQHandler
-                0x08002e54                CAN2_RX1_IRQHandler
-                0x08002e54                EXTI3_IRQHandler
-                0x08002e54                TIM8_TRG_COM_TIM14_IRQHandler
-                0x08002e54                TIM1_UP_TIM10_IRQHandler
-                0x08002e54                TIM8_UP_TIM13_IRQHandler
-                0x08002e54                I2C3_ER_IRQHandler
-                0x08002e54                EXTI0_IRQHandler
-                0x08002e54                I2C2_EV_IRQHandler
-                0x08002e54                DMA1_Stream2_IRQHandler
-                0x08002e54                CAN1_RX0_IRQHandler
-                0x08002e54                FPU_IRQHandler
-                0x08002e54                OTG_HS_WKUP_IRQHandler
-                0x08002e54                CAN2_SCE_IRQHandler
-                0x08002e54                DMA2_Stream2_IRQHandler
-                0x08002e54                SPI1_IRQHandler
-                0x08002e54                TIM6_DAC_IRQHandler
-                0x08002e54                TIM1_BRK_TIM9_IRQHandler
-                0x08002e54                DCMI_IRQHandler
-                0x08002e54                CAN2_RX0_IRQHandler
-                0x08002e54                DMA2_Stream3_IRQHandler
-                0x08002e54                SAI2_IRQHandler
-                0x08002e54                USART6_IRQHandler
-                0x08002e54                USART3_IRQHandler
-                0x08002e54                CAN1_RX1_IRQHandler
-                0x08002e54                UART5_IRQHandler
-                0x08002e54                DMA2_Stream0_IRQHandler
-                0x08002e54                TIM4_IRQHandler
-                0x08002e54                QUADSPI_IRQHandler
-                0x08002e54                I2C1_EV_IRQHandler
-                0x08002e54                DMA1_Stream6_IRQHandler
-                0x08002e54                DMA1_Stream1_IRQHandler
-                0x08002e54                UART4_IRQHandler
-                0x08002e54                TIM3_IRQHandler
-                0x08002e54                RCC_IRQHandler
-                0x08002e54                TIM8_BRK_TIM12_IRQHandler
-                0x08002e54                Default_Handler
-                0x08002e54                CEC_IRQHandler
-                0x08002e54                EXTI15_10_IRQHandler
-                0x08002e54                ADC_IRQHandler
-                0x08002e54                DMA1_Stream7_IRQHandler
-                0x08002e54                TIM7_IRQHandler
-                0x08002e54                CAN2_TX_IRQHandler
-                0x08002e54                TIM5_IRQHandler
-                0x08002e54                DMA2_Stream7_IRQHandler
-                0x08002e54                I2C3_EV_IRQHandler
-                0x08002e54                EXTI9_5_IRQHandler
-                0x08002e54                RTC_WKUP_IRQHandler
-                0x08002e54                SPDIF_RX_IRQHandler
-                0x08002e54                SPI2_IRQHandler
-                0x08002e54                OTG_HS_EP1_IN_IRQHandler
-                0x08002e54                DMA1_Stream0_IRQHandler
-                0x08002e54                CAN1_TX_IRQHandler
-                0x08002e54                FMPI2C1_ER_IRQHandler
-                0x08002e54                EXTI4_IRQHandler
-                0x08002e54                OTG_HS_EP1_OUT_IRQHandler
-                0x08002e54                WWDG_IRQHandler
-                0x08002e54                TIM2_IRQHandler
-                0x08002e54                OTG_FS_WKUP_IRQHandler
-                0x08002e54                TIM1_TRG_COM_TIM11_IRQHandler
-                0x08002e54                OTG_HS_IRQHandler
-                0x08002e54                EXTI1_IRQHandler
-                0x08002e54                USART2_IRQHandler
-                0x08002e54                I2C2_ER_IRQHandler
-                0x08002e54                DMA2_Stream1_IRQHandler
-                0x08002e54                CAN1_SCE_IRQHandler
-                0x08002e54                FLASH_IRQHandler
-                0x08002e54                DMA2_Stream4_IRQHandler
-                0x08002e54                USART1_IRQHandler
-                0x08002e54                OTG_FS_IRQHandler
-                0x08002e54                SPI3_IRQHandler
-                0x08002e54                DMA1_Stream4_IRQHandler
-                0x08002e54                I2C1_ER_IRQHandler
-                0x08002e54                FMC_IRQHandler
-                0x08002e54                DMA2_Stream6_IRQHandler
-                0x08002e54                SAI1_IRQHandler
-                0x08002e54                DMA1_Stream3_IRQHandler
+                0x08002e5c        0x2 CMakeFiles/Laser_Light_Cue.dir/startup_stm32f446xx.s.obj
+                0x08002e5c                RTC_Alarm_IRQHandler
+                0x08002e5c                EXTI2_IRQHandler
+                0x08002e5c                TIM8_CC_IRQHandler
+                0x08002e5c                FMPI2C1_EV_IRQHandler
+                0x08002e5c                SPI4_IRQHandler
+                0x08002e5c                TIM1_CC_IRQHandler
+                0x08002e5c                DMA2_Stream5_IRQHandler
+                0x08002e5c                DMA1_Stream5_IRQHandler
+                0x08002e5c                PVD_IRQHandler
+                0x08002e5c                SDIO_IRQHandler
+                0x08002e5c                TAMP_STAMP_IRQHandler
+                0x08002e5c                CAN2_RX1_IRQHandler
+                0x08002e5c                EXTI3_IRQHandler
+                0x08002e5c                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08002e5c                TIM1_UP_TIM10_IRQHandler
+                0x08002e5c                TIM8_UP_TIM13_IRQHandler
+                0x08002e5c                I2C3_ER_IRQHandler
+                0x08002e5c                EXTI0_IRQHandler
+                0x08002e5c                I2C2_EV_IRQHandler
+                0x08002e5c                DMA1_Stream2_IRQHandler
+                0x08002e5c                CAN1_RX0_IRQHandler
+                0x08002e5c                FPU_IRQHandler
+                0x08002e5c                OTG_HS_WKUP_IRQHandler
+                0x08002e5c                CAN2_SCE_IRQHandler
+                0x08002e5c                DMA2_Stream2_IRQHandler
+                0x08002e5c                SPI1_IRQHandler
+                0x08002e5c                TIM6_DAC_IRQHandler
+                0x08002e5c                TIM1_BRK_TIM9_IRQHandler
+                0x08002e5c                DCMI_IRQHandler
+                0x08002e5c                CAN2_RX0_IRQHandler
+                0x08002e5c                DMA2_Stream3_IRQHandler
+                0x08002e5c                SAI2_IRQHandler
+                0x08002e5c                USART6_IRQHandler
+                0x08002e5c                USART3_IRQHandler
+                0x08002e5c                CAN1_RX1_IRQHandler
+                0x08002e5c                UART5_IRQHandler
+                0x08002e5c                DMA2_Stream0_IRQHandler
+                0x08002e5c                TIM4_IRQHandler
+                0x08002e5c                QUADSPI_IRQHandler
+                0x08002e5c                I2C1_EV_IRQHandler
+                0x08002e5c                DMA1_Stream6_IRQHandler
+                0x08002e5c                DMA1_Stream1_IRQHandler
+                0x08002e5c                UART4_IRQHandler
+                0x08002e5c                TIM3_IRQHandler
+                0x08002e5c                RCC_IRQHandler
+                0x08002e5c                TIM8_BRK_TIM12_IRQHandler
+                0x08002e5c                Default_Handler
+                0x08002e5c                CEC_IRQHandler
+                0x08002e5c                EXTI15_10_IRQHandler
+                0x08002e5c                ADC_IRQHandler
+                0x08002e5c                DMA1_Stream7_IRQHandler
+                0x08002e5c                TIM7_IRQHandler
+                0x08002e5c                CAN2_TX_IRQHandler
+                0x08002e5c                TIM5_IRQHandler
+                0x08002e5c                DMA2_Stream7_IRQHandler
+                0x08002e5c                I2C3_EV_IRQHandler
+                0x08002e5c                EXTI9_5_IRQHandler
+                0x08002e5c                RTC_WKUP_IRQHandler
+                0x08002e5c                SPDIF_RX_IRQHandler
+                0x08002e5c                SPI2_IRQHandler
+                0x08002e5c                OTG_HS_EP1_IN_IRQHandler
+                0x08002e5c                DMA1_Stream0_IRQHandler
+                0x08002e5c                CAN1_TX_IRQHandler
+                0x08002e5c                FMPI2C1_ER_IRQHandler
+                0x08002e5c                EXTI4_IRQHandler
+                0x08002e5c                OTG_HS_EP1_OUT_IRQHandler
+                0x08002e5c                WWDG_IRQHandler
+                0x08002e5c                TIM2_IRQHandler
+                0x08002e5c                OTG_FS_WKUP_IRQHandler
+                0x08002e5c                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08002e5c                OTG_HS_IRQHandler
+                0x08002e5c                EXTI1_IRQHandler
+                0x08002e5c                USART2_IRQHandler
+                0x08002e5c                I2C2_ER_IRQHandler
+                0x08002e5c                DMA2_Stream1_IRQHandler
+                0x08002e5c                CAN1_SCE_IRQHandler
+                0x08002e5c                FLASH_IRQHandler
+                0x08002e5c                DMA2_Stream4_IRQHandler
+                0x08002e5c                USART1_IRQHandler
+                0x08002e5c                OTG_FS_IRQHandler
+                0x08002e5c                SPI3_IRQHandler
+                0x08002e5c                DMA1_Stream4_IRQHandler
+                0x08002e5c                I2C1_ER_IRQHandler
+                0x08002e5c                FMC_IRQHandler
+                0x08002e5c                DMA2_Stream6_IRQHandler
+                0x08002e5c                SAI1_IRQHandler
+                0x08002e5c                DMA1_Stream3_IRQHandler
  *(.glue_7)
- .glue_7        0x08002e56        0x0 linker stubs
+ .glue_7        0x08002e5e        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08002e56        0x0 linker stubs
+ .glue_7t       0x08002e5e        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x08002e56        0x2 
- .eh_frame      0x08002e58        0x0 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ *fill*         0x08002e5e        0x2 
+ .eh_frame      0x08002e60        0x0 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08002e58        0x4 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08002e58                _init
- .init          0x08002e5c        0x8 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08002e60        0x4 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08002e60                _init
+ .init          0x08002e64        0x8 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08002e64        0x4 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08002e64                _fini
- .fini          0x08002e68        0x8 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08002e70                        . = ALIGN (0x4)
-                0x08002e70                        _etext = .
+ .fini          0x08002e6c        0x4 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08002e6c                _fini
+ .fini          0x08002e70        0x8 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08002e78                        . = ALIGN (0x4)
+                0x08002e78                        _etext = .
 
-.vfp11_veneer   0x08002e70        0x0
- .vfp11_veneer  0x08002e70        0x0 linker stubs
+.vfp11_veneer   0x08002e78        0x0
+ .vfp11_veneer  0x08002e78        0x0 linker stubs
 
-.v4_bx          0x08002e70        0x0
- .v4_bx         0x08002e70        0x0 linker stubs
+.v4_bx          0x08002e78        0x0
+ .v4_bx         0x08002e78        0x0 linker stubs
 
-.iplt           0x08002e70        0x0
- .iplt          0x08002e70        0x0 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08002e78        0x0
+ .iplt          0x08002e78        0x0 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08002e70       0x18
-                0x08002e70                        . = ALIGN (0x4)
+.rodata         0x08002e78       0x18
+                0x08002e78                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x08002e70       0x10 CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08002e70                AHBPrescTable
+                0x08002e78       0x10 CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
+                0x08002e78                AHBPrescTable
  .rodata.APBPrescTable
-                0x08002e80        0x8 CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
-                0x08002e80                APBPrescTable
-                0x08002e88                        . = ALIGN (0x4)
+                0x08002e88        0x8 CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
+                0x08002e88                APBPrescTable
+                0x08002e90                        . = ALIGN (0x4)
 
-.ARM.extab      0x08002e88        0x0
-                0x08002e88                        . = ALIGN (0x4)
+.ARM.extab      0x08002e90        0x0
+                0x08002e90                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08002e88                        . = ALIGN (0x4)
+                0x08002e90                        . = ALIGN (0x4)
 
-.ARM            0x08002e88        0x8
-                0x08002e88                        . = ALIGN (0x4)
-                0x08002e88                        __exidx_start = .
+.ARM            0x08002e90        0x8
+                0x08002e90                        . = ALIGN (0x4)
+                0x08002e90                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08002e88        0x8 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08002e90                        __exidx_end = .
-                0x08002e90                        . = ALIGN (0x4)
+ .ARM.exidx     0x08002e90        0x8 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x08002e98                        __exidx_end = .
+                0x08002e98                        . = ALIGN (0x4)
 
-.preinit_array  0x08002e90        0x0
-                0x08002e90                        . = ALIGN (0x4)
-                0x08002e90                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08002e98        0x0
+                0x08002e98                        . = ALIGN (0x4)
+                0x08002e98                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08002e90                        PROVIDE (__preinit_array_end = .)
-                0x08002e90                        . = ALIGN (0x4)
+                0x08002e98                        PROVIDE (__preinit_array_end = .)
+                0x08002e98                        . = ALIGN (0x4)
 
-.init_array     0x08002e90        0x4
-                0x08002e90                        . = ALIGN (0x4)
-                0x08002e90                        PROVIDE (__init_array_start = .)
+.init_array     0x08002e98        0x4
+                0x08002e98                        . = ALIGN (0x4)
+                0x08002e98                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08002e90        0x4 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08002e94                        PROVIDE (__init_array_end = .)
-                0x08002e94                        . = ALIGN (0x4)
+ .init_array    0x08002e98        0x4 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08002e9c                        PROVIDE (__init_array_end = .)
+                0x08002e9c                        . = ALIGN (0x4)
 
-.fini_array     0x08002e94        0x4
-                0x08002e94                        . = ALIGN (0x4)
+.fini_array     0x08002e9c        0x4
+                0x08002e9c                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08002e94        0x4 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x08002e9c        0x4 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08002e98                        . = ALIGN (0x4)
-                0x08002e98                        _sidata = LOADADDR (.data)
+                0x08002ea0                        . = ALIGN (0x4)
+                0x08002ea0                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x08002e98        0x0
- .rel.iplt      0x08002e98        0x0 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08002ea0        0x0
+ .rel.iplt      0x08002ea0        0x0 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.data           0x20000000        0xc load address 0x08002e98
+.data           0x20000000        0xc load address 0x08002ea0
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -3347,11 +3347,11 @@ LOAD C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x2000000c                        . = ALIGN (0x4)
                 0x2000000c                        _edata = .
 
-.igot.plt       0x2000000c        0x0 load address 0x08002ea4
+.igot.plt       0x2000000c        0x0 load address 0x08002eac
  .igot.plt      0x2000000c        0x0 C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x2000000c                        . = ALIGN (0x4)
 
-.bss            0x2000000c       0xc4 load address 0x08002ea4
+.bss            0x2000000c       0xc4 load address 0x08002eac
                 0x2000000c                        _sbss = .
                 0x2000000c                        __bss_start__ = _sbss
  *(.bss)
@@ -3373,7 +3373,7 @@ LOAD C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x200000d0                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200000d0      0x600 load address 0x08002ea4
+                0x200000d0      0x600 load address 0x08002eac
                 0x200000d0                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
                 0x200000d0                        PROVIDE (_end = .)
@@ -3625,21 +3625,21 @@ LOAD C:/ST/STM32CubeCLT_1.15.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_macro   0x000218fc      0x1c5 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .debug_macro   0x00021ac1      0x1c4 CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
 
-.debug_line     0x00000000     0xc18d
+.debug_line     0x00000000     0xc18b
  .debug_line    0x00000000      0x967 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
- .debug_line    0x00000967      0x89e CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
- .debug_line    0x00001205      0x84d CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_line    0x00001a52      0x824 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_line    0x00002276     0x1d73 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_line    0x00003fe9      0xdf5 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_line    0x00004dde     0x1493 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
- .debug_line    0x00006271      0xbf0 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_line    0x00006e61      0x9a1 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
- .debug_line    0x00007802      0xd40 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_line    0x00008542      0xa78 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_line    0x00008fba     0x294a CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_line    0x0000b904      0x80f CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
- .debug_line    0x0000c113       0x7a CMakeFiles/Laser_Light_Cue.dir/startup_stm32f446xx.s.obj
+ .debug_line    0x00000967      0x89c CMakeFiles/Laser_Light_Cue.dir/Core/Src/ICM20948.c.obj
+ .debug_line    0x00001203      0x84d CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_line    0x00001a50      0x824 CMakeFiles/Laser_Light_Cue.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_line    0x00002274     0x1d73 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+ .debug_line    0x00003fe7      0xdf5 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_line    0x00004ddc     0x1493 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_line    0x0000626f      0xbf0 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_line    0x00006e5f      0x9a1 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+ .debug_line    0x00007800      0xd40 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_line    0x00008540      0xa78 CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_line    0x00008fb8     0x294a CMakeFiles/Laser_Light_Cue.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_line    0x0000b902      0x80f CMakeFiles/Laser_Light_Cue.dir/Core/Src/system_stm32f4xx.c.obj
+ .debug_line    0x0000c111       0x7a CMakeFiles/Laser_Light_Cue.dir/startup_stm32f446xx.s.obj
 
 .debug_str      0x00000000    0xcb266
  .debug_str     0x00000000    0xc8a28 CMakeFiles/Laser_Light_Cue.dir/Core/Src/main.c.obj
