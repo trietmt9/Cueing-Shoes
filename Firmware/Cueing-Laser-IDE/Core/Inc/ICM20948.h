@@ -508,6 +508,14 @@
             /*====== CONTROL 3 REGISTER ======*/
 #define SRST                                    0x00U     
 
+/********************* Enum for controlling IMU *********************/
+typedef enum
+{
+        BANK_0,
+        BANK_1,
+        BANK_2,
+        BANK_3
+}usrbank_sel;
 /********************* Gyroscope and Accelerometer control functions *********************/
 void WHO_AM_I_CHECK(SPI_HandleTypeDef *SPIx, uint8_t* who_am_i);
 void ICM20948_Init();

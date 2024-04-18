@@ -510,8 +510,9 @@
 
 /********************* Gyroscope and Accelerometer control functions *********************/
 
-void WHO_AM_I_CHECK(SPI_HandleTypeDef *SPIx);
+void WHO_AM_I_CHECK(SPI_HandleTypeDef *SPIx, uint8_t* who_am_i);
 void ICM20948_Init();
 float ICM20948_Read();
+
 
 #endif

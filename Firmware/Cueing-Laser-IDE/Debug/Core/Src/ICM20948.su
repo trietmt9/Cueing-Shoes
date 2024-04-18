@@ -1,6 +1,6 @@
 ../Core/Src/ICM20948.c:3:20:CS_ACTIVATE	8	static
 ../Core/Src/ICM20948.c:8:20:CS_DEACTIVATE	8	static
 ../Core/Src/ICM20948.c:17:6:SPI_WriteRegisters	24	static
-../Core/Src/ICM20948.c:25:6:USER_BANK_SELECTION	16	static
+../Core/Src/ICM20948.c:25:6:USER_BANK_SELECTION	24	static
 ../Core/Src/ICM20948.c:33:6:SPI_ReadRegisters	24	static
-../Core/Src/ICM20948.c:42:6:WHO_AM_I_CHECK	16	static
+../Core/Src/ICM20948.c:43:6:WHO_AM_I_CHECK	16	static

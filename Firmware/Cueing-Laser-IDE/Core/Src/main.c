@@ -96,20 +96,6 @@ int main(void)
   MX_SPI1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-//  HAL_Delay(100);
-//  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
-//  reg = REG_BANK_SEL;
-//  data = 0;
-//  HAL_SPI_Transmit(&hspi1, &reg, 1, 100);
-//  HAL_SPI_Transmit(&hspi1, &data, 1, 100);
-//  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);
-//
-//  HAL_Delay(100);
-//  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
-//  reg = WHO_AM_I|0x80;
-//  HAL_SPI_Transmit(&hspi1, &reg, 1, 100);
-//  HAL_SPI_Receive(&hspi1, &who_am_i, 1, 100);
-//  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);
   
    WHO_AM_I_CHECK(&hspi1, &who_am_i);
   /* USER CODE END 2 */
