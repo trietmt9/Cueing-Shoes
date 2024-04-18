@@ -61,3 +61,13 @@ void WHO_AM_I_CHECK(SPI_HandleTypeDef *SPIx, uint8_t* who_am_i)
 {
     SPI_ReadRegisters(BANK_0, SPIx, WHO_AM_I, who_am_i);
 }
+
+void ICM20948_Init(SPI_HandleTypeDef *SPIx)
+{
+    uint8_t temp_data = 0;
+    temp_data |= (1 << CLKSEL)|( 1 << SLEEP)|(1 << DEVICE_RESET);
+    SPI_WriteRegisters(BANK_0, SPIx, PWR_MGMT_1, &temp_data, sizeof(temp_data));
+
+    temp_data |= (1 << GYRO_FCHOICE)|(1 << GYRO_FS_SEL)|(1 << GYRO_DLPFCFG);
+    SPI_WriteRegisters(BANK_2, SPIx, GYRO_CONFIG_1, &temp_data, sizeof(temp_data));
+}
