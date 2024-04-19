@@ -822,8 +822,8 @@ typedef enum
 
 typedef enum
 {
-        ACCEL_246Hz_265Hz_0,
-        ACCEL_246Hz_265Hz_1,
+        ACCEL_246Hz_265Hz,
+        ACCEL_246Hz_265Hz,
         ACCEL_111_4Hz_136Hz,
         ACCEL_50_4Hz_68_8Hz,   
         ACCEL_23_9Hz_34_4Hz,
@@ -843,7 +843,7 @@ typedef enum
 {
         ODR_ALGIN_OFF,
         ODR_ALGIN_ON
-}outputdatarate;
+};
 
 typedef enum
 {

@@ -843,7 +843,7 @@ typedef enum
 {
         ODR_ALGIN_OFF,
         ODR_ALGIN_ON
-}outputdatarate;
+};
 
 typedef enum
 {

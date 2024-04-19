@@ -2,8 +2,8 @@
 ../Core/Src/ICM20948.c:8:20:CS_DEACTIVATE	1
 ../Core/Src/ICM20948.c:17:6:SPI_WriteByte	1
 ../Core/Src/ICM20948.c:25:6:SPI_ReadByte	1
-../Core/Src/ICM20948.c:34:6:SPI_WriteRegisters	1
-../Core/Src/ICM20948.c:43:6:SPI_ReadRegisters	1
-../Core/Src/ICM20948.c:52:6:USER_BANK_SELECTION	1
-../Core/Src/ICM20948.c:60:6:WHO_AM_I_CHECK	1
-../Core/Src/ICM20948.c:65:6:ICM20948_Init	1
+../Core/Src/ICM20948.c:34:6:USER_BANK_SELECTION	1
+../Core/Src/ICM20948.c:42:6:SPI_WriteRegisters	1
+../Core/Src/ICM20948.c:51:6:SPI_ReadRegisters	1
+../Core/Src/ICM20948.c:61:6:WHO_AM_I_CHECK	1
+../Core/Src/ICM20948.c:66:6:ICM20948_Init	2

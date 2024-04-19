@@ -97,7 +97,6 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   
-  WHO_AM_I_CHECK(&hspi1, &who_am_i);
   ICM20948_Init(&hspi1);
   /* USER CODE END 2 */
 
