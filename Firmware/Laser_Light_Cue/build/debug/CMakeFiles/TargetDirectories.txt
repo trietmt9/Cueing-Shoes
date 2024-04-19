@@ -1,5 +1,0 @@
-C:/Users/pc/Documents/Lazer-light-cueing/Firmware/Laser_Light_Cue/build/debug/CMakeFiles/Laser_Light_Cue.dir
-C:/Users/pc/Documents/Lazer-light-cueing/Firmware/Laser_Light_Cue/build/debug/CMakeFiles/edit_cache.dir
-C:/Users/pc/Documents/Lazer-light-cueing/Firmware/Laser_Light_Cue/build/debug/CMakeFiles/rebuild_cache.dir
-C:/Users/pc/Documents/Lazer-light-cueing/Firmware/Laser_Light_Cue/build/debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
-C:/Users/pc/Documents/Lazer-light-cueing/Firmware/Laser_Light_Cue/build/debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
