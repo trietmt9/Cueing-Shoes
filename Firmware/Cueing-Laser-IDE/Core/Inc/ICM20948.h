@@ -874,6 +874,6 @@ typedef struct
 /********************* Gyroscope and Accelerometer control functions *********************/
 void WHO_AM_I_CHECK(SPI_HandleTypeDef *SPIx, uint8_t* who_am_i);
 void ICM20948_Init(SPI_HandleTypeDef *SPIx);
-double ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data);
+void ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data);
 
 #endif

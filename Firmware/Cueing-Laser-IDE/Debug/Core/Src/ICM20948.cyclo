@@ -7,4 +7,4 @@
 ../Core/Src/ICM20948.c:51:6:SPI_ReadRegisters	1
 ../Core/Src/ICM20948.c:61:6:WHO_AM_I_CHECK	1
 ../Core/Src/ICM20948.c:66:6:ICM20948_Init	2
-../Core/Src/ICM20948.c:121:8:ICM20948_Read	1
+../Core/Src/ICM20948.c:121:6:ICM20948_Read	1

@@ -110,7 +110,7 @@ int main(void)
     /* USER CODE END WHILE */
 
   ICM20948_Read(&hspi1, &data);
-  sprintf(buffer,"Raw: %.2f\n ",data.RAW_Ax);
+  sprintf(buffer,"Ax: %.2f, Ay: %.2f, Az: %.2f ",data.Ax, data.Ay, data.Az);
   HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 10);
   HAL_Delay(100);
     /* USER CODE BEGIN 3 */

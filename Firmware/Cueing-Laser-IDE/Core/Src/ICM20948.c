@@ -118,7 +118,7 @@ void ICM20948_Init(SPI_HandleTypeDef *SPIx)
     }
 }
 
-double ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data)
+void ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data)
 {
     // Read accelerometer data
     uint8_t accel_data[6];
@@ -142,6 +142,6 @@ double ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data)
     // Convert gyroscope raw data to true gyroscope data
     data->Gx = (double)data->RAW_Gx / 250;
     data->Gy = (double)data->RAW_Gy / 250;
-    data->Gz = (float)data->RAW_Gz / 250;
+    data->Gz = (double)data->RAW_Gz / 250;
 
 }
