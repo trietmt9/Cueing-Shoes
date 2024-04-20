@@ -1,10 +1,10 @@
-15:35:42 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+20:10:09 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
 make -j16 all 
 arm-none-eabi-size  Cueing-Laser-IDE.elf 
    text	   data	    bss	    dec	    hex	filename
-  12396	     12	   1732	  14140	   373c	Cueing-Laser-IDE.elf
+  28752	    468	   2152	  31372	   7a8c	Cueing-Laser-IDE.elf
 Finished building: default.size.stdout
  
 
-15:35:43 Build Finished. 0 errors, 0 warnings. (took 185ms)
+20:10:09 Build Finished. 0 errors, 0 warnings. (took 194ms)
 

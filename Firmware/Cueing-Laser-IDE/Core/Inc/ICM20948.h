@@ -850,9 +850,30 @@ typedef enum
         I2C_ENABLE,
         I2C_DISABLE
 }i2c_dis_reg;
+
+/********************* Read Gyroscope and Accelerometer Data structure  *********************/
+
+typedef struct
+{
+        int16_t RAW_Gx;
+        int16_t RAW_Gy;
+        int16_t RAW_Gz;
+        int16_t RAW_Ax;
+        int16_t RAW_Ay;
+        int16_t RAW_Az;
+
+        double Gx;
+        double Gy;
+        double Gz;
+        double Ax;
+        double Ay;
+        double Az;
+        
+}gyro_accel_data_t;
+
 /********************* Gyroscope and Accelerometer control functions *********************/
 void WHO_AM_I_CHECK(SPI_HandleTypeDef *SPIx, uint8_t* who_am_i);
 void ICM20948_Init(SPI_HandleTypeDef *SPIx);
-float ICM20948_Read();
+double ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data);
 
 #endif

@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ICM20948.h"
+#include "stdint.h"
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,7 +49,8 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 uint8_t who_am_i;
 uint8_t reg;
-uint8_t data;
+gyro_accel_data_t data;
+char buffer[20];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -106,6 +109,10 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
+  ICM20948_Read(&hspi1, &data);
+  sprintf(buffer,"Raw: %.2f\n ",data.RAW_Ax);
+  HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 10);
+  HAL_Delay(100);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
