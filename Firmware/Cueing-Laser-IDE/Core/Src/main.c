@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ICM20948.h"
+#include "FIR_Filter.h"
 #include "stdint.h"
 #include "string.h"
 /* USER CODE END Includes */
@@ -50,8 +51,10 @@ UART_HandleTypeDef huart2;
 uint8_t who_am_i;
 uint8_t reg;
 gyro_accel_data_t data;
-int8_t ax, ay, az;
-int8_t gx, gy, gz;
+FIR_Filter low_pass_filter;
+float ax, ay, az;
+float gx, gy, gz;
+float filtered_ax;
 char buffer[30];
 char buffer[30];
 /* USER CODE END PV */
@@ -104,6 +107,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   
   ICM20948_Init(&hspi1);
+  Filter_init(&low_pass_filter);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -113,16 +117,20 @@ int main(void)
     /* USER CODE END WHILE */
 
   ICM20948_Read(&hspi1, &data);
+  Filter_update(&low_pass_filter, data.Ax);
   ax = data.Ax;
+  filtered_ax = low_pass_filter.output;
   ay = data.Ay;
   az = data.Az;
   gx = data.Gx;
   gy = data.Gy;
   gz = data.Gz;
-  sprintf(buffer,"Ax: %.2f, Ay: %.2f, Az: %.2f \n",data.Ax, data.Ay, data.Az);
+  sprintf(buffer,"Ax: %.2f, filtered Ax: %.2f\n",ax, filtered_ax);
   HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 10);
-  sprintf(buffer,"Gx: %.2f, Gy: %.2f, Gz: %.2f \n",data.Gx, data.Gy, data.Gz);
-  HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 10);
+  // sprintf(buffer,"Ax: %.2f, Ay: %.2f, Az: %.2f \n",data.Ax, data.Ay, data.Az);
+  // HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 10);
+  // sprintf(buffer,"Gx: %.2f, Gy: %.2f, Gz: %.2f \n",data.Gx, data.Gy, data.Gz);
+  // HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 10);
   HAL_Delay(100);
     /* USER CODE BEGIN 3 */
   }

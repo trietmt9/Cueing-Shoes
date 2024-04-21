@@ -92,31 +92,31 @@ void ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data)
     data->Gz = (double)data->RAW_Gz / 250;
 
 }
-void GYRO_BIAS_CANCELLATION(SPI_HandleTypeDef *SPIx)
-{
-    int16_t Gx_bias, Gy_bias, Gz_bias;
-    gyro_accel_data_t data; 
-    int32_t x_bias, y_bias, z_bias = 0;
-    for(int sample; sample < SAMPLE_RATE; sample++)
-    {
-        ICM20948_Read(SPIx, &data);
-        x_bias += (int32_t)data.Gx;
-        y_bias += (int32_t)data.Gy;
-        z_bias += (int32_t)data.Gz;
-        HAL_Delay(2);
-    }
-    Gx_bias = -(int16_t)(x_bias / 4000);
-    Gy_bias = -(int16_t)(y_bias / 4000);
-    Gz_bias = -(int16_t)(z_bias / 4000);
-    HAL_Delay(20);
-    SPI_WriteRegisters(BANK_2, SPIx, XG_OFFS_USER_H, (uint8_t*)(Gx_bias<<8), 1);
-    SPI_WriteRegisters(BANK_2, SPIx, XG_OFFS_USER_L, (uint8_t*) Gx_bias, 1);
-    SPI_WriteRegisters(BANK_2, SPIx, YG_OFFS_USER_H, (uint8_t*)(Gy_bias<<8), 1);
-    SPI_WriteRegisters(BANK_2, SPIx, YG_OFFS_USER_L, (uint8_t*) Gy_bias, 1);
-    SPI_WriteRegisters(BANK_2, SPIx, ZG_OFFS_USER_H, (uint8_t*)(Gz_bias<<8), 1);
-    SPI_WriteRegisters(BANK_2, SPIx, ZG_OFFS_USER_L, (uint8_t*) Gz_bias, 1);
+// void GYRO_BIAS_CANCELLATION(SPI_HandleTypeDef *SPIx)
+// {
+//     int16_t Gx_bias, Gy_bias, Gz_bias;
+//     gyro_accel_data_t data; 
+//     int32_t x_bias, y_bias, z_bias = 0;
+//     for(int sample; sample < SAMPLE_RATE; sample++)
+//     {
+//         ICM20948_Read(SPIx, &data);
+//         x_bias += (int32_t)data.Gx;
+//         y_bias += (int32_t)data.Gy;
+//         z_bias += (int32_t)data.Gz;
+//         HAL_Delay(2);
+//     }
+//     Gx_bias = -(int16_t)(x_bias / 4000);
+//     Gy_bias = -(int16_t)(y_bias / 4000);
+//     Gz_bias = -(int16_t)(z_bias / 4000);
+//     HAL_Delay(20);
+//     SPI_WriteRegisters(BANK_2, SPIx, XG_OFFS_USER_H, (uint8_t*)(Gx_bias<<8), 1);
+//     SPI_WriteRegisters(BANK_2, SPIx, XG_OFFS_USER_L, (uint8_t*) Gx_bias, 1);
+//     SPI_WriteRegisters(BANK_2, SPIx, YG_OFFS_USER_H, (uint8_t*)(Gy_bias<<8), 1);
+//     SPI_WriteRegisters(BANK_2, SPIx, YG_OFFS_USER_L, (uint8_t*) Gy_bias, 1);
+//     SPI_WriteRegisters(BANK_2, SPIx, ZG_OFFS_USER_H, (uint8_t*)(Gz_bias<<8), 1);
+//     SPI_WriteRegisters(BANK_2, SPIx, ZG_OFFS_USER_L, (uint8_t*) Gz_bias, 1);
 
-}
+// }
 
 void ICM20948_Init(SPI_HandleTypeDef *SPIx)
 {
@@ -148,12 +148,12 @@ void ICM20948_Init(SPI_HandleTypeDef *SPIx)
         SPI_WriteRegisters(BANK_2, SPIx, GYRO_SMPLRT_DIV, &temp_data, sizeof(temp_data));
 
         // Enable low-pass filter  
-        // Choose full scale rate at 500 dps with 3 decibels bandwith is 51.2Hz and Noise bandwith is 73.3Hz
+        // Choose full scale rate at 500 dps with 3 decibels band-with is 51.2Hz and Noise band-with is 73.3Hz
         temp_data = 0;
         temp_data |= (DLPF_ENABLED << GYRO_FCHOICE)|(GYRO_FS_500DPS << GYRO_FS_SEL)|(GYRO_11_6Hz_17_8Hz << GYRO_DLPFCFG);
         SPI_WriteRegisters(BANK_2, SPIx, GYRO_CONFIG_1, &temp_data, sizeof(temp_data));
 
-        // enable output data rate alignment 
+        // Enable output data rate alignment 
         temp_data = 0;
         temp_data |= (ODR_ALGIN_ON << ODR_ALIGN_EN_REG);
         SPI_WriteRegisters(BANK_2, SPIx, ODR_ALIGN_EN, &temp_data, sizeof(temp_data));
