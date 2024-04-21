@@ -1,27 +1,41 @@
-10:33:45 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+15:01:40 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
 make -j16 all 
+arm-none-eabi-gcc "../Core/Src/ICM20948.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ICM20948.d" -MT"Core/Src/ICM20948.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ICM20948.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/ICM20948.c: In function 'GYRO_BIAS_CANCELLATION':
+../Core/Src/ICM20948.c:113:54: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  113 |     SPI_WriteRegisters(BANK_2, SPIx, XG_OFFS_USER_L, (uint8_t*) Gx_bias, 1);
+      |                                                      ^
+../Core/Src/ICM20948.c:115:54: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  115 |     SPI_WriteRegisters(BANK_2, SPIx, YG_OFFS_USER_L, (uint8_t*) Gy_bias, 1);
+      |                                                      ^
+../Core/Src/ICM20948.c:117:54: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  117 |     SPI_WriteRegisters(BANK_2, SPIx, ZG_OFFS_USER_L, (uint8_t*) Gz_bias, 1);
+      |                                                      ^
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:113:41: warning: ', Az: ' directive writing 6 bytes into a region of size between 0 and 4 [-Wformat-overflow=]
-  113 |   sprintf(buffer,"Ax: %.2f, Ay: %.2f, Az: %.2f ",data.Ax, data.Ay, data.Az);
-      |                                     ~~~~^~
-../Core/Src/main.c:113:18: note: assuming directive output of 4 bytes
-  113 |   sprintf(buffer,"Ax: %.2f, Ay: %.2f, Az: %.2f ",data.Ax, data.Ay, data.Az);
-      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:113:3: note: 'sprintf' output between 27 and 957 bytes into a destination of size 20
-  113 |   sprintf(buffer,"Ax: %.2f, Ay: %.2f, Az: %.2f ",data.Ax, data.Ay, data.Az);
-      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:122:50: warning: 'sprintf' may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  122 |   sprintf(buffer,"Ax: %.2f, Ay: %.2f, Az: %.2f \n",data.Ax, data.Ay, data.Az);
+      |                                                  ^
+../Core/Src/main.c:122:3: note: 'sprintf' output between 28 and 958 bytes into a destination of size 30
+  122 |   sprintf(buffer,"Ax: %.2f, Ay: %.2f, Az: %.2f \n",data.Ax, data.Ay, data.Az);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:50: warning: 'sprintf' may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  124 |   sprintf(buffer,"Gx: %.2f, Gy: %.2f, Gz: %.2f \n",data.Gx, data.Gy, data.Gz);
+      |                                                  ^
+../Core/Src/main.c:124:3: note: 'sprintf' output between 28 and 958 bytes into a destination of size 30
+  124 |   sprintf(buffer,"Gx: %.2f, Gy: %.2f, Gz: %.2f \n",data.Gx, data.Gy, data.Gz);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Cueing-Laser-IDE.elf
  
 arm-none-eabi-size  Cueing-Laser-IDE.elf 
 arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
    text	   data	    bss	    dec	    hex	filename
-  28792	    468	   2152	  31412	   7ab4	Cueing-Laser-IDE.elf
+  29040	    468	   2176	  31684	   7bc4	Cueing-Laser-IDE.elf
 Finished building: default.size.stdout
  
 Finished building: Cueing-Laser-IDE.list
  
 
-10:33:45 Build Finished. 0 errors, 1 warnings. (took 642ms)
+15:01:41 Build Finished. 0 errors, 5 warnings. (took 698ms)
 

@@ -1,0 +1,53 @@
+Change Component Designator: OldDesignator=2 NewDesignator=R15
+Change Component Designator: OldDesignator=ADC NewDesignator=ADC1
+Change Component Designator: OldDesignator=Batterry NewDesignator=Batterry1
+Change Component Designator: OldDesignator=Boot NewDesignator=Boot1
+Change Component Designator: OldDesignator=Driver NewDesignator=Driver1
+Change Component Designator: OldDesignator=I2C NewDesignator=I1
+Change Component Designator: OldDesignator=Power Options NewDesignator=S1
+Change Component Designator: OldDesignator=Reset NewDesignator=Reset1
+Change Component Designator: OldDesignator=SWD/JTAG DEBUG NewDesignator=SWD/JTAG1
+Change Component Designator: OldDesignator=UART NewDesignator=UART1
+Change Component Description : Designator=U7 Old Description=Accelerometer, Gyroscope, Magnetometer, 9 Axis Sensor IÂ²C, SPI Output New Description=Accelerometer, Gyroscope, Magnetometer, 9 Axis Sensor IÂ²C, SPI Output 
+Change Component Description : Designator=Boot1 Old Description=Slide Switch, EG Series, SPDT, Non-Shorting, ON-ON, 200mA DC, 30VDC, PC Pin New Description=Slide Switch, EG Series, SPDT, Non-Shorting, ON-ON, 200mA DC, 30VDC, PC Pin | E-Switch EG1218
+Change Component Description : Designator=S1 Old Description=Slide Switch, EG Series, SPDT, Non-Shorting, ON-ON, 200mA DC, 30VDC, PC Pin New Description=Slide Switch, EG Series, SPDT, Non-Shorting, ON-ON, 200mA DC, 30VDC, PC Pin | E-Switch EG1218
+Added Component: Designator=JP2(JP 1x2 DT)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Added Component: Designator=JP3(JP 1x2 DT)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Added Component: Designator=JP4(JP 1x2 DT)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Added Component: Designator=JP5(JP 1x2 DT)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3.3V_STM32 Pin=JP2-1
+Added Pin To Net: NetName=GND Pin=JP2-2
+Added Pin To Net: NetName=+3.3V_STM32 Pin=JP3-1
+Added Pin To Net: NetName=GND Pin=JP3-2
+Added Pin To Net: NetName=+3.3V_STM32 Pin=JP4-1
+Added Pin To Net: NetName=GND Pin=JP4-2
+Added Pin To Net: NetName=+3.3V_STM32 Pin=JP5-1
+Added Pin To Net: NetName=GND Pin=JP5-2
+Added Member To Class: ClassName=STM32_MCU Member=Component JP2 JP 1x2 2.54
+Added Member To Class: ClassName=STM32_MCU Member=Component JP3 JP 1x2 2.54
+Added Member To Class: ClassName=STM32_MCU Member=Component JP4 JP 1x2 2.54
+Added Member To Class: ClassName=STM32_MCU Member=Component JP5 JP 1x2 2.54

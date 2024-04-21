@@ -7,6 +7,7 @@
 
 /*********************** GENERAL MACROS ***********************/
 #define SPI_TIMEOUT                             100
+#define SAMPLE_RATE                             1000
 /*********************** GYROSCOPE, ACCELEROMETER AND TEMPERATURE REGISTERS MACROS ***********************/
         /************* USER BANK 0 REGISTERS MAP *************/
 #define WHO_AM_I                                0x00U 

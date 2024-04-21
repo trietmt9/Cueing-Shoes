@@ -50,7 +50,10 @@ UART_HandleTypeDef huart2;
 uint8_t who_am_i;
 uint8_t reg;
 gyro_accel_data_t data;
-char buffer[20];
+int8_t ax, ay, az;
+int8_t gx, gy, gz;
+char buffer[30];
+char buffer[30];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -110,7 +113,15 @@ int main(void)
     /* USER CODE END WHILE */
 
   ICM20948_Read(&hspi1, &data);
-  sprintf(buffer,"Ax: %.2f, Ay: %.2f, Az: %.2f ",data.Ax, data.Ay, data.Az);
+  ax = data.Ax;
+  ay = data.Ay;
+  az = data.Az;
+  gx = data.Gx;
+  gy = data.Gy;
+  gz = data.Gz;
+  sprintf(buffer,"Ax: %.2f, Ay: %.2f, Az: %.2f \n",data.Ax, data.Ay, data.Az);
+  HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 10);
+  sprintf(buffer,"Gx: %.2f, Gy: %.2f, Gz: %.2f \n",data.Gx, data.Gy, data.Gz);
   HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 10);
   HAL_Delay(100);
     /* USER CODE BEGIN 3 */
