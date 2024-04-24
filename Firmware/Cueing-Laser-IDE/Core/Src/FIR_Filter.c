@@ -1,6 +1,6 @@
 #include "FIR_Filter.h"
 
-static float FIR_IMPULSE_RESPONSE[FIR_FILTER_LENGTH] = {0.3,0.2,0.2,0.3,0.37,0.4,0.27,0.32}; // Impulse response h(j)
+static float FIR_IMPULSE_RESPONSE[FIR_FILTER_LENGTH] = {0.3 ,0.2,0.1,0.09,0.08,0.07,0.09,0.08, 0.3, 0.2,0.1,0.09,0.08,0.07,0.09,0.08}; // Impulse response h(j)
 
 void Filter_init(FIR_Filter *fir)
 {

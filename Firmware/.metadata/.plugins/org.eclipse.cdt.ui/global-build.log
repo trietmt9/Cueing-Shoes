@@ -1,25 +1,102 @@
-21:05:12 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+13:36:39 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/ICM20948.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ICM20948.d" -MT"Core/Src/ICM20948.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ICM20948.o"
 arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Cueing-Laser-IDE.elf
  
 arm-none-eabi-size  Cueing-Laser-IDE.elf 
 arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
    text	   data	    bss	    dec	    hex	filename
-  29400	    468	   2328	  32196	   7dc4	Cueing-Laser-IDE.elf
+  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
 Finished building: default.size.stdout
  
 Finished building: Cueing-Laser-IDE.list
  
-21:05:16 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+14:09:26 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
 make -j16 all 
+arm-none-eabi-gcc "../Core/Src/ICM20948.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ICM20948.d" -MT"Core/Src/ICM20948.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ICM20948.o"
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
 arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
    text	   data	    bss	    dec	    hex	filename
-  29400	    468	   2328	  32196	   7dc4	Cueing-Laser-IDE.elf
+  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
 Finished building: default.size.stdout
  
-21:07:57 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+Finished building: Cueing-Laser-IDE.list
+ 
+14:17:06 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/FIR_Filter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FIR_Filter.d" -MT"Core/Src/FIR_Filter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FIR_Filter.o"
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+14:17:57 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/FIR_Filter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FIR_Filter.d" -MT"Core/Src/FIR_Filter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FIR_Filter.o"
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+14:18:45 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/FIR_Filter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FIR_Filter.d" -MT"Core/Src/FIR_Filter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FIR_Filter.o"
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+14:23:00 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/FIR_Filter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FIR_Filter.d" -MT"Core/Src/FIR_Filter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FIR_Filter.o"
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+14:24:51 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/FIR_Filter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FIR_Filter.d" -MT"Core/Src/FIR_Filter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FIR_Filter.o"
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+14:27:49 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/FIR_Filter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FIR_Filter.d" -MT"Core/Src/FIR_Filter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FIR_Filter.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
@@ -29,34 +106,12 @@ Finished building target: Cueing-Laser-IDE.elf
 arm-none-eabi-size  Cueing-Laser-IDE.elf 
 arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
    text	   data	    bss	    dec	    hex	filename
-  29416	    468	   2456	  32340	   7e54	Cueing-Laser-IDE.elf
+  29400	    532	   2264	  32196	   7dc4	Cueing-Laser-IDE.elf
 Finished building: default.size.stdout
  
 Finished building: Cueing-Laser-IDE.list
  
-21:08:09 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
-make -j16 all 
-arm-none-eabi-size  Cueing-Laser-IDE.elf 
-   text	   data	    bss	    dec	    hex	filename
-  29416	    468	   2456	  32340	   7e54	Cueing-Laser-IDE.elf
-Finished building: default.size.stdout
- 
-21:12:12 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/FIR_Filter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FIR_Filter.d" -MT"Core/Src/FIR_Filter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FIR_Filter.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Cueing-Laser-IDE.elf
- 
-arm-none-eabi-size  Cueing-Laser-IDE.elf 
-arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
-   text	   data	    bss	    dec	    hex	filename
-  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
-Finished building: default.size.stdout
- 
-Finished building: Cueing-Laser-IDE.list
- 
-21:14:28 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+14:32:09 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/FIR_Filter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FIR_Filter.d" -MT"Core/Src/FIR_Filter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FIR_Filter.o"
 arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -65,70 +120,7 @@ Finished building target: Cueing-Laser-IDE.elf
 arm-none-eabi-size  Cueing-Laser-IDE.elf 
 arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
    text	   data	    bss	    dec	    hex	filename
-  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
-Finished building: default.size.stdout
- 
-Finished building: Cueing-Laser-IDE.list
- 
-21:15:31 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/FIR_Filter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FIR_Filter.d" -MT"Core/Src/FIR_Filter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FIR_Filter.o"
-arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Cueing-Laser-IDE.elf
- 
-arm-none-eabi-size  Cueing-Laser-IDE.elf 
-arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
-   text	   data	    bss	    dec	    hex	filename
-  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
-Finished building: default.size.stdout
- 
-Finished building: Cueing-Laser-IDE.list
- 
-21:16:16 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/FIR_Filter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FIR_Filter.d" -MT"Core/Src/FIR_Filter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FIR_Filter.o"
-arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Cueing-Laser-IDE.elf
- 
-arm-none-eabi-size  Cueing-Laser-IDE.elf 
-arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
-   text	   data	    bss	    dec	    hex	filename
-  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
-Finished building: default.size.stdout
- 
-Finished building: Cueing-Laser-IDE.list
- 
-21:21:57 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/FIR_Filter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FIR_Filter.d" -MT"Core/Src/FIR_Filter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FIR_Filter.o"
-arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Cueing-Laser-IDE.elf
- 
-arm-none-eabi-size  Cueing-Laser-IDE.elf 
-arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
-   text	   data	    bss	    dec	    hex	filename
-  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
-Finished building: default.size.stdout
- 
-Finished building: Cueing-Laser-IDE.list
- 
-21:22:10 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
-make -j16 all 
-arm-none-eabi-size  Cueing-Laser-IDE.elf 
-   text	   data	    bss	    dec	    hex	filename
-  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
-Finished building: default.size.stdout
- 
-21:28:57 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
-make -j16 all 
-arm-none-eabi-gcc "../Core/Src/FIR_Filter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/FIR_Filter.d" -MT"Core/Src/FIR_Filter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FIR_Filter.o"
-arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Cueing-Laser-IDE.elf
- 
-arm-none-eabi-size  Cueing-Laser-IDE.elf 
-arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
-   text	   data	    bss	    dec	    hex	filename
-  29400	    500	   2232	  32132	   7d84	Cueing-Laser-IDE.elf
+  29400	    532	   2264	  32196	   7dc4	Cueing-Laser-IDE.elf
 Finished building: default.size.stdout
  
 Finished building: Cueing-Laser-IDE.list

@@ -1,0 +1,4 @@
+Change Component Designator: OldDesignator=Boot1 NewDesignator=Boot
+Change Component Designator: OldDesignator=Reset1 NewDesignator=Reset
+Change Component Designator: OldDesignator=SWD/JTAG1 NewDesignator=SWD/JTAG
+Change Net Name : Old Net Name=NetBoot1_1 New Net Name=NetBoot_1

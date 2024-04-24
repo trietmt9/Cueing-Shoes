@@ -1,44 +1,101 @@
 #include "ICM20948.h"
+
+/********************* Serial Peripheral Interface (SPI) abstract functions *********************/
+
 /********************* NCS pin control functions *********************/
+/**
+ * @brief Activates the chip select pin.
+ *
+ * This function Activates the chip select pin (GPIOA4) by setting it to GPIO_PIN_RESET.
+ */
 inline static void CS_ACTIVATE()
 {
     HAL_Delay(100);
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
 }
-inline static void CS_DEACTIVATE()
+
+/**
+ * @brief Deactivates the chip select pin.
+ *
+ * This function deactivates the chip select pin (GPIOA4) by setting it to GPIO_PIN_SET.
+ */
+inline static void CS_DEACTIVATE(void)
 {
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);
 }
 
-/********************* USER BANK SELECTION functions *********************/
-
-
-/********************* Read/Write registers functions *********************/
-void SPI_WriteByte(SPI_HandleTypeDef *SPIx, uint8_t Register, uint8_t* Data, uint8_t Data_length)
+/********************* Read/Write single byte functions *********************/
+/**
+ * @brief Writes a single byte of data to a register in the ICM20948.
+ *
+ * @param[in] SPIx The SPI handle to use for communication.
+ * @param[in] Register The register address to write to.
+ * @param[out] pData The pointer to the byte of data to be written.
+ * @param[in] Data_length The length of the data to write.
+ *
+ * This function writes a single byte of data to the specified register in the ICM20948.
+ * It first writes the register address with the most significant bit set to 1,
+ * then writes the data from the provided pointer.
+ *
+ * @note The SPI handle must be initialized and configured before calling this function.
+ */
+void SPI_WriteByte(SPI_HandleTypeDef *SPIx, uint8_t Register, uint8_t* pData, uint8_t Data_length)
 {
     CS_ACTIVATE();
     HAL_SPI_Transmit(SPIx, &Register, sizeof(Register), SPI_TIMEOUT);
-    HAL_SPI_Transmit(SPIx, Data, Data_length, SPI_TIMEOUT);
+    HAL_SPI_Transmit(SPIx, pData, Data_length, SPI_TIMEOUT);
     CS_DEACTIVATE();
 }
 
-void SPI_ReadByte(SPI_HandleTypeDef *SPIx,uint8_t reg, uint8_t* pData) 
+/**
+ * @brief Reads a single byte of data from a register in the ICM20948.
+ *
+ * @param[in] SPIx The SPI handle to use for communication.
+ * @param[in] reg The register address to read from.
+ * @param[out] pData The pointer to the byte of data to be read.
+ *
+ * This function reads a single byte of data from the specified register in the ICM20948.
+ * It first writes the register address with the most significant bit set to 1,
+ * then reads the data from the ICM20948.
+ *
+ * @note The SPI handle must be initialized and configured before calling this function.
+ */
+void SPI_ReadByte(SPI_HandleTypeDef *SPIx, uint8_t reg, uint8_t* pData)
 {
-	reg = reg | 0x80;
-	CS_ACTIVATE();
+    reg |= 0x80;
+    CS_ACTIVATE();
     HAL_SPI_Transmit(SPIx, &reg, 1, SPI_TIMEOUT);
     HAL_SPI_Receive(SPIx, pData, 1, SPI_TIMEOUT);
-	CS_DEACTIVATE();
+    CS_DEACTIVATE();
 }
 
+
+/********************* USER BANK SELECTION functions *********************/
+/**
+ * @brief Selects the user bank for the ICM20948.
+ * 
+ * @param user_bank The user bank to select.
+ * @param SPIx The SPI handle.
+ */
 void USER_BANK_SELECTION(SPI_HandleTypeDef *SPIx, uint8_t USER_BANK_SELECT)
-{   
+{
     uint8_t user_bank_options = 0; 
     user_bank_options = (USER_BANK_SELECT << USER_BANK); // select the user bank 
     CS_ACTIVATE();
     SPI_WriteByte(SPIx, REG_BANK_SEL, &user_bank_options, 1);
     CS_DEACTIVATE();
 }
+
+/********************* Read/Write registers functions *********************/
+/**
+ * @brief Writes a sequence of data to a register in the ICM20948.
+ * 
+ * @param user_bank The user bank to write to.
+ * @param SPIx The SPI handle.
+ * @param Register The register to write to.
+ * @param Data The data to write.
+ * @param Data_length The length of the data to write.
+ */
 void SPI_WriteRegisters(usrbank_sel user_bank, SPI_HandleTypeDef *SPIx, uint8_t Register, uint8_t* Data, uint8_t Data_length)
 {
     USER_BANK_SELECTION(SPIx, user_bank);
@@ -48,23 +105,43 @@ void SPI_WriteRegisters(usrbank_sel user_bank, SPI_HandleTypeDef *SPIx, uint8_t 
     CS_DEACTIVATE();
 }
 
-void SPI_ReadRegisters(usrbank_sel user_bank, SPI_HandleTypeDef *SPIx,uint8_t reg, uint8_t* pData, uint8_t Data_length) 
+/**
+ * @brief Reads a sequence of data from a register in the ICM20948.
+ *
+ * @param user_bank The user bank to read from.
+ * @param SPIx The SPI handle.
+ * @param Register The register to read from.
+ * @param pData The data to read into.
+ * @param Data_length The length of the data to read.
+ */
+void SPI_ReadRegisters(usrbank_sel user_bank, SPI_HandleTypeDef *SPIx, uint8_t reg, uint8_t* pData, uint8_t Data_length) 
 {
-	reg = reg | 0x80;
+    reg |= 0x80;
     USER_BANK_SELECTION(SPIx, user_bank);
-	CS_ACTIVATE();
+    CS_ACTIVATE();
     HAL_SPI_Transmit(SPIx, &reg, 1, SPI_TIMEOUT);
     HAL_SPI_Receive(SPIx, pData, Data_length, SPI_TIMEOUT);
-	CS_DEACTIVATE();
+    CS_DEACTIVATE();
 }
 
+/**
+ * @brief Reads the WHO_AM_I register of the ICM20948.
+ *
+ * @param[in] SPIx The SPI handle to use for communication.
+ * @param[out] who_am_i The pointer to the byte of data to be read.
+ */
 void WHO_AM_I_CHECK(SPI_HandleTypeDef *SPIx, uint8_t* who_am_i)
 {
     SPI_ReadRegisters(BANK_0, SPIx, WHO_AM_I, who_am_i, 1);
 }
 
 
-
+/**
+ * @brief Reads the accelerometer and gyroscope data from the ICM20948 sensor.
+ *
+ * @param[in] SPIx The SPI handle to use for communication.
+ * @param[out] data A pointer to a struct containing the accelerometer and gyroscope data.
+ */
 void ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data)
 {
     // Read accelerometer data
@@ -74,7 +151,7 @@ void ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data)
     data->RAW_Ay = (int16_t)(accel_data[2]<<8|accel_data[3]);
     data->RAW_Az = (int16_t)(accel_data[4]<<8|accel_data[5]);
 
-    // Convert accelerometer raw data to true accelerometer data 
+    // Convert accelerometer raw data to true accelerometer data
     data->Ax = (double)data->RAW_Ax / 8;
     data->Ay = (double)data->RAW_Ay / 8;
     data->Az = (double)data->RAW_Az / 8;
@@ -90,34 +167,13 @@ void ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data)
     data->Gx = (double)data->RAW_Gx / 250;
     data->Gy = (double)data->RAW_Gy / 250;
     data->Gz = (double)data->RAW_Gz / 250;
-
 }
-// void GYRO_BIAS_CANCELLATION(SPI_HandleTypeDef *SPIx)
-// {
-//     int16_t Gx_bias, Gy_bias, Gz_bias;
-//     gyro_accel_data_t data; 
-//     int32_t x_bias, y_bias, z_bias = 0;
-//     for(int sample; sample < SAMPLE_RATE; sample++)
-//     {
-//         ICM20948_Read(SPIx, &data);
-//         x_bias += (int32_t)data.Gx;
-//         y_bias += (int32_t)data.Gy;
-//         z_bias += (int32_t)data.Gz;
-//         HAL_Delay(2);
-//     }
-//     Gx_bias = -(int16_t)(x_bias / 4000);
-//     Gy_bias = -(int16_t)(y_bias / 4000);
-//     Gz_bias = -(int16_t)(z_bias / 4000);
-//     HAL_Delay(20);
-//     SPI_WriteRegisters(BANK_2, SPIx, XG_OFFS_USER_H, (uint8_t*)(Gx_bias<<8), 1);
-//     SPI_WriteRegisters(BANK_2, SPIx, XG_OFFS_USER_L, (uint8_t*) Gx_bias, 1);
-//     SPI_WriteRegisters(BANK_2, SPIx, YG_OFFS_USER_H, (uint8_t*)(Gy_bias<<8), 1);
-//     SPI_WriteRegisters(BANK_2, SPIx, YG_OFFS_USER_L, (uint8_t*) Gy_bias, 1);
-//     SPI_WriteRegisters(BANK_2, SPIx, ZG_OFFS_USER_H, (uint8_t*)(Gz_bias<<8), 1);
-//     SPI_WriteRegisters(BANK_2, SPIx, ZG_OFFS_USER_L, (uint8_t*) Gz_bias, 1);
 
-// }
-
+/**
+ * @brief Initial setting for the accelerometer and gyroscope data of the ICM20948 sensor.
+ *
+ * @param[in] SPIx The SPI handle to use for communication.
+ */
 void ICM20948_Init(SPI_HandleTypeDef *SPIx)
 {
     uint8_t temp_data = 0;

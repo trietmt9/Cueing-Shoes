@@ -1,0 +1,7 @@
+Removed Member From Class: ClassName=Driver Member=Driver
+Removed Member From Class: ClassName=STM32_MCU Member=I/O1
+Change Component Designator: OldDesignator=Driver NewDesignator=AMS3
+Change Component Designator: OldDesignator=Driver NewDesignator=Driver1
+Change Component Designator: OldDesignator=MCU NewDesignator=AMS1
+Change Net Name : Old Net Name=NetBatterry1_1 New Net Name=NetBatterry_1
+Added Member To Class: ClassName=Driver Member=Component Driver1 JP 2x4 2.54

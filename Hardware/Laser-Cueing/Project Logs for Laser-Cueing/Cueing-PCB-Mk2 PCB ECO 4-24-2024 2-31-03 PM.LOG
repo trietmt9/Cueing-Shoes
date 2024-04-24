@@ -1,0 +1,38 @@
+Removed Pin From Net: NetName=+3.3V_STM32 Pin=JP2-1
+Removed Pin From Net: NetName=GND Pin=JP2-2
+Removed Pin From Net: NetName=+3.3V_STM32 Pin=JP3-1
+Removed Pin From Net: NetName=GND Pin=JP3-2
+Removed Pin From Net: NetName=+3.3V_STM32 Pin=JP4-1
+Removed Pin From Net: NetName=GND Pin=JP4-2
+Removed Pin From Net: NetName=+3.3V_STM32 Pin=JP5-1
+Removed Pin From Net: NetName=GND Pin=JP5-2
+Removed Pin From Net: NetName=I2C_SCL Pin=U1-58
+Removed Pin From Net: NetName=I2C_SDA Pin=U1-59
+Change Component Footprint: Designator=JP2 Old Footprint=JP 1x2 DT New Footprint=JP 1x3 DT
+Change Component Footprint: Designator=JP3 Old Footprint=JP 1x2 DT New Footprint=JP 1x3 DT
+Change Component Footprint: Designator=JP4 Old Footprint=JP 1x2 DT New Footprint=JP 1x3 DT
+Change Component Footprint: Designator=JP5 Old Footprint=JP 1x2 DT New Footprint=JP 1x3 DT
+Change Component Comment : Designator=JP2 Old Comment=JP 1x2 2.54 New Comment=JP 1x3 2.54
+Change Component Comment : Designator=JP3 Old Comment=JP 1x2 2.54 New Comment=JP 1x3 2.54
+Change Component Comment : Designator=JP4 Old Comment=JP 1x2 2.54 New Comment=JP 1x3 2.54
+Change Component Comment : Designator=JP5 Old Comment=JP 1x2 2.54 New Comment=JP 1x3 2.54
+Added Pin To Net: NetName=GND Pin=JP2-1
+Added Pin To Net: NetName=+5V Pin=JP2-2
+Added Pin To Net: NetName=I2C_SCL Pin=JP2-3
+Added Pin To Net: NetName=GND Pin=JP3-1
+Added Pin To Net: NetName=+5V Pin=JP3-2
+Added Pin To Net: NetName=I2C_SDA Pin=JP3-3
+Added Pin To Net: NetName=GND Pin=JP4-1
+Added Pin To Net: NetName=+5V Pin=JP4-2
+Added Pin To Net: NetName=GND Pin=JP5-1
+Added Pin To Net: NetName=+5V Pin=JP5-2
+Added Pin To Net: NetName=I2C_SDA Pin=U1-58
+Added Pin To Net: NetName=I2C_SCL Pin=U1-59
+Change Net Name : Old Net Name=I2C_SCL New Net Name=PB7
+Change Net Name : Old Net Name=I2C_SDA New Net Name=PB6
+Added Pin To Net: NetName=PA9 Pin=JP4-3
+Added Pin To Net: NetName=PA9 Pin=U1-42
+Added Net: Name=PA9
+Added Pin To Net: NetName=PA10 Pin=JP5-3
+Added Pin To Net: NetName=PA10 Pin=U1-43
+Added Net: Name=PA10

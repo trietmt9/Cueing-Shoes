@@ -1,0 +1,97 @@
+Removed Pin From Net: NetName=PC9 Pin=I/O1-2
+Removed Pin From Net: NetName=PC8 Pin=I/O1-3
+Removed Pin From Net: NetName=PC7 Pin=I/O1-4
+Removed Pin From Net: NetName=PC6 Pin=I/O1-5
+Removed Pin From Net: NetName=PB7 Pin=JP2-3
+Removed Pin From Net: NetName=PB6 Pin=JP3-3
+Removed Pin From Net: NetName=PA9 Pin=JP4-3
+Removed Pin From Net: NetName=PA10 Pin=JP5-3
+Removed Pin From Net: NetName=PA1 Pin=JP11-1
+Removed Pin From Net: NetName=PA0 Pin=JP11-2
+Removed Pin From Net: NetName=PC1 Pin=JP11-3
+Removed Pin From Net: NetName=PC0 Pin=JP11-4
+Removed Pin From Net: NetName=PB9 Pin=JP11-5
+Removed Pin From Net: NetName=PB8 Pin=JP11-6
+Removed Pin From Net: NetName=PB5 Pin=JP11-7
+Removed Pin From Net: NetName=PC13 Pin=JP11-8
+Removed Pin From Net: NetName=NetL3_1 Pin=L3-1
+Removed Pin From Net: NetName=NetL3_2 Pin=L3-2
+Removed Pin From Net: NetName=PC10 Pin=R14-1
+Removed Pin From Net: NetName=PC11 Pin=R16-1
+Removed Pin From Net: NetName=PC12 Pin=R18-1
+Removed Pin From Net: NetName=PD2 Pin=R19-1
+Removed Pin From Net: NetName=NetL3_1 Pin=R30-1
+Removed Pin From Net: NetName=+3.3V_STM32 Pin=R30-2
+Removed Pin From Net: NetName=UART_Tx Pin=U1-16
+Removed Pin From Net: NetName=UART_Rx Pin=U1-17
+Removed Pin From Net: NetName=NetL3_2 Pin=U1-25
+Removed Pin From Net: NetName=NRF24_CSN Pin=U1-27
+Removed Pin From Net: NetName=NRF24_INT Pin=U1-28
+Removed Pin From Net: NetName=PA9 Pin=U1-42
+Removed Pin From Net: NetName=PA10 Pin=U1-43
+Removed Member From Class: ClassName=STM32_MCU Member=JP11
+Removed Member From Class: ClassName=STM32_MCU Member=L3
+Removed Member From Class: ClassName=STM32_MCU Member=R30
+Change Component Designator: OldDesignator=Reset NewDesignator=Reset1
+Added Component: Designator=I/O2(JP 2x5 DT)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH002686"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðôi Ð?c 2.54MM 2x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Added Component: Designator=LED3(LED-0805-Yellow)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH002329"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "LED 0805 Màu Vàng ( Yellow)"; VariantName = "[No Variations]"
+Added Component: Designator=R?(tro smd 0603)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH006334"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Tr? 0603 1% 1k"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetL3_2 Pin=I/O1-2
+Added Pin To Net: NetName=NetL3_1 Pin=I/O1-3
+Added Pin To Net: NetName=PB10 Pin=I/O1-4
+Added Pin To Net: NetName=GND Pin=I/O1-5
+Added Pin To Net: NetName=PA1 Pin=I/O2-1
+Added Pin To Net: NetName=PA0 Pin=I/O2-2
+Added Pin To Net: NetName=PC1 Pin=I/O2-3
+Added Pin To Net: NetName=PC0 Pin=I/O2-4
+Added Pin To Net: NetName=PC13 Pin=I/O2-5
+Added Pin To Net: NetName=PB5 Pin=I/O2-6
+Added Pin To Net: NetName=PD2 Pin=I/O2-7
+Added Pin To Net: NetName=PC12 Pin=I/O2-8
+Added Pin To Net: NetName=PC11 Pin=I/O2-9
+Added Pin To Net: NetName=PC10 Pin=I/O2-10
+Added Pin To Net: NetName=PB6 Pin=JP2-3
+Added Pin To Net: NetName=PB7 Pin=JP3-3
+Added Pin To Net: NetName=PB8 Pin=JP4-3
+Added Pin To Net: NetName=PB9 Pin=JP5-3
+Added Pin To Net: NetName=PA10 Pin=LED3-1
+Added Pin To Net: NetName=PA9 Pin=LED3-2
+Added Pin To Net: NetName=PC9 Pin=R14-1
+Added Pin To Net: NetName=PC8 Pin=R16-1
+Added Pin To Net: NetName=PC7 Pin=R18-1
+Added Pin To Net: NetName=PC6 Pin=R19-1
+Added Pin To Net: NetName=PA10 Pin=R?-1
+Added Pin To Net: NetName=+3.3V_STM32 Pin=R?-2
+Added Pin To Net: NetName=PA9 Pin=U1-16
+Added Pin To Net: NetName=NRF24_CSN Pin=U1-17
+Added Pin To Net: NetName=NRF24_INT Pin=U1-25
+Added Pin To Net: NetName=NetL3_2 Pin=U1-27
+Added Pin To Net: NetName=NetL3_1 Pin=U1-28
+Added Pin To Net: NetName=UART_Tx Pin=U1-42
+Added Pin To Net: NetName=UART_Rx Pin=U1-43
+Change Net Name : Old Net Name=NetL3_1 New Net Name=PB2
+Change Net Name : Old Net Name=NetL3_2 New Net Name=PB1
+Change Net Name : Old Net Name=NRF24_CS New Net Name=NRF24_CE
+Change Net Name : Old Net Name=PA9 New Net Name=NetLED3_2
+Change Net Name : Old Net Name=PA10 New Net Name=NetLED3_1
+Added Member To Class: ClassName=STM32_MCU Member=Component I/O2 JP 2x5 2.54
+Added Member To Class: ClassName=STM32_MCU Member=Component LED3 LED 0805
+Added Member To Class: ClassName=STM32_MCU Member=Component R? 1k

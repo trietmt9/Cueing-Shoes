@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=PA8 Pin=I/O1-1
+Removed Pin From Net: NetName=PB1 Pin=I/O1-2
+Removed Pin From Net: NetName=PB2 Pin=I/O1-3
+Removed Pin From Net: NetName=PB10 Pin=I/O1-4
+Removed Pin From Net: NetName=PB15 Pin=I/O1-5
+Removed Pin From Net: NetName=PB14 Pin=I/O1-6
+Removed Pin From Net: NetName=PB13 Pin=I/O1-7
+Removed Pin From Net: NetName=PB12 Pin=I/O1-8
+Added Pin To Net: NetName=PB1 Pin=I/O1-1
+Added Pin To Net: NetName=PB2 Pin=I/O1-2
+Added Pin To Net: NetName=PB10 Pin=I/O1-3
+Added Pin To Net: NetName=PB12 Pin=I/O1-4
+Added Pin To Net: NetName=PA8 Pin=I/O1-5
+Added Pin To Net: NetName=PB15 Pin=I/O1-6
+Added Pin To Net: NetName=PB14 Pin=I/O1-7
+Added Pin To Net: NetName=PB13 Pin=I/O1-8
+Added Member To Class: ClassName=PWR_SRC Member=Component AMS1 AMS1117-3.3V

@@ -1,0 +1,25 @@
+Removed Pin From Net: NetName=+V_Bat Pin=S1-1
+Removed Pin From Net: NetName=NetD1_A Pin=S1-2
+Removed Pin From Net: NetName=+V_USB Pin=S1-3
+Removed Member From Class: ClassName=PWR_SRC Member=S1
+Change Component Footprint: Designator=Boot Old Footprint=SW_EG1218 New Footprint=SW_OS102011MS2QN1
+Change Component Comment : Designator=Boot Old Comment=EG1218 New Comment=OS102011MS2QN1
+Change Component Designator: OldDesignator=R? NewDesignator=R9
+Change component parameters: Designator = "Boot" ("Boot"); Footprint = "SW_EG1218"; UniqueID = "\PCDEVAFH" ("\PCDEVAFH")
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "{'manufacturer': u'C&K'}"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "OS102011MS2QN1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=Power Options(SW_OS102011MS2QN1)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "{'manufacturer': u'C&K'}"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "OS102011MS2QN1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+V_Bat Pin=Power Options-1
+Added Pin To Net: NetName=NetD1_A Pin=Power Options-2
+Added Pin To Net: NetName=+V_USB Pin=Power Options-3
+Added Member To Class: ClassName=PWR_SRC Member=Component Power Options OS102011MS2QN1

@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=+5V Pin=C19-1
+Removed Pin From Net: NetName=+V_USB Pin=D1-A
+Removed Pin From Net: NetName=+5V Pin=S1-2
+Added Pin To Net: NetName=+V_USB Pin=C19-1
+Added Pin To Net: NetName=NetD1_A Pin=D1-A
+Added Pin To Net: NetName=NetD1_A Pin=S1-2
+Added Net: Name=NetD1_A

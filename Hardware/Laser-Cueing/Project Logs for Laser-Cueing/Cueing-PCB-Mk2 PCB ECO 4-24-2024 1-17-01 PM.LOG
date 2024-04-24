@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=+3.3V_STM32 Pin=-12
+Removed Pin From Net: NetName=GND Pin=-13
+Removed Pin From Net: NetName=GND Pin=-26
+Removed Pin From Net: NetName=+3.3V_STM32 Pin=-27
+Removed Pin From Net: NetName=UART_Tx Pin=-28
+Removed Pin From Net: NetName=UART_Rx Pin=-29
+Removed Member From Class: ClassName=Peripherial Member=
+Added Component: Designator=JDY-18(JP 1x5 CC)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH001265"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Cái 2.54MM 1x40P Cong"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=JDY-18-1
+Added Pin To Net: NetName=+3.3V_STM32 Pin=JDY-18-2
+Added Pin To Net: NetName=UART_Tx Pin=JDY-18-3
+Added Pin To Net: NetName=UART_Rx Pin=JDY-18-4
+Added Member To Class: ClassName=Peripherial Member=Component JDY-18 JP 1x5 2.54
