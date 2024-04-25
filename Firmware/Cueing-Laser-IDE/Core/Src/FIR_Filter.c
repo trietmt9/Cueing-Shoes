@@ -1,3 +1,10 @@
+/*
+*
+* FIR_Filter.c 
+* Created on: April/20/2024
+* Author: trietmt9 
+*
+*/
 #include "FIR_Filter.h"
 
 static float FIR_IMPULSE_RESPONSE[FIR_FILTER_LENGTH] = {0.3 ,0.2,0.1,0.09,0.08,0.07,0.09,0.08, 0.3, 0.2,0.1,0.09,0.08,0.07,0.09,0.08}; // Impulse response h(j)

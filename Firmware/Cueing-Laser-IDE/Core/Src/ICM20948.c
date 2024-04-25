@@ -1,3 +1,10 @@
+/*
+*
+* ICM20948.c 
+* Created on: April/15/2024
+* Author: trietmt9 
+*
+*/
 #include "ICM20948.h"
 
 /********************* Serial Peripheral Interface (SPI) abstract functions *********************/
@@ -82,7 +89,7 @@ void USER_BANK_SELECTION(SPI_HandleTypeDef *SPIx, uint8_t USER_BANK_SELECT)
     uint8_t user_bank_options = 0; 
     user_bank_options = (USER_BANK_SELECT << USER_BANK); // select the user bank 
     CS_ACTIVATE();
-    SPI_WriteByte(SPIx, REG_BANK_SEL, &user_bank_options, 1);
+    SPI_WriteByte(SPIx, ICM20948_REG_BANK_SEL, &user_bank_options, 1);
     CS_DEACTIVATE();
 }
 
@@ -132,7 +139,7 @@ void SPI_ReadRegisters(usrbank_sel user_bank, SPI_HandleTypeDef *SPIx, uint8_t r
  */
 void WHO_AM_I_CHECK(SPI_HandleTypeDef *SPIx, uint8_t* who_am_i)
 {
-    SPI_ReadRegisters(BANK_0, SPIx, WHO_AM_I, who_am_i, 1);
+    SPI_ReadRegisters(BANK_0, SPIx, ICM20948_REG_WHO_AM_I, who_am_i, 1);
 }
 
 
@@ -146,7 +153,7 @@ void ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data)
 {
     // Read accelerometer data
     uint8_t accel_data[6];
-    SPI_ReadRegisters(BANK_0, SPIx, ACCEL_XOUT_H, accel_data, 6);
+    SPI_ReadRegisters(BANK_0, SPIx, ICM20948_REG_ACCEL_XOUT_H, accel_data, 6);
     data->RAW_Ax = (int16_t)(accel_data[0]<<8|accel_data[1]);
     data->RAW_Ay = (int16_t)(accel_data[2]<<8|accel_data[3]);
     data->RAW_Az = (int16_t)(accel_data[4]<<8|accel_data[5]);
@@ -158,7 +165,7 @@ void ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data)
 
     // Read gyroscope data
     uint8_t gyro_data[6];
-    SPI_ReadRegisters(BANK_0, SPIx, GYRO_XOUT_H, gyro_data, 6);
+    SPI_ReadRegisters(BANK_0, SPIx, ICM20948_REG_GYRO_XOUT_H, gyro_data, 6);
     data->RAW_Gx = (int16_t)(gyro_data[0]<<8|gyro_data[1]);
     data->RAW_Gy = (int16_t)(gyro_data[2]<<8|gyro_data[3]);
     data->RAW_Gz = (int16_t)(gyro_data[4]<<8|gyro_data[5]);
@@ -183,51 +190,51 @@ void ICM20948_Init(SPI_HandleTypeDef *SPIx)
     {
         // Disable I2C slave module
         temp_data = (I2C_DISABLE<< I2C_IF_DIS);
-        SPI_WriteRegisters(BANK_0, SPIx, USER_CTRL, &temp_data, sizeof(temp_data));
+        SPI_WriteRegisters(BANK_0, SPIx, ICM20948_REG_USER_CTRL, &temp_data, sizeof(temp_data));
 
         // Reset the IMU, in this configuration temp will equal to 0xC1u 
         temp_data = 0; 
         temp_data |= (BEST_CLK_SRC << CLKSEL)|( SLEEP_EN << SLEEP)|(DEVICE_RST << DEVICE_RESET);
-        SPI_WriteRegisters(BANK_0, SPIx, PWR_MGMT_1, &temp_data, sizeof(temp_data));
+        SPI_WriteRegisters(BANK_0, SPIx, ICM20948_REG_PWR_MGMT_1, &temp_data, sizeof(temp_data));
 
         // Exit sleep mode
         temp_data = 0; 
         temp_data |= (BEST_CLK_SRC << CLKSEL);
-        SPI_WriteRegisters(BANK_0, SPIx, PWR_MGMT_1, &temp_data, sizeof(temp_data));
+        SPI_WriteRegisters(BANK_0, SPIx, ICM20948_REG_PWR_MGMT_1, &temp_data, sizeof(temp_data));
 
         // Bias cancellation
 
         // GYRO_BIAS_CANCELLATION(SPIx);
         // Choose sample rate divider at 100, temp = 0x64u
         temp_data = 0;
-        temp_data |= (GYRO_SMPLRT_DIV_100 << GYRO_SMPLRT_DIV_REG);
+        temp_data |= (GYRO_SMPLRT_DIV_100 << GYRO_SMPLRT_DIV);
         SPI_WriteRegisters(BANK_2, SPIx, GYRO_SMPLRT_DIV, &temp_data, sizeof(temp_data));
 
         // Enable low-pass filter  
         // Choose full scale rate at 500 dps with 3 decibels band-with is 51.2Hz and Noise band-with is 73.3Hz
         temp_data = 0;
         temp_data |= (DLPF_ENABLED << GYRO_FCHOICE)|(GYRO_FS_500DPS << GYRO_FS_SEL)|(GYRO_11_6Hz_17_8Hz << GYRO_DLPFCFG);
-        SPI_WriteRegisters(BANK_2, SPIx, GYRO_CONFIG_1, &temp_data, sizeof(temp_data));
+        SPI_WriteRegisters(BANK_2, SPIx, ICM20948_REG_GYRO_CONFIG_1, &temp_data, sizeof(temp_data));
 
         // Enable output data rate alignment 
         temp_data = 0;
-        temp_data |= (ODR_ALGIN_ON << ODR_ALIGN_EN_REG);
+        temp_data |= (ODR_ALGIN_ON << ODR_ALIGN_EN);
         SPI_WriteRegisters(BANK_2, SPIx, ODR_ALIGN_EN, &temp_data, sizeof(temp_data));
 
         // Select sample rate divider for Accelerometer 
         temp_data = 0;
-        temp_data |= (0<<ACCEL_SMPLRT_DIV_1_REG);
-        SPI_WriteRegisters(BANK_2, SPIx, ACCEL_SMPLRT_DIV_1, &temp_data, sizeof(temp_data));
+        temp_data |= (0<<ACCEL_SMPLRT_DIV_1);
+        SPI_WriteRegisters(BANK_2, SPIx, ICM20948_REG_ACCEL_SMPLRT_DIV_1, &temp_data, sizeof(temp_data));
 
         temp_data = 0;
-        temp_data |= (0x0A<<ACCEL_SMPLRT_DIV_2_REG);
-        SPI_WriteRegisters(BANK_2, SPIx, ACCEL_SMPLRT_DIV_2, &temp_data, sizeof(temp_data));
+        temp_data |= (0x0A<<ACCEL_SMPLRT_DIV_2);
+        SPI_WriteRegisters(BANK_2, SPIx, ICM20948_REG_ACCEL_SMPLRT_DIV_2, &temp_data, sizeof(temp_data));
 
         // Select accelerometer at 4g 
         // Enable low-pass filter 
         temp_data = 0;
         temp_data |= (DLPF_ENABLED << ACCEL_FCHOICE)|(ACCEL_FS_8G << ACCEL_FS_SEL)|(ACCEL_111_4Hz_136Hz << ACCEL_DLPFCFG);
-        SPI_WriteRegisters(BANK_2, SPIx, ACCEL_CONFIG_1, &temp_data, sizeof(temp_data));
+        SPI_WriteRegisters(BANK_2, SPIx, ICM20948_REG_ACCEL_CONFIG_1, &temp_data, sizeof(temp_data));
 
     }
 }

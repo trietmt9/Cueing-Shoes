@@ -10,134 +10,134 @@
 #define SAMPLE_RATE                             1000
 /*********************** GYROSCOPE, ACCELEROMETER AND TEMPERATURE REGISTERS MACROS ***********************/
         /************* USER BANK 0 REGISTERS MAP *************/
-#define WHO_AM_I                                0x00U 
-#define USER_CTRL                               0x03U
-#define LP_CONFIG                               0x05U
-#define PWR_MGMT_1                              0x06U
-#define PWR_MGMT_2                              0x07U
-#define INT_PIN_CFG                             0x0FU
-#define INT_ENABLE                              0x10U
-#define INT_ENABLE_1                            0x11U
-#define INT_ENABLE_2                            0x12U
-#define INT_ENABLE_3                            0x13U
-#define I2C_MST_STATUS                          0x17U
-#define INT_STATUS                              0x19U   
-#define INT_STATUS_1                            0x1AU
-#define INT_STATUS_2                            0x1BU
-#define INT_STATUS_3                            0x1CU
-#define DELAY_TIMEH                             0x28U
-#define DELAY_TIMEL                             0x29U
-#define ACCEL_XOUT_H                            0x2DU
-#define ACCEL_XOUT_L                            0x2EU
-#define ACCEL_YOUT_H                            0x2FU
-#define ACCEL_YOUT_L                            0x30U
-#define ACCEL_ZOUT_H                            0x31U
-#define ACCEL_ZOUT_L                            0x32U
-#define GYRO_XOUT_H                             0x33U
-#define GYRO_XOUT_L                             0x34U
-#define GYRO_YOUT_H                             0x35U
-#define GYRO_YOUT_L                             0x36U
-#define GYRO_ZOUT_H                             0x37U
-#define GYRO_ZOUT_L                             0x38U
-#define TEMP_OUT_H                              0x39U
-#define TEMP_OUT_L                              0x3AU
-#define EXTI_SLV_SENS_DATA_00                   0x3BU
-#define EXTI_SLV_SENS_DATA_01                   0x3CU
-#define EXTI_SLV_SENS_DATA_02                   0x3DU
-#define EXTI_SLV_SENS_DATA_03                   0x3EU
-#define EXTI_SLV_SENS_DATA_04                   0x3FU
-#define EXTI_SLV_SENS_DATA_05                   0x40U
-#define EXTI_SLV_SENS_DATA_06                   0x41U
-#define EXTI_SLV_SENS_DATA_07                   0x42U
-#define EXTI_SLV_SENS_DATA_08                   0x43U
-#define EXTI_SLV_SENS_DATA_09                   0x44U
-#define EXTI_SLV_SENS_DATA_10                   0x45U
-#define EXTI_SLV_SENS_DATA_11                   0x46U
-#define EXTI_SLV_SENS_DATA_12                   0x47U
-#define EXTI_SLV_SENS_DATA_13                   0x48U
-#define EXTI_SLV_SENS_DATA_14                   0x49U
-#define EXTI_SLV_SENS_DATA_15                   0x4AU
-#define EXTI_SLV_SENS_DATA_16                   0x4BU
-#define EXTI_SLV_SENS_DATA_17                   0x4CU
-#define EXTI_SLV_SENS_DATA_18                   0x4DU
-#define EXTI_SLV_SENS_DATA_19                   0x4EU
-#define EXTI_SLV_SENS_DATA_20                   0x4FU
-#define EXTI_SLV_SENS_DATA_21                   0x50U
-#define EXTI_SLV_SENS_DATA_22                   0x51U
-#define EXTI_SLV_SENS_DATA_23                   0x52U
-#define FIFO_EN_1                               0x66U
-#define FIFO_EN_2                               0x67U
-#define FIFO_RST                                0x68U
-#define FIFO_MODE                               0x69U
-#define FIFO_COUNTH                             0x70U
-#define FIFO_COUNTL                             0x71U
-#define FIFO_R_W                                0x72U
-#define DATA_RDY_STATUS                         0x74U
-#define FIFO_CFG                                0x76U
-#define REG_BANK_SEL                            0x7FU
+#define ICM20948_REG_WHO_AM_I                                0x00U 
+#define ICM20948_REG_USER_CTRL                               0x03U
+#define ICM20948_REG_LP_CONFIG                               0x05U
+#define ICM20948_REG_PWR_MGMT_1                              0x06U
+#define ICM20948_REG_PWR_MGMT_2                              0x07U
+#define ICM20948_REG_INT_PIN_CFG                             0x0FU
+#define ICM20948_REG_INT_ENABLE                              0x10U
+#define ICM20948_REG_INT_ENABLE_1                            0x11U
+#define ICM20948_REG_INT_ENABLE_2                            0x12U
+#define ICM20948_REG_INT_ENABLE_3                            0x13U
+#define ICM20948_REG_I2C_MST_STATUS                          0x17U
+#define ICM20948_REG_INT_STATUS                              0x19U   
+#define ICM20948_REG_INT_STATUS_1                            0x1AU
+#define ICM20948_REG_INT_STATUS_2                            0x1BU
+#define ICM20948_REG_INT_STATUS_3                            0x1CU
+#define ICM20948_REG_DELAY_TIMEH                             0x28U
+#define ICM20948_REG_DELAY_TIMEL                             0x29U
+#define ICM20948_REG_ACCEL_XOUT_H                            0x2DU
+#define ICM20948_REG_ACCEL_XOUT_L                            0x2EU
+#define ICM20948_REG_ACCEL_YOUT_H                            0x2FU
+#define ICM20948_REG_ACCEL_YOUT_L                            0x30U
+#define ICM20948_REG_ACCEL_ZOUT_H                            0x31U
+#define ICM20948_REG_ACCEL_ZOUT_L                            0x32U
+#define ICM20948_REG_GYRO_XOUT_H                             0x33U
+#define ICM20948_REG_GYRO_XOUT_L                             0x34U
+#define ICM20948_REG_GYRO_YOUT_H                             0x35U
+#define ICM20948_REG_GYRO_YOUT_L                             0x36U
+#define ICM20948_REG_GYRO_ZOUT_H                             0x37U
+#define ICM20948_REG_GYRO_ZOUT_L                             0x38U
+#define ICM20948_REG_TEMP_OUT_H                              0x39U
+#define ICM20948_REG_TEMP_OUT_L                              0x3AU
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_00                   0x3BU
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_01                   0x3CU
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_02                   0x3DU
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_03                   0x3EU
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_04                   0x3FU
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_05                   0x40U
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_06                   0x41U
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_07                   0x42U
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_08                   0x43U
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_09                   0x44U
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_10                   0x45U
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_11                   0x46U
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_12                   0x47U
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_13                   0x48U
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_14                   0x49U
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_15                   0x4AU
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_16                   0x4BU
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_17                   0x4CU
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_18                   0x4DU
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_19                   0x4EU
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_20                   0x4FU
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_21                   0x50U
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_22                   0x51U
+#define ICM20948_REG_EXTI_SLV_SENS_DATA_23                   0x52U
+#define ICM20948_REG_FIFO_EN_1                               0x66U
+#define ICM20948_REG_FIFO_EN_2                               0x67U
+#define ICM20948_REG_FIFO_RST                                0x68U
+#define ICM20948_REG_FIFO_MODE                               0x69U
+#define ICM20948_REG_FIFO_COUNTH                             0x70U
+#define ICM20948_REG_FIFO_COUNTL                             0x71U
+#define ICM20948_REG_FIFO_R_W                                0x72U
+#define ICM20948_REG_DATA_RDY_STATUS                         0x74U
+#define ICM20948_REG_FIFO_CFG                                0x76U
+#define ICM20948_REG_BANK_SEL                                0x7FU
 
 /************* USER BANK 1 REGISTERS MAP *************/
-#define SELF_TEST_X_GYRO                        0x02U
-#define SELF_TEST_Y_GYRO                        0x03U
-#define SELF_TEST_Z_GYRO                        0x04U
-#define SELF_TEST_X_ACCEL                       0x0EU
-#define SELF_TEST_Y_ACCEL                       0x0FU
-#define SELF_TEST_Z_ACCEL                       0x10U
-#define XA_OFFS_H                               0x14U
-#define XA_OFFS_L                               0x15U
-#define YA_OFFS_H                               0x17U
-#define YA_OFFS_L                               0x18U
-#define ZA_OFFS_H                               0x1AU
-#define ZA_OFFS_L                               0x1BU 
-#define TIMEBASE_CORRECTION_PLL                 0x28U
+#define ICM20948_REG_SELF_TEST_X_GYRO                        0x02U
+#define ICM20948_REG_SELF_TEST_Y_GYRO                        0x03U
+#define ICM20948_REG_SELF_TEST_Z_GYRO                        0x04U
+#define ICM20948_REG_SELF_TEST_X_ACCEL                       0x0EU
+#define ICM20948_REG_SELF_TEST_Y_ACCEL                       0x0FU
+#define ICM20948_REG_SELF_TEST_Z_ACCEL                       0x10U
+#define ICM20948_REG_XA_OFFS_H                               0x14U
+#define ICM20948_REG_XA_OFFS_L                               0x15U
+#define ICM20948_REG_YA_OFFS_H                               0x17U
+#define ICM20948_REG_YA_OFFS_L                               0x18U
+#define ICM20948_REG_ZA_OFFS_H                               0x1AU
+#define ICM20948_REG_ZA_OFFS_L                               0x1BU 
+#define ICM20948_REG_TIMEBASE_CORRECTION_PLL                 0x28U
 
 /************* USER BANK 2 REGISTERS MAP *************/
 
-#define GYRO_SMPLRT_DIV                         0x00U
-#define GYRO_CONFIG_1                           0x01U
-#define GYRO_CONFIG_2                           0x02U
-#define XG_OFFS_USRH                            0x03U
-#define XG_OFFS_USRL                            0x04U
-#define YG_OFFS_USRH                            0x05U
-#define YG_OFFS_USRL                            0x06U
-#define ZG_OFFS_USRH                            0x07U
-#define ZG_OFFS_USRL                            0x08U   
-#define ODR_ALIGN_EN                            0x09U
-#define ACCEL_SMPLRT_DIV_1                      0x10U
-#define ACCEL_SMPLRT_DIV_2                      0x11U
-#define ACC_INTEL_CTRL                          0x12U
-#define ACC_WOM_THR                             0x13U
-#define ACCEL_CONFIG_1                          0x14U
-#define ACCEL_CONFIG_2                          0x15U
-#define FSYNC_CONFIG                            0x52U
-#define TEMP_CONFIG                             0x53U
-#define MOD_CTRL_USR                            0x54U
+#define ICM20948_REG_GYRO_SMPLRT_DIV                         0x00U
+#define ICM20948_REG_GYRO_CONFIG_1                           0x01U
+#define ICM20948_REG_GYRO_CONFIG_2                           0x02U
+#define ICM20948_REG_XG_OFFS_USRH                            0x03U
+#define ICM20948_REG_XG_OFFS_USRL                            0x04U
+#define ICM20948_REG_YG_OFFS_USRH                            0x05U
+#define ICM20948_REG_YG_OFFS_USRL                            0x06U
+#define ICM20948_REG_ZG_OFFS_USRH                            0x07U
+#define ICM20948_REG_ZG_OFFS_USRL                            0x08U   
+#define ICM20948_REG_ODR_ALIGN_EN                            0x09U
+#define ICM20948_REG_ACCEL_SMPLRT_DIV_1                      0x10U
+#define ICM20948_REG_ACCEL_SMPLRT_DIV_2                      0x11U
+#define ICM20948_REG_ACC_INTEL_CTRL                          0x12U
+#define ICM20948_REG_ACC_WOM_THR                             0x13U
+#define ICM20948_REG_ACCEL_CONFIG_1                          0x14U
+#define ICM20948_REG_ACCEL_CONFIG_2                          0x15U
+#define ICM20948_REG_FSYNC_CONFIG                            0x52U
+#define ICM20948_REG_TEMP_CONFIG                             0x53U
+#define ICM20948_REG_MOD_CTRL_USR                            0x54U
 
 /************* USER BANK 3 REGISTERS MAP *************/
-#define I2C_MST_ODR_CONFIG                      0x00U
-#define I2C_MST_CTRL                            0x01U
-#define I2C_MST_DELAY_CTRL                      0x02U
-#define I2C_SLV0_ADDR                           0x03U
-#define I2C_SLV0_REG                            0x04U
-#define I2C_SLV0_CTRL                           0x05U
-#define I2C_SLV0_DO                             0x06U
-#define I2C_SLV1_ADDR                           0x07U
-#define I2C_SLV1_REG                            0x08U
-#define I2C_SLV1_CTRL                           0x09U
-#define I2C_SLV1_DO                             0x0AU
-#define I2C_SLV2_ADDR                           0x0BU
-#define I2C_SLV2_REG                            0x0CU
-#define I2C_SLV2_CTRL                           0x0DU
-#define I2C_SLV2_DO                             0x0EU
-#define I2C_SLV3_ADDR                           0x0FU
-#define I2C_SLV3_REG                            0x10U
-#define I2C_SLV3_CTRL                           0x11U
-#define I2C_SLV3_DO                             0x12U
-#define I2C_SLV4_ADDR                           0x13U
-#define I2C_SLV4_REG                            0x14U
-#define I2C_SLV4_CTRL                           0x15U
-#define I2C_SLV4_DO                             0x16U
-#define I2C_SLV4_DI                             0x17U 
+#define ICM20948_REG_I2C_MST_ODR_CONFIG                      0x00U
+#define ICM20948_REG_I2C_MST_CTRL                            0x01U
+#define ICM20948_REG_I2C_MST_DELAY_CTRL                      0x02U
+#define ICM20948_REG_I2C_SLV0_ADDR                           0x03U
+#define ICM20948_REG_I2C_SLV0_REG                            0x04U
+#define ICM20948_REG_I2C_SLV0_CTRL                           0x05U
+#define ICM20948_REG_I2C_SLV0_DO                             0x06U
+#define ICM20948_REG_I2C_SLV1_ADDR                           0x07U
+#define ICM20948_REG_I2C_SLV1_REG                            0x08U
+#define ICM20948_REG_I2C_SLV1_CTRL                           0x09U
+#define ICM20948_REG_I2C_SLV1_DO                             0x0AU
+#define ICM20948_REG_I2C_SLV2_ADDR                           0x0BU
+#define ICM20948_REG_I2C_SLV2_REG                            0x0CU
+#define ICM20948_REG_I2C_SLV2_CTRL                           0x0DU
+#define ICM20948_REG_I2C_SLV2_DO                             0x0EU
+#define ICM20948_REG_I2C_SLV3_ADDR                           0x0FU
+#define ICM20948_REG_I2C_SLV3_REG                            0x10U
+#define ICM20948_REG_I2C_SLV3_CTRL                           0x11U
+#define ICM20948_REG_I2C_SLV3_DO                             0x12U
+#define ICM20948_REG_I2C_SLV4_ADDR                           0x13U
+#define ICM20948_REG_I2C_SLV4_REG                            0x14U
+#define ICM20948_REG_I2C_SLV4_CTRL                           0x15U
+#define ICM20948_REG_I2C_SLV4_DO                             0x16U
+#define ICM20948_REG_I2C_SLV4_DI                             0x17U 
 
 
 /*============== USER BANK 0 DESCRIPTIONS MACROS ==============*/
@@ -242,7 +242,7 @@
 #define FIFO_RESET                              0x00U
 
             /*====== FIRST IN FIRST OUT MODE REGISTER ======*/
-#define FIFO_MODE_REG                           0x00U
+#define FIFO_MODE                               0x00U
 
             /*====== FIRST IN FIRST OUT COUNT HIGH REGISTER ======*/
 #define FIFO_CNT_H                              0x00U
@@ -251,7 +251,7 @@
 #define FIFO_CNT_L                              0x00U
 
             /*====== FIRST IN FIRST OUT READ WRITE REGISTER ======*/
-#define FIFO_R_W_REG                            0x00U
+#define FIFO_R_W                                0x00U
 
             /*====== INTERRUPT SOURCE REGISTER ======*/
 #define INT_SOURCE                              0x00U
@@ -260,7 +260,7 @@
 #define RAW_DATA_RDY                            0x00U   
 
             /*====== FIRST IN FIRST OUT CONFIG REGISTER ======*/
-#define FIFO_CFG_REG                            0x00U
+#define FIFO_CFG                                0x00U
 
             /*====== USER BANK SELECT REGISTER ======*/
 #define USER_BANK                               0x04U   
@@ -285,29 +285,29 @@
 #define ZA_ST_DATA                              0x00U
 
             /*====== ACCELEROMETER X AXIS OFFSET REGISTER ======*/
-#define XA_OFFS_H_REG                           0x00U
+#define XA_OFFS_H                               0x00U
 
             /*====== ACCELEROMETER X AXIS OFFSET REGISTER ======*/
-#define XA_OFFS_L_REG                           0x01U
+#define XA_OFFS_L                               0x01U
 
             /*====== ACCELEROMETER Y AXIS OFFSET REGISTER ======*/
-#define YA_OFFS_H_REG                           0x00U
+#define YA_OFFS_H                               0x00U
 
             /*====== ACCELEROMETER Y AXIS OFFSET REGISTER ======*/
-#define YA_OFFS_L_REG                           0x01U
+#define YA_OFFS_L                               0x01U
 
             /*====== ACCELEROMETER Z AXIS OFFSET REGISTER ======*/
-#define ZA_OFFS_H_REG                           0x00U
+#define ZA_OFFS_H                               0x00U
 
             /*====== ACCELEROMETER Z AXIS OFFSET REGISTER ======*/
-#define ZA_OFFS_L_REG                           0x01U
+#define ZA_OFFS_L                               0x01U
 
             /*====== TIME BASE CORRECTION PLL CONTROL REGISTER ======*/
 #define TBC_PLL                                 0x00U
 
 /*============== USER BANK 2 R/W DESCRIPTIONS MACROS ==============*/
             /*====== GYROSCOPE SAMPLE RATE DIVIDE REGISTER ======*/
-#define GYRO_SMPLRT_DIV_REG                      0x00U
+#define GYRO_SMPLRT_DIV                         0x00U
 
             /*====== GYROSCOPE CONFIGURATIONS 1 REGISTER ======*/           
 #define GYRO_FCHOICE                            0x00U
@@ -339,13 +339,13 @@
 #define ZG_OFFS_USER_L                          0x00U
 
             /*====== OUTPUT DATA RATE TIME ALIGNMENT ENABLE REGISTER ======*/
-#define ODR_ALIGN_EN_REG                        0x00U
+#define ODR_ALIGN_EN                            0x00U
 
             /*====== ACCELEROMETER SAMPLE RATE DIVIDE 1 REGISTER ======*/
-#define ACCEL_SMPLRT_DIV_1_REG                  0x00U
+#define ACCEL_SMPLRT_DIV_1                      0x00U
 
             /*====== ACCELEROMETER SAMPLE RATE DIVIDE 2 REGISTER ======*/
-#define ACCEL_SMPLRT_DIV_2_REG                  0x00U
+#define ACCEL_SMPLRT_DIV_2                      0x00U
 
             /*====== ACCELEROMETER INTEL CONTROL REGISTER ======*/
 #define ACCEL_INTEL_MODE_INT                    0x00U
@@ -361,9 +361,9 @@
 
             /*====== ACCELEROMETER CONFIGURATIONS 2 REGISTER ======*/
 #define DEC3_CFG                                0x00U
-#define AZ_ST_EN_REG                            0x02U
-#define AY_ST_EN_REG                            0x03U
-#define AX_ST_EN_REG                            0x04U
+#define AZ_ST_EN                                0x02U
+#define AY_ST_EN                                0x03U
+#define AX_ST_EN                                0x04U
 
             /*====== FREQUENCY SYNCHRONOUS CONFIGURATION REGISTER ======*/
 #define EXT_SYNC_SET                            0x00U
@@ -379,7 +379,7 @@
 
 /*============== USER BANK 3 R/W DESCRIPTIONS MACROS ==============*/
             /*====== I2C MASTER OUTPUT DATA RATE CONFIGURATION REGISTER ======*/
-#define I2C_MST_ODR_CONFIG_REG                   0x00U
+#define I2C_MST_ODR_CONFIG                      0x00U
 
             /*====== I2C MASTER CONTROL REGISTER ======*/
 #define I2C_MST_CLK                             0x00U
@@ -399,7 +399,7 @@
 #define I2C_SLV0_RNW                            0x07U
 
             /*====== I2C SLAVE 0 REGISTER READ AND WRITE REGISTER ======*/
-#define I2C_SLV0_REG_REG                        0x00U
+#define I2C_SLV0_REG                            0x00U
 
             /*====== I2C SLAVE 0 CONTROL REGISTER ======*/
 #define I2C_SLV0_LENG                           0x00U
@@ -409,14 +409,14 @@
 #define I2C_SLV0_EN                             0x07U
 
             /*====== I2C SLAVE 0 DIGITAL OUTPUT REGISTER ======*/
-#define I2C_SLV0_DO_REG                          0x00U
+#define I2C_SLV0_DO                             0x00U
 
             /*====== I2C SLAVE 1 ADDRESS REGISTER ======*/
 #define I2C_ID_1                                0x00U
 #define I2C_SLV1_RNW                            0x07U
 
             /*====== I2C SLAVE 1 REGISTER READ AND WRITE REGISTER ======*/
-#define I2C_SLV1_REG_REG                        0x00U
+#define I2C_SLV1_REG                            0x00U
 
             /*====== I2C SLAVE 1 CONTROL REGISTER ======*/
 #define I2C_SLV1_LENG                           0x00U
@@ -426,14 +426,14 @@
 #define I2C_SLV1_EN                             0x07U
 
             /*====== I2C SLAVE 1 DIGITAL OUTPUT REGISTER ======*/
-#define I2C_SLV1_DO_REG                          0x00U
+#define I2C_SLV1_DO                             0x00U
 
             /*====== I2C SLAVE 2 ADDRESS REGISTER ======*/
 #define I2C_ID_2                                0x00U
 #define I2C_SLV2_RNW                            0x07U
 
             /*====== I2C SLAVE 2 REGISTER READ AND WRITE REGISTER ======*/
-#define I2C_SLV2_REG_REG                        0x00U
+#define I2C_SLV2_REG                            0x00U
 
             /*====== I2C SLAVE 2 CONTROL REGISTER ======*/
 #define I2C_SLV2_LENG                           0x00U
@@ -443,14 +443,14 @@
 #define I2C_SLV2_EN                             0x07U
 
             /*====== I2C SLAVE 2 DIGITAL OUTPUT REGISTER ======*/
-#define I2C_SLV2_DO_REG                          0x00U
+#define I2C_SLV2_DO                             0x00U
 
             /*====== I2C SLAVE 3 ADDRESS REGISTER ======*/
 #define I2C_ID_3                                0x00U
 #define I2C_SLV3_RNW                            0x07U
 
             /*====== I2C SLAVE 3 REGISTER READ AND WRITE REGISTER ======*/
-#define I2C_SLV3_REG_REG                        0x00U
+#define I2C_SLV3_REG                            0x00U
 
             /*====== I2C SLAVE 3 CONTROL REGISTER ======*/
 #define I2C_SLV3_LENG                           0x00U
@@ -460,14 +460,14 @@
 #define I2C_SLV3_EN                             0x07U
 
             /*====== I2C SLAVE 3 DIGITAL OUTPUT REGISTER ======*/
-#define I2C_SLV3_DO_REG                          0x00U
+#define I2C_SLV3_DO                             0x00U
 
             /*====== I2C SLAVE 4 ADDRESS REGISTER ======*/
 #define I2C_ID_4                                0x00U
 #define I2C_SLV4_RNW                            0x07U
 
             /*====== I2C SLAVE 4 REGISTER READ AND WRITE REGISTER ======*/
-#define I2C_SLV4_REG_REG                        0x00U
+#define I2C_SLV4_REG                            0x00U
 
             /*====== I2C SLAVE 4 CONTROL REGISTER ======*/
 #define I2C_SLV4_DLY                            0x00U
@@ -476,10 +476,10 @@
 #define I2C_SLV4_EN                             0x07U
 
             /*====== I2C SLAVE 4 DIGITAL OUTPUT REGISTER ======*/
-#define I2C_SLV4_DO_REG                         0x00U
+#define I2C_SLV4_DO                             0x00U
 
             /*====== I2C SLAVE 4 DIGITAL INPUT REGISTER ======*/
-#define I2C_SLV4_DI_REG                         0x00U
+#define I2C_SLV4_DI                             0x00U
 
 /*********************** MAGNETOMETER REGISTERS MACROS ***********************/
 #define WIA                                     0x01U
