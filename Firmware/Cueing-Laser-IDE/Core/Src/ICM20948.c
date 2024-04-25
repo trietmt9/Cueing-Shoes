@@ -223,11 +223,7 @@ void ICM20948_Init(SPI_HandleTypeDef *SPIx)
 
         // Select sample rate divider for Accelerometer 
         temp_data = 0;
-        temp_data |= (0<<ACCEL_SMPLRT_DIV_1);
-        SPI_WriteRegisters(BANK_2, SPIx, ICM20948_REG_ACCEL_SMPLRT_DIV_1, &temp_data, sizeof(temp_data));
-
-        temp_data = 0;
-        temp_data |= (0x0A<<ACCEL_SMPLRT_DIV_2);
+        temp_data |= (ACCEL_SMPLRT_DIV_1000<<ACCEL_SMPLRT_DIV_2);
         SPI_WriteRegisters(BANK_2, SPIx, ICM20948_REG_ACCEL_SMPLRT_DIV_2, &temp_data, sizeof(temp_data));
 
         // Select accelerometer at 4g 
