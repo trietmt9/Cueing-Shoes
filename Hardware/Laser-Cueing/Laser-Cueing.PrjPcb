@@ -242,6 +242,10 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
+DocumentPath=Project Outputs for Laser-Cueing\Design Rule Check - Cueing-PCB-Mk2.html
+DItemRevisionGUID=
+
+[GeneratedDocument2]
 DocumentPath=Project Outputs for Laser-Cueing\Design Rule Check - Cueing-PCB.html
 DItemRevisionGUID=
 
