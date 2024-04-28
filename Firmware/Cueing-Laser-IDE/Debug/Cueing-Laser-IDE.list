@@ -1425,7 +1425,7 @@ float Filter_update(FIR_Filter* fir, float input)
 /********************* Serial Peripheral Interface (SPI) abstract functions *********************/
 
 /********************* NCS pin control functions *********************/
-inline static void CS_ACTIVATE()
+inline static void CS_SELECT()
 {
  8001080:	b580      	push	{r7, lr}
  8001082:	af00      	add	r7, sp, #0
@@ -1443,7 +1443,7 @@ inline static void CS_ACTIVATE()
  8001098:	40020000 	.word	0x40020000
 
 0800109c <CS_DEACTIVATE>:
-inline static void CS_DEACTIVATE()
+inline static void CS_UNSELECT()
 {
  800109c:	b580      	push	{r7, lr}
  800109e:	af00      	add	r7, sp, #0
@@ -1473,7 +1473,7 @@ void SPI_WriteByte(SPI_HandleTypeDef *SPIx, uint8_t Register, uint8_t* Data, uin
  80010c2:	72fb      	strb	r3, [r7, #11]
  80010c4:	4613      	mov	r3, r2
  80010c6:	72bb      	strb	r3, [r7, #10]
-    CS_ACTIVATE();
+    CS_SELECT();
  80010c8:	f7ff ffda 	bl	8001080 <CS_ACTIVATE>
     HAL_SPI_Transmit(SPIx, &Register, sizeof(Register), SPI_TIMEOUT);
  80010cc:	f107 010b 	add.w	r1, r7, #11
@@ -1488,7 +1488,7 @@ void SPI_WriteByte(SPI_HandleTypeDef *SPIx, uint8_t Register, uint8_t* Data, uin
  80010e0:	6879      	ldr	r1, [r7, #4]
  80010e2:	68f8      	ldr	r0, [r7, #12]
  80010e4:	f001 ff37 	bl	8002f56 <HAL_SPI_Transmit>
-    CS_DEACTIVATE();
+    CS_UNSELECT();
  80010e8:	f7ff ffd8 	bl	800109c <CS_DEACTIVATE>
 }
  80010ec:	bf00      	nop
@@ -1517,7 +1517,7 @@ void USER_BANK_SELECTION(SPI_HandleTypeDef *SPIx, uint8_t USER_BANK_SELECT)
  8001106:	011b      	lsls	r3, r3, #4
  8001108:	b2db      	uxtb	r3, r3
  800110a:	73fb      	strb	r3, [r7, #15]
-    CS_ACTIVATE();
+    CS_SELECT();
  800110c:	f7ff ffb8 	bl	8001080 <CS_ACTIVATE>
     SPI_WriteByte(SPIx, REG_BANK_SEL, &user_bank_options, 1);
  8001110:	f107 020f 	add.w	r2, r7, #15
@@ -1525,7 +1525,7 @@ void USER_BANK_SELECTION(SPI_HandleTypeDef *SPIx, uint8_t USER_BANK_SELECT)
  8001116:	217f      	movs	r1, #127	; 0x7f
  8001118:	6878      	ldr	r0, [r7, #4]
  800111a:	f7ff ffcb 	bl	80010b4 <SPI_WriteByte>
-    CS_DEACTIVATE();
+    CS_UNSELECT();
  800111e:	f7ff ffbd 	bl	800109c <CS_DEACTIVATE>
 }
  8001122:	bf00      	nop
@@ -1552,7 +1552,7 @@ void SPI_WriteRegisters(usrbank_sel user_bank, SPI_HandleTypeDef *SPIx, uint8_t 
  800113e:	4619      	mov	r1, r3
  8001140:	68b8      	ldr	r0, [r7, #8]
  8001142:	f7ff ffd7 	bl	80010f4 <USER_BANK_SELECTION>
-    CS_ACTIVATE();
+    CS_SELECT();
  8001146:	f7ff ff9b 	bl	8001080 <CS_ACTIVATE>
     HAL_SPI_Transmit(SPIx, &Register, sizeof(Register), SPI_TIMEOUT);
  800114a:	f107 010e 	add.w	r1, r7, #14
@@ -1567,7 +1567,7 @@ void SPI_WriteRegisters(usrbank_sel user_bank, SPI_HandleTypeDef *SPIx, uint8_t 
  800115e:	6879      	ldr	r1, [r7, #4]
  8001160:	68b8      	ldr	r0, [r7, #8]
  8001162:	f001 fef8 	bl	8002f56 <HAL_SPI_Transmit>
-    CS_DEACTIVATE();
+    CS_UNSELECT();
  8001166:	f7ff ff99 	bl	800109c <CS_DEACTIVATE>
 }
  800116a:	bf00      	nop
@@ -1598,7 +1598,7 @@ void SPI_ReadRegisters(usrbank_sel user_bank, SPI_HandleTypeDef *SPIx,uint8_t re
  8001190:	4619      	mov	r1, r3
  8001192:	68b8      	ldr	r0, [r7, #8]
  8001194:	f7ff ffae 	bl	80010f4 <USER_BANK_SELECTION>
-	CS_ACTIVATE();
+	CS_SELECT();
  8001198:	f7ff ff72 	bl	8001080 <CS_ACTIVATE>
     HAL_SPI_Transmit(SPIx, &reg, 1, SPI_TIMEOUT);
  800119c:	f107 010e 	add.w	r1, r7, #14
@@ -1613,7 +1613,7 @@ void SPI_ReadRegisters(usrbank_sel user_bank, SPI_HandleTypeDef *SPIx,uint8_t re
  80011b0:	6879      	ldr	r1, [r7, #4]
  80011b2:	68b8      	ldr	r0, [r7, #8]
  80011b4:	f002 f812 	bl	80031dc <HAL_SPI_Receive>
-	CS_DEACTIVATE();
+	CS_UNSELECT();
  80011b8:	f7ff ff70 	bl	800109c <CS_DEACTIVATE>
 }
  80011bc:	bf00      	nop

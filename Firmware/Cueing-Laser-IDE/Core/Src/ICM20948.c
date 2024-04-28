@@ -15,7 +15,7 @@
  *
  * This function Activates the chip select pin (GPIOA4) by setting it to GPIO_PIN_RESET.
  */
-inline static void CS_ACTIVATE()
+inline static void CS_SELECT()
 {
     HAL_Delay(100);
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
@@ -48,10 +48,10 @@ inline static void CS_DEACTIVATE(void)
  */
 void SPI_WriteByte(SPI_HandleTypeDef *SPIx, uint8_t Register, uint8_t* pData, uint8_t Data_length)
 {
-    CS_ACTIVATE();
+    CS_SELECT();
     HAL_SPI_Transmit(SPIx, &Register, sizeof(Register), SPI_TIMEOUT);
     HAL_SPI_Transmit(SPIx, pData, Data_length, SPI_TIMEOUT);
-    CS_DEACTIVATE();
+    CS_UNSELECT();
 }
 
 /**
@@ -70,10 +70,10 @@ void SPI_WriteByte(SPI_HandleTypeDef *SPIx, uint8_t Register, uint8_t* pData, ui
 void SPI_ReadByte(SPI_HandleTypeDef *SPIx, uint8_t reg, uint8_t* pData)
 {
     reg |= 0x80;
-    CS_ACTIVATE();
+    CS_SELECT();
     HAL_SPI_Transmit(SPIx, &reg, 1, SPI_TIMEOUT);
     HAL_SPI_Receive(SPIx, pData, 1, SPI_TIMEOUT);
-    CS_DEACTIVATE();
+    CS_UNSELECT();
 }
 
 
@@ -88,9 +88,9 @@ void USER_BANK_SELECTION(SPI_HandleTypeDef *SPIx, uint8_t USER_BANK_SELECT)
 {
     uint8_t user_bank_options = 0; 
     user_bank_options = (USER_BANK_SELECT << USER_BANK); // select the user bank 
-    CS_ACTIVATE();
+    CS_SELECT();
     SPI_WriteByte(SPIx, ICM20948_REG_BANK_SEL, &user_bank_options, 1);
-    CS_DEACTIVATE();
+    CS_UNSELECT();
 }
 
 /********************* Read/Write registers functions *********************/
@@ -106,10 +106,10 @@ void USER_BANK_SELECTION(SPI_HandleTypeDef *SPIx, uint8_t USER_BANK_SELECT)
 void SPI_WriteRegisters(usrbank_sel user_bank, SPI_HandleTypeDef *SPIx, uint8_t Register, uint8_t* Data, uint8_t Data_length)
 {
     USER_BANK_SELECTION(SPIx, user_bank);
-    CS_ACTIVATE();
+    CS_SELECT();
     HAL_SPI_Transmit(SPIx, &Register, sizeof(Register), SPI_TIMEOUT);
     HAL_SPI_Transmit(SPIx, Data, Data_length, SPI_TIMEOUT);
-    CS_DEACTIVATE();
+    CS_UNSELECT();
 }
 
 /**
@@ -125,10 +125,10 @@ void SPI_ReadRegisters(usrbank_sel user_bank, SPI_HandleTypeDef *SPIx, uint8_t r
 {
     reg |= 0x80;
     USER_BANK_SELECTION(SPIx, user_bank);
-    CS_ACTIVATE();
+    CS_SELECT();
     HAL_SPI_Transmit(SPIx, &reg, 1, SPI_TIMEOUT);
     HAL_SPI_Receive(SPIx, pData, Data_length, SPI_TIMEOUT);
-    CS_DEACTIVATE();
+    CS_UNSELECT();
 }
 
 /**
