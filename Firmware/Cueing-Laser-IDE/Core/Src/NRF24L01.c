@@ -112,51 +112,7 @@ static void NRF24_Reset(SPI_HandleTypeDef *SPIx)
     SPI_Write_Byte(SPIx, NRF24L01_REG_FEATURE,      0x00); 
 }
 
-void NRF24_Init(SPI_HandleTypeDef* SPIx, uint16_t MHz)
-{
-    uint8_t temp_data = 0;
-    NRF24_DISABLE();
-    NRF24_SELECT();
-    // Reset the NRF24L01 before setup
-    NRF24_Reset(SPIx);
 
-    // Select Channel 
-    NRF24_Select_Channel(SPIx, MHz);
-    // Disable CE pin before configuration
-    NRF24_UNSELECT(); 
-    NRF24_ENABLE();
-}
-void NRF24_Rx_setting(SPI_HandleTypeDef* SPIx, uint8_t pipe, uint8_t* Address)
-{
-    // Select pipe number 
-    switch(pipe)
-    {
-        case PIPE_0:
-            SPI_Write_MultiByte(SPIx, NRF24L01_REG_RX_ADDR_P0, Address, 5);
-            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P0, PAYLOAD_PIPE_32_BYTE);
-            break;
-        case PIPE_1:
-            SPI_Write_MultiByte(SPIx, NRF24L01_REG_RX_ADDR_P1, Address, 5);
-            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P1, PAYLOAD_PIPE_32_BYTE);
-            break;
-        case PIPE_2:
-            SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P2, Address);
-            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P2, PAYLOAD_PIPE_32_BYTE);
-            break;
-        case PIPE_3:
-            SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P3, Address);
-            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P3, PAYLOAD_PIPE_32_BYTE);
-            break; 
-        case PIPE_4:
-            SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P4, Address);
-            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P4, PAYLOAD_PIPE_32_BYTE);
-            break;
-        case PIPE_5:
-            SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P5, Address);
-            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P5, PAYLOAD_PIPE_32_BYTE);
-            break;
-    }
-}
 void NRF24_Select_Channel(SPI_HandleTypeDef* SPIx, uint8_t channel)
 {  // Select channel
     SPI_Write_Byte(SPIx, NRF24L01_REG_RF_CH, channel);
@@ -165,77 +121,259 @@ void NRF24_Select_Channel(SPI_HandleTypeDef* SPIx, uint8_t channel)
 void NRF24_Rx_Mode(SPI_HandleTypeDef* SPIx, uint8_t *Address, uint8_t pipe)
 {
     uint8_t temp_data = 0;
+    uint8_t pipe_select = 0;
+    // Select Rx mode 
     temp_data |= (RECEIVE << PRIM_RX);
     NRF24_DISABLE();
-    SPI_Write_Byte(SPIx, NRF24L01_REG_CONFIG, temp_data);
+    SPI_Write_Byte(SPIx, NRF24L01_REG_CONFIG, &temp_data);
+
+    // Setup Address width 
+    temp_data = 0;
+    temp_data |= (sizeof(Address) << AW);
+    SPI_Write_Byte(SPIx, NRF24L01_REG_SETUP_AW, &temp_data);
+
+    // Select pipe number and maximum pipe width 
+    switch(pipe)
+    {
+        case PIPE_0:
+            
+            // Enable Pipe 0 
+            pipe_select = 0;
+            pipe_select |= ( 1 << ERX_P0);
+            SPI_Write_Byte(SPIx, NRF24L01_REG_EN_RXADDR, &pipe_select);
+
+            // Set Pipe 0 address
+            SPI_Write_MultiByte(SPIx, NRF24L01_REG_RX_ADDR_P0, Address, 5);
+
+            // Set Pipe 0 width
+            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P0, PAYLOAD_PIPE_32_BYTE);
+            break;
+        case PIPE_1:
+            // Enable Pipe 1
+            pipe_select = 0;
+            pipe_select |= ( 1 << ERX_P1);
+            SPI_Write_Byte(SPIx, NRF24L01_REG_EN_RXADDR, &pipe_select);
+
+            // Set Pipe 1 address
+            SPI_Write_MultiByte(SPIx, NRF24L01_REG_RX_ADDR_P1, Address, 5);
+
+            // Set Pipe 1 width
+            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P1, PAYLOAD_PIPE_32_BYTE);
+            break;
+        case PIPE_2:
+            // Enable Pipe 2
+            pipe_select = 0;
+            pipe_select |= ( 1 << ERX_P2);
+            SPI_Write_Byte(SPIx, NRF24L01_REG_EN_RXADDR, &pipe_select);
+
+            // Set Pipe 2 address
+            SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P2, Address);
+
+            // Set Pipe 2 width
+            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P2, PAYLOAD_PIPE_32_BYTE);
+            break;
+        case PIPE_3:
+            // Enable Pipe 3
+            pipe_select = 0;
+            pipe_select |= ( 1 << ERX_P3);
+            SPI_Write_Byte(SPIx, NRF24L01_REG_EN_RXADDR, &pipe_select);
+
+            // Set Pipe 3 address
+            SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P3, Address);
+
+            // Set Pipe 3 width
+            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P3, PAYLOAD_PIPE_32_BYTE);
+            break; 
+        case PIPE_4:
+            // Enable Pipe 4
+            pipe_select = 0;
+            pipe_select |= ( 1 << ERX_P4);
+            SPI_Write_Byte(SPIx, NRF24L01_REG_EN_RXADDR, &pipe_select);
+            
+            // Set Pipe 4 address
+            SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P4, Address);
+            
+            // Set Pipe 4 width
+            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P4, PAYLOAD_PIPE_32_BYTE);
+            break;
+        case PIPE_5:
+            // Enable Pipe 5
+            pipe_select = 0;
+            pipe_select |= ( 1 << ERX_P5);
+            SPI_Write_Byte(SPIx, NRF24L01_REG_EN_RXADDR, &pipe_select);
+            
+            // Set Pipe 5 address
+            SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P5, Address);
+            
+            // Set Pipe 5 width
+            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P5, PAYLOAD_PIPE_32_BYTE);
+            break;
+    }
+
     NRF24_ENABLE();
 }
+/**
+ * @brief  NRF24L01 Set Transmit Mode function
+ * @param[in]  SPIx: SPI handle
+ * @param[in]  Address: Pointer to the buffer containing the transmit address
+ * @return  None
+ * @details  This function sets the transmit mode and powers up the NRF24L01 module.
+ *  It writes the specified transmit address to the TX_ADDR register of the NRF24L01 module.
+ *  After setting the transmit mode, the function enables the CE pin to activate the module.
+ */
 void NRF24_Tx_Mode(SPI_HandleTypeDef *SPIx, uint8_t *Address)
 {
     uint8_t temp_data = 0;
-    // Disable CE pin
+
+    /*
+     * @brief  Disable CE pin
+     */
     NRF24_DISABLE();
-    // Write 5 Bytes to address
+
+    /*
+     * @brief  Write 5 Bytes to address
+     */
     SPI_Write_MultiByte(SPIx, NRF24L01_REG_TX_ADDR, Address, 5);
 
-    // Set transmit mode and power up the module
-    temp_data |= (POWER_UP << PWR_UP)|(TRANSMIT << PRIM_RX);
+    /*
+     * @brief  Set transmit mode and power up the module
+     */
+    temp_data |= (TRANSMIT << PRIM_RX);
     SPI_Write_Byte(SPIx, NRF24L01_REG_CONFIG, temp_data);
 
-    // Enable CE pin
+    /*
+     * @brief  Enable CE pin
+     */
     NRF24_ENABLE();
 }
 
+/**
+ * @brief  NRF24L01 Check Data Available function
+ * @param[in]  SPIx: SPI handle
+ * @param[in]  pipe: Pipe number
+ * @return  None
+ * @details  This function checks if there is data available in the specified pipe of the NRF24L01 module.
+ *  If data is available, it clears the RX_DR flag in the STATUS register.
+ */
 void NRF24_CHECK_DATA_AVAILABLE(SPI_HandleTypeDef *SPIx,uint8_t pipe)
 {
     uint8_t status;
+    /*
+     * @brief  Reads the status register of the NRF24L01 module
+     */
     SPI_Read_Byte(SPIx, NRF24L01_REG_STATUS, &status);
-    if((status & (1 << RX_DR)) && (status & (pipe << 1)))
-    {
+    /*
+     * @brief  Checks if there is data available in the specified pipe
+     */
+    if((status & (1 << RX_DR)) && (status & (pipe << 1))){
         SPI_Write_Byte(SPIx, NRF24L01_REG_STATUS,(1 << RX_DR));
     }
 }
 
+/**
+ * @brief  NRF24L01 Set Power Amplifier Level function
+ * @param[in]  SPIx: SPI handle
+ * @param[in]  PA_Level: Power Amplifier level
+ * @return  None
+ * @details  This function sets the Power Amplifier level of the NRF24L01 module.
+ *  The PA_Level parameter is a bitmask that specifies the desired power amplifier level.
+ *  The function writes the specified PA_Level to the RF_SETUP register of the NRF24L01 module.
+ */
+void NRF24_SET_PA(SPI_HandleTypeDef* SPIx, PA_LEVEL PA_Level)
+{
+    uint8_t temp_data = 0;
+    temp_data = (PA_Level << RF_PWR);
+    SPI_Write_Byte(SPIx, NRF24L01_REG_RF_SETUP, &temp_data);
+}
+
+void NRF24_Init(SPI_HandleTypeDef* SPIx, uint16_t MHz, PA_LEVEL PA_level)
+{
+    uint8_t temp_data = 0;
+    NRF24_DISABLE();
+    NRF24_SELECT();
+
+    // Reset the NRF24L01 before setup
+    NRF24_Reset(SPIx);
+
+    // FLush Rx Packet 
+    NRF24_FLUSH_RX(SPIx);
+
+    // FLush Tx Packet
+    NRF24_FLUSH_TX(SPIx);
+
+    // Start setting configuration 
+    temp_data |= (POWER_UP << PWR_UP);
+    SPI_Write_Byte(SPIx, NRF24L01_REG_CONFIG, &temp_data);
+
+    // Set Power Amplifier level
+    NRF24_SET_PA(SPIx, PA_level);
+
+    // Select Channel 
+    NRF24_Select_Channel(SPIx, MHz);
+
+    // Enable CE pin after configuration
+    NRF24_UNSELECT(); 
+    NRF24_ENABLE();
+}
+/**
+ * @brief  NRF24L01 Transmit function
+ * @param[in]  SPIx: SPI handle
+ * @param[in,out]  pData: Pointer to the buffer to store transmitted data
+ * @return  None
+ * @details  This function sends the payload command to the NRF24L01 module and transmits data from the specified buffer.
+ *  After transmitting the data, it checks the FIFO status and flushes the TX FIFO if necessary.
+ *  @note  The NRF24L01 module must be initialized and configured before using this function.
+ */
 void NRF24_Transmit(SPI_HandleTypeDef *SPIx, uint8_t *pData)
 {
     uint8_t cmd = 0;
+
+    // Send payload command
     cmd = NRF24L01_CMD_W_TX_PAYLOAD;
-        // Send payload command 
     NRF24L01_SEND_CMD(SPIx, &cmd);
 
     NRF24_SELECT();
-    // Send payload 
-    HAL_SPI_Transmit(SPIx, pData, 32, SPI_TIMEOUT);
+
+    // Send payload
+    HAL_SPI_Transmit(SPIx, pData, PAYLOAD_PIPE_32_BYTE, SPI_TIMEOUT);
 
     NRF24_UNSELECT();
     HAL_Delay(1);
 
-    // check FIFO status 
+    // check FIFO status
     uint8_t fifo_status;
     SPI_Read_Byte(SPIx, NRF24L01_REG_FIFO_STATUS, &fifo_status);
-    
-    if((fifo_status & (TX_FIFO_EMPTY << TX_EMPTY)) && (!(fifo_status & (1 << 3))))  
+
+    if((fifo_status & (TX_FIFO_EMPTY << TX_EMPTY)) && (!(fifo_status & (1 << 3))))
     {
-        cmd = NRF24L01_CMD_FLUSH_TX;   
-        NRF24L01_SEND_CMD(SPIx, &cmd); 
+        cmd = NRF24L01_CMD_FLUSH_TX;
+        NRF24L01_SEND_CMD(SPIx, &cmd);
     }
 }
 
+/**
+ * @brief  NRF24L01 Receive function
+ * @param[in]  SPIx: SPI handle
+ * @param[in,out]  pData: Pointer to the buffer to store received data
+ * @return  None
+ * @details  This function sends the received command to the NRF24L01 module and receives data from the specified pipe.
+ *  After receiving the data, it flushes the RX FIFO.
+ *  @note  The NRF24L01 module must be initialized and configured before using this function.
+ */
 void NRF24_Receive(SPI_HandleTypeDef *SPIx, uint8_t *pData)
 {
-    uint8_t cmd = 0; 
-    
+    uint8_t cmd = 0;
+
     // Send Received command
     cmd = NRF24L01_CMD_R_RX_PAYLOAD;
     NRF24L01_SEND_CMD(SPIx, &cmd);
 
-    // Received data from pipe 
+    // Received data from pipe
     NRF24_SELECT();
-    HAL_SPI_Receive(SPIx, pData, 32, SPI_TIMEOUT);
+    HAL_SPI_Receive(SPIx, pData, PAYLOAD_PIPE_32_BYTE, SPI_TIMEOUT);
     NRF24_UNSELECT();
     HAL_Delay(1);
 
-    cmd = NRF24L01_CMD_FLUSH_RX; 
+    cmd = NRF24L01_CMD_FLUSH_RX;
     NRF24L01_SEND_CMD(SPIx, &cmd);
-
 }
