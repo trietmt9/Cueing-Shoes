@@ -235,13 +235,13 @@ enum
     PAYLOAD_PIPE_32_BYTE,
 };
 
-enum 
+typedef enum 
 {
     RF_PWR_MIN,
     RF_PWR_LOW,
     RF_PWR_HIGH,
     RF_PWR_MAX,
-};
+}PA_LEVEL;
 /*********************** NRF24L01 CONTROL FUNCTIONS ***********************/
 void NRF24_Init(SPI_HandleTypeDef* SPIx, uint16_t MHz);
 void NRF24_SET_PA(SPI_HandleTypeDef* SPIx, uint8_t PA_Level);

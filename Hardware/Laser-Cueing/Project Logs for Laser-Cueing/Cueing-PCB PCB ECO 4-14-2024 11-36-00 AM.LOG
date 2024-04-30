@@ -1,9 +1,0 @@
-Change Component Footprint: Designator=Y1 Old Footprint=XTAL_ECS-080-20-5PX-TR New Footprint=XTAL_ECS-80-20-20A-TR
-Change Component Comment : Designator=Y1 Old Comment=ECS-080-20-5PX-TR New Comment=ECS-80-20-20A-TR
-Change component parameters: Designator = "Y1" ("Y1"); Footprint = "XTAL_ECS-080-20-5PX-TR"; UniqueID = "\ILSSOIOS" ("\ILSSOIOS")
-Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
-Change component parameters (AddParameter): Name = "MF"; Value = "{'manufacturer': u'ECS Inc.'}"; VariantName = "[No Variations]"
-Change component parameters (AddParameter): Name = "MP"; Value = "ECS-80-20-20A-TR"; VariantName = "[No Variations]"
-Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
-Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
-Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"

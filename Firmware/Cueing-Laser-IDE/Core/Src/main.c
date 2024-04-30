@@ -25,6 +25,7 @@
 #include "FIR_Filter.h"
 #include "stdint.h"
 #include "string.h"
+#include "NRF24L01.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -63,7 +64,8 @@ float ax, ay, az;
 float gx, gy, gz;
 float filtered_ax;
 char buffer[30];
-char buffer[30];
+char Tx_Address[6] = {0xEE, 0xFE, 0xAE,0xBE, 0xCE, 0xDE};
+char Tx_Data[] = "Hello, world!";
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -121,8 +123,11 @@ int main(void)
   MX_USB_OTG_FS_HCD_Init();
   /* USER CODE BEGIN 2 */
   
-  ICM20948_Init(&hspi1);
-  Filter_init(&low_pass_filter);
+  // ICM20948_Init(&hspi1);
+  // Filter_init(&low_pass_filter);
+  NRF24_Init(&hspi1, 2400);  
+  NRF24_SET_PA(&hspi1, RF_PWR_MIN);
+  NRF24_Tx_Mode(&hspi1, &Tx_Address);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -130,7 +135,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    NRF24_Transmit(&hspi1, &Tx_Data);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

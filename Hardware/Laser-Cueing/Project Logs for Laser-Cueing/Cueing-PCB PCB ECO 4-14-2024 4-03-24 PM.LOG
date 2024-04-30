@@ -1,7 +1,0 @@
-Change Component Designator: OldDesignator=Batterry NewDesignator=Batterry1
-Change Component Designator: OldDesignator=D2 NewDesignator=D5
-Change Component Designator: OldDesignator=Driver NewDesignator=Driver1
-Change Component Designator: OldDesignator=I2C NewDesignator=I1
-Change Component Designator: OldDesignator=Reset NewDesignator=Reset1
-Change Component Designator: OldDesignator=UART NewDesignator=UART1
-Added Member To Class: ClassName=PWR_SRC Member=Component D5 1N5819HW-7-F

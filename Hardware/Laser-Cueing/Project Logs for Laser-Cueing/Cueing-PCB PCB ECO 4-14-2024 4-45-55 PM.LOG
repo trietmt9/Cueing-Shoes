@@ -1,6 +1,0 @@
-Added Pin To Net: NetName=USB_M Pin=U1-44
-Added Pin To Net: NetName=USB_P Pin=U1-45
-Change Net Name : Old Net Name=USB_M New Net Name=USB_N
-Added Differential Pair: Name=USB
-Added Member To Class: ClassName=PWR_SRC Member=Component D2 LESD5D5.0CT1G
-Added Class: Name=diff90

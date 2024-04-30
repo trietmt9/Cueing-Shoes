@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\pc\Documents\Lazer-light-cueing\Hardware\Laser-Cueing\Cueing-PCB-Mk2_4302024.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=cueing-pcb-mk2_4302024-roundholes.txt|DrillLayers=gtl,g1,g2,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=cueing-pcb-mk2_4302024-slotholes.txt|DrillLayers=gtl,g1,g2,gbl

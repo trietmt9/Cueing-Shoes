@@ -1,4 +1,0 @@
-Removed Pin From Net: NetName=I2C_SCL Pin=I2C-1
-Removed Pin From Net: NetName=I2C_SDA Pin=I2C-2
-Removed Member From Class: ClassName=STM32_MCU Member=I2C
-Change Component Designator: OldDesignator=SWD/JTAG NewDesignator=SWD/JTAG1
