@@ -1,10 +1,13 @@
-Output: Generates pick and place files
-Type  : Pick Place
-From  : Variant [[No Variations]] of Project [Laser-Cueing.PrjPcb]
-   Generated File[Pick Place for Cueing-PCB-Mk2_4302024.txt]
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Laser-Cueing.PrjPcb]
+   Generated File[Cueing-PCB-Mk2_4302024-RoundHoles.TXT]
+   Generated File[Cueing-PCB-Mk2_4302024-SlotHoles.TXT]
+   Generated File[Cueing-PCB-Mk2_4302024.LDP]
+   Generated File[Cueing-PCB-Mk2_4302024.DRR]
 
 
-Files Generated   : 1
+Files Generated   : 4
 Documents Printed : 0
 
-Finished Output Generation At 2:53:22 PM On 4/30/2024
+Finished Output Generation At 7:07:55 PM On 4/30/2024

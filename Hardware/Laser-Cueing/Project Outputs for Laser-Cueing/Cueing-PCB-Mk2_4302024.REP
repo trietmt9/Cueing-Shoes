@@ -2,34 +2,6 @@
 FileName = Cueing-PCB-Mk2_4302024.GBR
 AutoAperture = True
 *************************************************************
-Generating : Drill Drawing
-      File : Cueing-PCB-Mk2_4302024.GD1
-
-    Adding Drill Pair : Top Layer-Bottom Layer
-
-    Adding Layer      : Drill Drawing
-
-
-Used DCodes :
-    D119
-    D120
-    D121
-*************************************************************
-
-*************************************************************
-Generating : Drill Guide
-      File : Cueing-PCB-Mk2_4302024.GG1
-
-    Adding Drill Pair : Top Layer-Bottom Layer
-
-    Adding Layer      : Drill Guide
-
-
-Used DCodes :
-    D119
-*************************************************************
-
-*************************************************************
 Generating : Mechanical 15
       File : Cueing-PCB-Mk2_4302024.GM15
 
@@ -39,6 +11,60 @@ Generating : Mechanical 15
 Used DCodes :
     D117
     D118
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 13
+      File : Cueing-PCB-Mk2_4302024.GM13
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D11
+    D12
+    D16
+    D17
+    D18
+    D116
+    D117
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : Cueing-PCB-Mk2_4302024.GM1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : Cueing-PCB-Mk2_4302024.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : Cueing-PCB-Mk2_4302024.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D14
+    D15
+    D16
+    D115
 *************************************************************
 
 *************************************************************
@@ -63,78 +89,42 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Top Pad Master
-      File : Cueing-PCB-Mk2_4302024.GPT
+Generating : Bottom Solder
+      File : Cueing-PCB-Mk2_4302024.GBS
 
-    Adding Layer      : Top Layer
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D20
-    D21
-    D22
-    D23
-    D24
-    D25
-    D26
-    D27
-    D28
-    D29
-    D30
-    D31
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D39
-    D40
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
+    D47
+    D48
+    D59
+    D69
+    D70
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
     D81
-    D93
-    D94
-    D95
-    D96
-    D97
-    D98
-    D99
-    D100
-    D101
-    D102
-    D103
-    D104
-    D105
-    D106
-    D107
-*************************************************************
-
-*************************************************************
-Generating : Int1 (GND)
-      File : Cueing-PCB-Mk2_4302024.G1
-
-    Adding Layer      : Int1 (GND)
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D93
-    D94
-    D96
-    D98
-    D101
-    D104
-    D107
-    D108
+    D82
+    D83
+    D84
+    D85
+    D86
+    D87
+    D88
+    D89
+    D90
+    D112
+    D113
+    D114
 *************************************************************
 
 *************************************************************
@@ -193,106 +183,6 @@ Used DCodes :
     D88
     D89
     D90
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : Cueing-PCB-Mk2_4302024.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D11
-    D12
-    D20
-    D21
-    D32
-    D42
-    D43
-    D81
-    D91
-    D93
-    D94
-    D95
-    D96
-    D97
-    D98
-    D99
-    D100
-    D101
-    D102
-    D103
-    D104
-    D105
-    D106
-    D107
-    D108
-    D109
-    D110
-    D111
-*************************************************************
-
-*************************************************************
-Generating : Top Layer
-      File : Cueing-PCB-Mk2_4302024.GTL
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D11
-    D12
-    D20
-    D21
-    D22
-    D23
-    D24
-    D25
-    D26
-    D27
-    D28
-    D29
-    D30
-    D31
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D39
-    D40
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D81
-    D91
-    D92
-    D93
-    D94
-    D95
-    D96
-    D97
-    D98
-    D99
-    D100
-    D101
-    D102
-    D103
-    D104
-    D105
-    D106
-    D107
-    D108
 *************************************************************
 
 *************************************************************
@@ -357,55 +247,58 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Solder
-      File : Cueing-PCB-Mk2_4302024.GBS
+Generating : Top Pad Master
+      File : Cueing-PCB-Mk2_4302024.GPT
 
-    Adding Layer      : Bottom Solder
-
-    Adding Layer      : Bottom Layer
+    Adding Layer      : Top Layer
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D47
-    D48
-    D59
-    D69
-    D70
-    D74
-    D75
-    D76
-    D77
-    D78
-    D79
-    D80
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
     D81
-    D82
-    D83
-    D84
-    D85
-    D86
-    D87
-    D88
-    D89
-    D90
-    D112
-    D113
-    D114
-*************************************************************
-
-*************************************************************
-Generating : Int2 (PWR)
-      File : Cueing-PCB-Mk2_4302024.G2
-
-    Adding Layer      : Int2 (PWR)
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D108
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+    D103
+    D104
+    D105
+    D106
+    D107
 *************************************************************
 
 *************************************************************
@@ -445,56 +338,163 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Mechanical 13
-      File : Cueing-PCB-Mk2_4302024.GM13
+Generating : Bottom Layer
+      File : Cueing-PCB-Mk2_4302024.GBL
 
-    Adding Layer      : Mechanical 13
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
 
 
 Used DCodes :
     D11
     D12
-    D16
-    D17
-    D18
-    D116
-    D117
+    D20
+    D21
+    D32
+    D42
+    D43
+    D81
+    D91
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+    D103
+    D104
+    D105
+    D106
+    D107
+    D108
+    D109
+    D110
+    D111
 *************************************************************
 
 *************************************************************
-Generating : Mechanical 1
-      File : Cueing-PCB-Mk2_4302024.GM1
+Generating : Drill Drawing
+      File : Cueing-PCB-Mk2_4302024.GD1
 
-    Adding Layer      : Mechanical 1
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Drawing
 
 
 Used DCodes :
+    D119
+    D120
+    D121
 *************************************************************
 
 *************************************************************
-Generating : Keep-Out Layer
-      File : Cueing-PCB-Mk2_4302024.GKO
+Generating : Drill Guide
+      File : Cueing-PCB-Mk2_4302024.GG1
 
-    Adding Layer      : Keep-Out Layer
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Guide
 
 
 Used DCodes :
-    D18
+    D119
 *************************************************************
 
 *************************************************************
-Generating : Bottom Overlay
-      File : Cueing-PCB-Mk2_4302024.GBO
+Generating : Int2 (PWR)
+      File : Cueing-PCB-Mk2_4302024.G2
 
-    Adding Layer      : Bottom Overlay
+    Adding Layer      : Int2 (PWR)
+
+    Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D10
+    D108
+*************************************************************
+
+*************************************************************
+Generating : Int1 (GND)
+      File : Cueing-PCB-Mk2_4302024.G1
+
+    Adding Layer      : Int1 (GND)
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D93
+    D94
+    D96
+    D98
+    D101
+    D104
+    D107
+    D108
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : Cueing-PCB-Mk2_4302024.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
     D11
-    D14
-    D15
-    D16
-    D115
+    D12
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D81
+    D91
+    D92
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+    D103
+    D104
+    D105
+    D106
+    D107
+    D108
 *************************************************************
 
