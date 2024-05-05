@@ -135,7 +135,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    NRF24_Transmit(&hspi1, &Tx_Data);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -162,7 +162,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 4;
+  RCC_OscInitStruct.PLL.PLLM = 8;
   RCC_OscInitStruct.PLL.PLLN = 72;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 3;
@@ -503,30 +503,30 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2|NRF24_CS_Pin|IMU_CS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2|NRF24_CE_Pin|NRF24_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(NRF24_CE_GPIO_Port, NRF24_CE_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(IMU_INT_GPIO_Port, IMU_INT_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PA2 NRF24_CS_Pin IMU_CS_Pin */
-  GPIO_InitStruct.Pin = GPIO_PIN_2|NRF24_CS_Pin|IMU_CS_Pin;
+  /*Configure GPIO pins : PA2 NRF24_CE_Pin NRF24_CS_Pin */
+  GPIO_InitStruct.Pin = GPIO_PIN_2|NRF24_CE_Pin|NRF24_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : IMU_INT_Pin NRF24_INT_Pin */
-  GPIO_InitStruct.Pin = IMU_INT_Pin|NRF24_INT_Pin;
+  /*Configure GPIO pins : NRF24_INT_Pin IMU_CS_Pin */
+  GPIO_InitStruct.Pin = NRF24_INT_Pin|IMU_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : NRF24_CE_Pin */
-  GPIO_InitStruct.Pin = NRF24_CE_Pin;
+  /*Configure GPIO pin : IMU_INT_Pin */
+  GPIO_InitStruct.Pin = IMU_INT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(NRF24_CE_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(IMU_INT_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

@@ -3,6 +3,7 @@
     "files.associations": {
         "icm20948.h": "c",
         "stdint.h": "c",
-        "stm32f446xx.h": "c"
+        "stm32f446xx.h": "c",
+        "main.h": "c"
     }
 }

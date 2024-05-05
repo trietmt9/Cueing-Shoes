@@ -7,26 +7,26 @@
 */
 
 #include "NRF24L01.h"
-
+#include "main.h"
 /*********************** SPI ABSTRACTS LAYER FUNCTIONS ***********************/
 inline static void NRF24_SELECT(void)
 {
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(NRF24_CS_GPIO_Port, NRF24_CS_Pin, GPIO_PIN_RESET);
 }
 
 inline static void NRF24_UNSELECT(void)
 {
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(NRF24_CS_GPIO_Port, NRF24_CS_Pin, GPIO_PIN_SET);
 }
 
 inline static void NRF24_ENABLE(void)
 {
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(NRF24_CE_GPIO_Port, NRF24_CE_Pin, GPIO_PIN_SET);
 }
 
 inline static void NRF24_DISABLE(void)
 {
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(NRF24_CE_GPIO_Port, NRF24_CE_Pin, GPIO_PIN_RESET);
 }
 
 void SPI_Write_Byte(SPI_HandleTypeDef *SPIx, uint8_t reg, uint8_t Data)

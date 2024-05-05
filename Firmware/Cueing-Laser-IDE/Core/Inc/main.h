@@ -59,16 +59,16 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define NRF24_CS_Pin GPIO_PIN_3
+#define NRF24_CE_Pin GPIO_PIN_3
+#define NRF24_CE_GPIO_Port GPIOA
+#define NRF24_CS_Pin GPIO_PIN_4
 #define NRF24_CS_GPIO_Port GPIOA
-#define IMU_CS_Pin GPIO_PIN_4
-#define IMU_CS_GPIO_Port GPIOA
-#define IMU_INT_Pin GPIO_PIN_4
-#define IMU_INT_GPIO_Port GPIOC
-#define NRF24_INT_Pin GPIO_PIN_5
+#define NRF24_INT_Pin GPIO_PIN_4
 #define NRF24_INT_GPIO_Port GPIOC
-#define NRF24_CE_Pin GPIO_PIN_0
-#define NRF24_CE_GPIO_Port GPIOB
+#define IMU_CS_Pin GPIO_PIN_5
+#define IMU_CS_GPIO_Port GPIOC
+#define IMU_INT_Pin GPIO_PIN_0
+#define IMU_INT_GPIO_Port GPIOB
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14

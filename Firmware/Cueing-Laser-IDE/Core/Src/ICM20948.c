@@ -6,7 +6,7 @@
 *
 */
 #include "ICM20948.h"
-
+#include "main.h"
 /********************* Serial Peripheral Interface (SPI) abstract functions *********************/
 
 /********************* NCS pin control functions *********************/
@@ -18,7 +18,7 @@
 inline static void CS_SELECT()
 {
     HAL_Delay(100);
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(IMU_CS_GPIO_Port, IMU_CS_Pin, GPIO_PIN_RESET);
 }
 
 /**
@@ -28,7 +28,7 @@ inline static void CS_SELECT()
  */
 inline static void CS_DEACTIVATE(void)
 {
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(IMU_CS_GPIO_Port, IMU_CS_Pin, GPIO_PIN_SET);
 }
 
 /********************* Read/Write single byte functions *********************/
