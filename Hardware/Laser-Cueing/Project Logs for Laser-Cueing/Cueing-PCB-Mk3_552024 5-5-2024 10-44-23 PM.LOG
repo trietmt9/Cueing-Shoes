@@ -1,0 +1,47 @@
+Removed Pin From Net: NetName=NetD7_2 Pin=R11-1
+Removed Pin From Net: NetName=NetD8_1 Pin=R12-1
+Removed Pin From Net: NetName=NetD8_1 Pin=U8-3
+Added Component: Designator=D4(J1-0603)
+Add component (AddParameter): Name = "Code_JEDEC"; Value = "DO-214-AB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDocument"; Value = "Sep-1996"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SMC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=D5(J1-0603)
+Add component (AddParameter): Name = "Code_JEDEC"; Value = "DO-214-AB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDocument"; Value = "Sep-1996"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SMC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=D7(J1-0603)
+Add component (AddParameter): Name = "Code_JEDEC"; Value = "DO-214-AB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDocument"; Value = "Sep-1996"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SMC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=USB(MINI_USB)
+Added Pin To Net: NetName=NetD4_1 Pin=D4-1
+Added Pin To Net: NetName=NetD4_2 Pin=D4-2
+Added Pin To Net: NetName=+3.3V_STM32 Pin=D5-1
+Added Pin To Net: NetName=NetD8_1 Pin=D5-2
+Added Pin To Net: NetName=NetD7_2 Pin=D7-1
+Added Pin To Net: NetName=GND Pin=D7-2
+Added Pin To Net: NetName=NetD8_1 Pin=R11-1
+Added Pin To Net: NetName=NetD7_2 Pin=R12-1
+Added Pin To Net: NetName=NetD7_2 Pin=U8-3
+Added Pin To Net: NetName=+V_USB Pin=USB-1
+Added Pin To Net: NetName=USB_N Pin=USB-2
+Added Pin To Net: NetName=USB_P Pin=USB-3
+Added Pin To Net: NetName=GND Pin=USB-5
+Change Net Name : Old Net Name=NetD7_2 New Net Name=NetD7_1
+Change Net Name : Old Net Name=NetD8_1 New Net Name=NetD5_2
+Added Member To Class: ClassName=STM32_MCU Member=Component D4 LED GREEN
+Added Member To Class: ClassName=PWR_SRC Member=Component D5 LED GREEN
+Added Member To Class: ClassName=PWR_SRC Member=Component D7 LED RED
+Added Member To Class: ClassName=PWR_SRC Member=Component USB MINI_USB_Grounding

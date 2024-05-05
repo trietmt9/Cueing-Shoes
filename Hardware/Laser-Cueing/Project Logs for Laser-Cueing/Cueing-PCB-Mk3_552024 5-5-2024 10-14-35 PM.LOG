@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=IMU_MISO Pin=JP7-1
+Removed Pin From Net: NetName=IMU_SCK Pin=JP8-1
+Removed Pin From Net: NetName=IMU_MOSI Pin=JP9-1
+Removed Pin From Net: NetName=S_IMU_CS Pin=JP10-1
+Removed Member From Class: ClassName=Peripherial Member=JP7
+Removed Member From Class: ClassName=Peripherial Member=JP8
+Removed Member From Class: ClassName=Peripherial Member=JP9
+Removed Member From Class: ClassName=Peripherial Member=JP10
+Change Component Footprint: Designator=JP6 Old Footprint=JP 1x1 DT New Footprint=JP 1x5 DT
+Change Component Comment : Designator=JP6 Old Comment=JP 1x1 2.54 New Comment=JP 1x5 2.54
+Added Pin To Net: NetName=S_IMU_CS Pin=JP6-2
+Added Pin To Net: NetName=IMU_MOSI Pin=JP6-3
+Added Pin To Net: NetName=IMU_SCK Pin=JP6-4
+Added Pin To Net: NetName=IMU_MISO Pin=JP6-5

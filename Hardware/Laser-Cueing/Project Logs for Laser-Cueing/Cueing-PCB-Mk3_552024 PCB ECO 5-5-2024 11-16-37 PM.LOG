@@ -1,0 +1,9 @@
+Removed Member From Class: ClassName=PWR_SRC Member=D1
+Removed Member From Class: ClassName=Driver Member=D6
+Change Component Designator: OldDesignator=SWD/JTAG1 NewDesignator=SWD/JTAG
+Added Member To Class: ClassName=PWR_SRC Member=Component C20 105
+Added Member To Class: ClassName=PWR_SRC Member=Component C23 10pF
+Added Member To Class: ClassName=PWR_SRC Member=Component D3 AVRL161A1R1NTA
+Added Member To Class: ClassName=PWR_SRC Member=Component D5 AVRL161A1R1NTA
+Added Member To Class: ClassName=Driver Member=Component D7 1N5819HW-7-F
+Added Member To Class: ClassName=PWR_SRC Member=Component U7 MAX1555EZK+T

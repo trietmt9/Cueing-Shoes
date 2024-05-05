@@ -1,0 +1,21 @@
+Change Component Description : Designator=U9 Old Description=Accelerometer, Gyroscope, Magnetometer, 9 Axis Sensor I²C, SPI Output New Description=Accelerometer, Gyroscope, Magnetometer, 9 Axis Sensor I²C, SPI Output 
+Added Component: Designator=U?(DBV5-M)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Component: Designator=U?(DBV5-M)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5V Pin=U?-1
+Added Pin To Net: NetName=+5V Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-2
+Added Pin To Net: NetName=GND Pin=U?-2
+Added Pin To Net: NetName=+5V Pin=U?-3
+Added Pin To Net: NetName=+5V Pin=U?-3
+Added Pin To Net: NetName=NetC16_1 Pin=U?-4
+Added Pin To Net: NetName=NetC19_1 Pin=U?-4
+Added Pin To Net: NetName=+3.3V_STM32 Pin=U?-5
+Added Pin To Net: NetName=+AVCC Pin=U?-5
+Added Member To Class: ClassName=PWR_SRC Member=Component U? TPS73630DBVR
+Added Member To Class: ClassName=PWR_SRC Member=Component U? TPS73630DBVR

@@ -1,0 +1,11 @@
+Added Component: Designator=Y1(SMD_Crystal)
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "631-1017-2-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.tw/product-detail/en/fox-electronics/FC4SDCBMF16.0-T1/631-1017-2-ND/1024609?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Fox"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "FOXSDLF/160-20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "HC49/US Fox"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/FOXSDLF/160-20/Fox%20Electronics/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=OSC_IN Pin=Y1-1
+Added Pin To Net: NetName=OSC_OUT Pin=Y1-2
+Added Member To Class: ClassName=STM32_MCU Member=Component Y1 FOXSDLF/160-20
