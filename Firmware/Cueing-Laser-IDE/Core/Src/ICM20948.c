@@ -6,7 +6,7 @@
 *
 */
 #include "ICM20948.h"
-#include "main.h"
+
 /********************* Serial Peripheral Interface (SPI) abstract functions *********************/
 
 /********************* NCS pin control functions *********************/

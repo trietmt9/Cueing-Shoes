@@ -1,5 +1,6 @@
 #ifndef __ICM20948__H
 #define __ICM20948__H
+#include "main.h"
 #include "stm32f446xx.h"
 #include "stm32f4xx_hal.h"
 #include "stdint.h"

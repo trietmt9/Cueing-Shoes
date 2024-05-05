@@ -1,5 +1,6 @@
 #ifndef __NRF24L01__H
 #define __NRF24L01__H
+#include "main.h"
 #include "stm32f446xx.h"
 #include "stm32f4xx_hal.h"
 #include "stdint.h"

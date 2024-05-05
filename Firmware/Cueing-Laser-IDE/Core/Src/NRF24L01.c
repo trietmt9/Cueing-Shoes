@@ -7,7 +7,7 @@
 */
 
 #include "NRF24L01.h"
-#include "main.h"
+
 /*********************** SPI ABSTRACTS LAYER FUNCTIONS ***********************/
 inline static void NRF24_SELECT(void)
 {
