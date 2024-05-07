@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=+V_Driver Pin=D7-C
+Change Component Footprint: Designator=D7 Old Footprint=SOD3715X145N New Footprint=SOD-80_MiniMELF_Glass
+Change Component Comment : Designator=D7 Old Comment=1N5819HW-7-F New Comment=Schottky-Diode
+Change Component Designator: OldDesignator=Driver NewDesignator=Driver1
+Change component parameters: Designator = "D7" ("D7"); Footprint = "SOD3715X145N"; UniqueID = "\FWXHZIJR" ("\FWXHZIJR")
+Change component parameters (AddParameter): Name = "Datasheet"; Value = "https://diotec.com/de/produktliste/SBD.html"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ki_description"; Value = "Schottky Diode"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ki_keywords"; Value = "Schottky"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Reference"; Value = "D"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "Shottky-Diode"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+V_Driver Pin=D7-K

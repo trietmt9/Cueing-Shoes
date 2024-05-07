@@ -1,0 +1,8 @@
+Change Component Designator: OldDesignator=ADC1 NewDesignator=ADC
+Change Component Designator: OldDesignator=Boot1 NewDesignator=Boot
+Change Component Designator: OldDesignator=Driver NewDesignator=Driver1
+Change Component Designator: OldDesignator=I/O1 NewDesignator=I/O
+Change Component Designator: OldDesignator=MD1 NewDesignator=NRF24
+Change Component Designator: OldDesignator=Power Options1 NewDesignator=Power Options
+Change Component Designator: OldDesignator=Reset1 NewDesignator=Reset
+Change Net Name : Old Net Name=NetBoot1_1 New Net Name=NetBoot_1

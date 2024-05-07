@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=NRF24_CSN Pin=U1-17
+Removed Pin From Net: NetName=IMU_CS Pin=U1-20
+Removed Pin From Net: NetName=IMU_INT Pin=U1-24
+Removed Pin From Net: NetName=NRF24_INT Pin=U1-25
+Removed Pin From Net: NetName=NRF24_CE Pin=U1-26
+Change Component Designator: OldDesignator=ADC NewDesignator=ADC1
+Change Component Designator: OldDesignator=Boot NewDesignator=Boot1
+Change Component Designator: OldDesignator=Driver NewDesignator=Driver1
+Change Component Designator: OldDesignator=Power Options NewDesignator=Power Options1
+Change Component Designator: OldDesignator=PWM 1 NewDesignator=JP2
+Change Component Designator: OldDesignator=PWM 2 NewDesignator=JP3
+Change Component Designator: OldDesignator=PWM 3 NewDesignator=JP4
+Change Component Designator: OldDesignator=PWM 4 NewDesignator=JP5
+Change Component Designator: OldDesignator=Reset NewDesignator=Reset1
+Change Component Designator: OldDesignator=USB NewDesignator=USB1
+Change Component Description : Designator=U8 Old Description=Accelerometer, Gyroscope, Magnetometer, 9 Axis Sensor I²C, SPI Output New Description=Accelerometer, Gyroscope, Magnetometer, 9 Axis Sensor I²C, SPI Output 
+Added Pin To Net: NetName=NRF24_CE Pin=U1-17
+Added Pin To Net: NetName=NRF24_CSN Pin=U1-20
+Added Pin To Net: NetName=NRF24_INT Pin=U1-24
+Added Pin To Net: NetName=IMU_CS Pin=U1-25
+Added Pin To Net: NetName=IMU_INT Pin=U1-26
