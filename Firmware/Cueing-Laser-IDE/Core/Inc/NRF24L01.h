@@ -199,7 +199,7 @@ enum
     PIPE_5
 };
 
-enum
+typedef enum
 {
     PAYLOAD_PIPE_NOT_USE,
     PAYLOAD_PIPE_1_BYTE,
@@ -234,7 +234,7 @@ enum
     PAYLOAD_PIPE_30_BYTE,
     PAYLOAD_PIPE_31_BYTE,
     PAYLOAD_PIPE_32_BYTE,
-};
+}payload_size_t;
 
 typedef enum 
 {
@@ -243,6 +243,45 @@ typedef enum
     RF_PWR_HIGH,
     RF_PWR_MAX,
 }PA_LEVEL;
+
+typedef enum
+{
+    _250uS,
+    _500uS,
+    _750uS,
+    _1000uS,
+    _1250uS,
+    _1500uS,
+    _1750uS,
+    _2000uS,
+}retransmit_delay_t;
+
+typedef enum
+{
+    _disable,
+    _1_times,
+    _2_times,
+    _3_times,
+    _4_times,
+    _5_times,
+    _6_times,
+    _7_times,
+    _8_times,
+    _9_times,
+    _10_times,
+    _11_times,
+    _12_times,
+    _13_times,
+    _14_times,
+    _15_times,
+}retries_time_t;
+
+typedef enum
+{
+    _1Mbps,
+    _2Mbps,
+    _250Kbps,
+}data_rate_t;
 /*********************** NRF24L01 CONTROL FUNCTIONS ***********************/
 void NRF24_Init(SPI_HandleTypeDef* SPIx, uint16_t MHz);
 void NRF24_SET_PA(SPI_HandleTypeDef* SPIx, uint8_t PA_Level);

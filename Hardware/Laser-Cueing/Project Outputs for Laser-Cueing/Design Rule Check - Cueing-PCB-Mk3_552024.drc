@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\pc\Documents\Lazer-light-cueing\Hardware\Laser-Cueing\Cueing-PCB-Mk3_552024.PcbDoc
-Date     : 5/7/2024
-Time     : 10:34:06 PM
+Date     : 5/8/2024
+Time     : 2:38:19 PM
 
 Processing Rule : Clearance Constraint (Gap=0.2mm) (All),(All)
    Violation between Clearance Constraint: (0.185mm < 0.2mm) Between Pad U8-1(95.09mm,70.353mm) on Top Layer And Pad U8-24(94.545mm,69.808mm) on Top Layer 
@@ -390,4 +390,4 @@ Rule Violations :0
 
 Violations Detected : 330
 Waived Violations : 0
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:03

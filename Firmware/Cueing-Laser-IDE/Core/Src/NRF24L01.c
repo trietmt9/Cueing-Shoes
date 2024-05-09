@@ -141,60 +141,40 @@ void NRF24_Rx_Mode(SPI_HandleTypeDef* SPIx, uint8_t *Address, uint8_t pipe)
             pipe_select = 0;
             pipe_select |= ( 1 << ERX_P0);
             SPI_Write_Byte(SPIx, NRF24L01_REG_EN_RXADDR, &pipe_select);
-
             // Set Pipe 0 address
             SPI_Write_MultiByte(SPIx, NRF24L01_REG_RX_ADDR_P0, Address, 5);
-
-            // Set Pipe 0 width
-            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P0, PAYLOAD_PIPE_32_BYTE);
             break;
         case PIPE_1:
             // Enable Pipe 1
             pipe_select = 0;
             pipe_select |= ( 1 << ERX_P1);
             SPI_Write_Byte(SPIx, NRF24L01_REG_EN_RXADDR, &pipe_select);
-
             // Set Pipe 1 address
             SPI_Write_MultiByte(SPIx, NRF24L01_REG_RX_ADDR_P1, Address, 5);
-
-            // Set Pipe 1 width
-            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P1, PAYLOAD_PIPE_32_BYTE);
             break;
         case PIPE_2:
             // Enable Pipe 2
             pipe_select = 0;
             pipe_select |= ( 1 << ERX_P2);
             SPI_Write_Byte(SPIx, NRF24L01_REG_EN_RXADDR, &pipe_select);
-
             // Set Pipe 2 address
             SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P2, Address);
-
-            // Set Pipe 2 width
-            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P2, PAYLOAD_PIPE_32_BYTE);
             break;
         case PIPE_3:
             // Enable Pipe 3
             pipe_select = 0;
             pipe_select |= ( 1 << ERX_P3);
             SPI_Write_Byte(SPIx, NRF24L01_REG_EN_RXADDR, &pipe_select);
-
             // Set Pipe 3 address
             SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P3, Address);
-
-            // Set Pipe 3 width
-            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P3, PAYLOAD_PIPE_32_BYTE);
             break; 
         case PIPE_4:
             // Enable Pipe 4
             pipe_select = 0;
             pipe_select |= ( 1 << ERX_P4);
             SPI_Write_Byte(SPIx, NRF24L01_REG_EN_RXADDR, &pipe_select);
-            
             // Set Pipe 4 address
             SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P4, Address);
-            
-            // Set Pipe 4 width
-            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P4, PAYLOAD_PIPE_32_BYTE);
             break;
         case PIPE_5:
             // Enable Pipe 5
@@ -205,8 +185,7 @@ void NRF24_Rx_Mode(SPI_HandleTypeDef* SPIx, uint8_t *Address, uint8_t pipe)
             // Set Pipe 5 address
             SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P5, Address);
             
-            // Set Pipe 5 width
-            SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P5, PAYLOAD_PIPE_32_BYTE);
+            
             break;
     }
 
@@ -286,6 +265,30 @@ void NRF24_SET_PA(SPI_HandleTypeDef* SPIx, PA_LEVEL PA_Level)
     SPI_Write_Byte(SPIx, NRF24L01_REG_RF_SETUP, &temp_data);
 }
 
+void NRF24_DataRate(SPI_HandleTypeDef* SPIx, uint8_t data_rate)
+{
+    uint8_t temp_data = 0;
+    if(data_rate == _1Mbps) temp_data &=~ ((1<<RF_DR_LOW)|(1<<RF_DR_HIGH));
+    else if(data_rate == _2Mbps) temp_data |= (1<<RF_DR_HIGH);
+    else if(data_rate == _250Kbps) temp_data |= (1<<RF_DR_LOW);
+    SPI_Write_Byte(SPIx, NRF24L01_REG_RF_SETUP, &temp_data);
+}
+void NRF24_Retries(SPI_HandleTypeDef *SPIx, retries_time_t retries_times, retransmit_delay_t retransmit_delay)
+{
+    uint8_t temp_data = 0;
+    temp_data |= (retries_times << ARC)|(retransmit_delay << ARD);
+    SPI_Write_Byte(SPIx, NRF24L01_REG_SETUP_RETR, &temp_data);
+}
+
+void NRF24_PAYLOADSIZE(SPI_HandleTypeDef *SPIx, payload_size_t size)
+{ 
+    SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P0, size);
+    SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P1, size);
+    SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P2, size); 
+    SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P3, size);
+    SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P4, size);
+    SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P5, size);
+}
 void NRF24_Init(SPI_HandleTypeDef* SPIx, uint16_t MHz, PA_LEVEL PA_level)
 {
     uint8_t temp_data = 0;
@@ -301,7 +304,26 @@ void NRF24_Init(SPI_HandleTypeDef* SPIx, uint16_t MHz, PA_LEVEL PA_level)
     // FLush Tx Packet
     NRF24_FLUSH_TX(SPIx);
 
+    // Set retry connection times and retry delay 
+    NRF24_Retries(SPIx,_5_times, _250uS);
+    
+    // Set data rate 
+    NRF24_DataRate(SPIx, _1Mbps);
+    // Disable Dynamic payload 
+    temp_data = 0x00u;
+    SPI_Write_Byte(SPIx, NRF24L01_REG_DYNPD, &temp_data);
+
+    // Enable auto acknoledge of all pipes 
+    temp_data = 0;
+    temp_data = 0x3Fu;
+    SPI_Write_Byte(SPIx, NRF24L01_REG_EN_AA, &temp_data); 
+    
+    //Set payload length at maximum 32 bytes
+    NRF24_PAYLOADSIZE(SPIx, PAYLOAD_PIPE_32_BYTE);
+
+
     // Start setting configuration 
+    temp_data = 0;
     temp_data |= (POWER_UP << PWR_UP);
     SPI_Write_Byte(SPIx, NRF24L01_REG_CONFIG, &temp_data);
 
@@ -311,6 +333,10 @@ void NRF24_Init(SPI_HandleTypeDef* SPIx, uint16_t MHz, PA_LEVEL PA_level)
     // Select Channel 
     NRF24_Select_Channel(SPIx, MHz);
 
+    // Reset Status Register
+    temp_data = 0;
+    temp_data |= (1 << RX_DR)|(1 << TX_DS)|(1 << MAX_RT);
+    SPI_Write_Byte(SPIx, NRF24L01_REG_STATUS, &temp_data);
     // Enable CE pin after configuration
     NRF24_UNSELECT(); 
     NRF24_ENABLE();
