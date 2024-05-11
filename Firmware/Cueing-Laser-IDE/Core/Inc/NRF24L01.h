@@ -283,13 +283,12 @@ typedef enum
     _250Kbps,
 }data_rate_t;
 /*********************** NRF24L01 CONTROL FUNCTIONS ***********************/
-void NRF24_Init(SPI_HandleTypeDef* SPIx, uint16_t MHz);
-void NRF24_SET_PA(SPI_HandleTypeDef* SPIx, uint8_t PA_Level);
+void NRF24_Init(SPI_HandleTypeDef* SPIx, uint16_t MHz, PA_LEVEL PA_level);
 void NRF24_CHECK_DATA_AVAILABLE(SPI_HandleTypeDef *SPIx,uint8_t pipe);
 void NRF24_Tx_Mode(SPI_HandleTypeDef *SPIx, uint8_t *Address);
 void NRF24_Rx_Mode(SPI_HandleTypeDef* SPIx, uint8_t *Address, uint8_t pipe);
 void NRF24_Select_Channel(SPI_HandleTypeDef* SPIx, uint8_t channel);
 void NRF24_Transmit(SPI_HandleTypeDef *SPIx, uint8_t *pData);
-void NRF24_Receive();
+void NRF24_Receive(SPI_HandleTypeDef *SPIx, uint8_t *pData);
 
 #endif
