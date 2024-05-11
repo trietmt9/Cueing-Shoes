@@ -125,7 +125,7 @@ int main(void)
   
   // ICM20948_Init(&hspi1);
   // Filter_init(&low_pass_filter);
-  NRF24_Init(&hspi1, 2400);  
+  NRF24_Init(&hspi1, 76);  
   NRF24_SET_PA(&hspi1, RF_PWR_MIN);
   NRF24_Tx_Mode(&hspi1, &Tx_Address);
   /* USER CODE END 2 */
@@ -135,8 +135,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+ 
     /* USER CODE BEGIN 3 */
+  NRF24_Transmit(&hspi1, &Tx_Data);
+  HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }

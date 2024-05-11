@@ -77,20 +77,32 @@ void NRF24L01_SEND_CMD(SPI_HandleTypeDef *SPI, uint8_t* CMD)
     NRF24_UNSELECT();
 }
 
+/**
+ * @brief  NRF24L01 FLUSH_RX function
+ * @param[in]  SPIx: SPI handle
+ * @return  None
+ * @details  This function flushes the RX FIFO of the NRF24L01 module.
+ *  It sends the specified command to the NRF24L01 module and then flushes the RX FIFO.
+ *  @note  The NRF24L01 module must be initialized and configured before using this function.
+ */
 void NRF24_FLUSH_RX(SPI_HandleTypeDef* SPIx)
-{   
+{
     uint8_t flush_rx = NRF24L01_CMD_FLUSH_RX;
-    NRF24_SELECT();
-    HAL_SPI_Transmit(SPIx, flush_rx, 1, SPI_TIMEOUT);
-    NRF24_UNSELECT();
+    NRF24L01_SEND_CMD(SPIx, flush_rx);
 }
 
+/**
+ * @brief  NRF24L01 FLUSH_TX function
+ * @param[in]  SPIx: SPI handle
+ * @return  None
+ * @details  This function flushes the TX FIFO of the NRF24L01 module.
+ *  It sends the specified command to the NRF24L01 module and then flushes the TX FIFO.
+ *  @note  The NRF24L01 module must be initialized and configured before using this function.
+ */
 void NRF24_FLUSH_TX(SPI_HandleTypeDef* SPIx)
 {
     uint8_t flush_tx = NRF24L01_CMD_FLUSH_TX;
-    NRF24_SELECT();
-    HAL_SPI_Transmit(SPIx, flush_tx, 1, SPI_TIMEOUT);
-    NRF24_UNSELECT();
+    NRF24L01_SEND_CMD(SPIx, flush_tx);
 }
 static void NRF24_Reset(SPI_HandleTypeDef *SPIx)
 {
@@ -112,12 +124,28 @@ static void NRF24_Reset(SPI_HandleTypeDef *SPIx)
     SPI_Write_Byte(SPIx, NRF24L01_REG_FEATURE,      0x00); 
 }
 
-
+/**
+ * @brief  NRF24L01 Set channel function
+ * @param[in]  SPIx: SPI handle
+ * @param[in]  channel: Select channel from 0 - 127
+ * @return  None
+ * @details  This function sets the working channel of the NRF24L01 
+ */
 void NRF24_Select_Channel(SPI_HandleTypeDef* SPIx, uint8_t channel)
 {  // Select channel
     SPI_Write_Byte(SPIx, NRF24L01_REG_RF_CH, channel);
 }
 
+/**
+ * @brief  NRF24L01 Set Transmit Mode function
+ * @param[in]  SPIx: SPI handle
+ * @param[in]  Address: Pointer to the buffer containing the transmit address
+ * @param[in] pip: NRF24L01 pipeline number
+ * @return  None
+ * @details This function sets the receive mode and powers up the NRF24L01 module.
+ *  It writes the specified receive address to the RX_ADDR register of the NRF24L01 module.
+ *  After setting the receive mode, the function enables the CE pin to activate the module.
+ */
 void NRF24_Rx_Mode(SPI_HandleTypeDef* SPIx, uint8_t *Address, uint8_t pipe)
 {
     uint8_t temp_data = 0;
@@ -191,6 +219,7 @@ void NRF24_Rx_Mode(SPI_HandleTypeDef* SPIx, uint8_t *Address, uint8_t pipe)
 
     NRF24_ENABLE();
 }
+
 /**
  * @brief  NRF24L01 Set Transmit Mode function
  * @param[in]  SPIx: SPI handle
@@ -217,7 +246,7 @@ void NRF24_Tx_Mode(SPI_HandleTypeDef *SPIx, uint8_t *Address)
     /*
      * @brief  Set transmit mode and power up the module
      */
-    temp_data |= (TRANSMIT << PRIM_RX);
+    temp_data &=~ (RECEIVE << PRIM_RX);
     SPI_Write_Byte(SPIx, NRF24L01_REG_CONFIG, temp_data);
 
     /*
