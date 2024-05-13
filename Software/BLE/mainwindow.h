@@ -2,8 +2,13 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtBluetooth>
 #include <QBluetoothDeviceDiscoveryAgent>
-#include <QLowEnergyAdvertisingData>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+#include <QQuickWidget>
+#include <QQmlContext>
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -20,7 +25,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QBluetoothDeviceDiscoveryAgent *m_deviceDiscoveryAgent = new QBluetoothDeviceDiscoveryAgent(this);
-    m_deviceDiscoveryAgent-
+    QBluetoothDeviceDiscoveryAgent *Agent = new QBluetoothDeviceDiscoveryAgent(this);
+
 };
 #endif // MAINWINDOW_H
