@@ -1,3 +1,0 @@
-C:/Users/pc/Documents/Lazer-light-cueing/Software/Test_Quick/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/_deps/ds-subbuild/CMakeFiles/ds-populate.dir
-C:/Users/pc/Documents/Lazer-light-cueing/Software/Test_Quick/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/_deps/ds-subbuild/CMakeFiles/edit_cache.dir
-C:/Users/pc/Documents/Lazer-light-cueing/Software/Test_Quick/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/_deps/ds-subbuild/CMakeFiles/rebuild_cache.dir
