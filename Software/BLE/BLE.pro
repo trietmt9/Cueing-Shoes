@@ -14,14 +14,12 @@ CONFIG += c++17
 SOURCES += \
     blemaneger.cpp \
     main.cpp \
-    mainwindow.cpp
 
 HEADERS += \
     blemaneger.h \
-    mainwindow.h
 
 FORMS += \
-    mainwindow.ui
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
