@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="/qt/qml/Test_Quick/">
+    <file alias="Constants.qml">C:/Users/pc/Documents/Lazer-light-cueing/Software/Test_Quick/imports/Test_Quick/Constants.qml</file>
+    <file alias="DirectoryFontLoader.qml">C:/Users/pc/Documents/Lazer-light-cueing/Software/Test_Quick/imports/Test_Quick/DirectoryFontLoader.qml</file>
+    <file alias="EventListModel.qml">C:/Users/pc/Documents/Lazer-light-cueing/Software/Test_Quick/imports/Test_Quick/EventListModel.qml</file>
+    <file alias="EventListSimulator.qml">C:/Users/pc/Documents/Lazer-light-cueing/Software/Test_Quick/imports/Test_Quick/EventListSimulator.qml</file>
+  </qresource>
+</RCC>
+

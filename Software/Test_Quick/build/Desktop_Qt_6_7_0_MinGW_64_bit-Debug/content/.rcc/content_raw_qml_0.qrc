@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/qt/qml/content/">
+    <file alias="App.qml">C:/Users/pc/Documents/Lazer-light-cueing/Software/Test_Quick/content/App.qml</file>
+    <file alias="Screen01.ui.qml">C:/Users/pc/Documents/Lazer-light-cueing/Software/Test_Quick/content/Screen01.ui.qml</file>
+    <file alias="fonts/fonts.txt">C:/Users/pc/Documents/Lazer-light-cueing/Software/Test_Quick/content/fonts/fonts.txt</file>
+  </qresource>
+</RCC>
+

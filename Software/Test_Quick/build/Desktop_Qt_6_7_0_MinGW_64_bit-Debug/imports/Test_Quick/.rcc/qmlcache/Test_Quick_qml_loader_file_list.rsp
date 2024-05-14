@@ -1,0 +1,8 @@
+--resource
+C:/Users/pc/Documents/Lazer-light-cueing/Software/Test_Quick/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/imports/Test_Quick/.rcc/qmake_Test_Quick.qrc
+--resource
+C:/Users/pc/Documents/Lazer-light-cueing/Software/Test_Quick/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/imports/Test_Quick/.rcc/Test_Quick_raw_qml_0.qrc
+/qt/qml/Test_Quick/Constants.qml
+/qt/qml/Test_Quick/DirectoryFontLoader.qml
+/qt/qml/Test_Quick/EventListModel.qml
+/qt/qml/Test_Quick/EventListSimulator.qml

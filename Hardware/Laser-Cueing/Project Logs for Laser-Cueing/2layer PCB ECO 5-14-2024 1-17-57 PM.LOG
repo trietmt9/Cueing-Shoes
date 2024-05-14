@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=+V_Bat Pin=Batterry-1
+Removed Pin From Net: NetName=GND Pin=Batterry-2
+Removed Pin From Net: NetName=GND Pin=U7-2
+Removed Member From Class: ClassName=PWR_SRC Member=Batterry
+Added Component: Designator=BT1(BAT-2)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Battery; 2 Leads"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "BAT-2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "24-Mar-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+V_Bat Pin=BT1-1
+Added Pin To Net: NetName=GND Pin=BT1-2
+Added Member To Class: ClassName=PWR_SRC Member=Component BT1 Battery
