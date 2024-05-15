@@ -1,0 +1,2 @@
+Change Component Designator: OldDesignator=Battery NewDesignator=BT1
+Added Pin To Net: NetName=GND Pin=U7-2

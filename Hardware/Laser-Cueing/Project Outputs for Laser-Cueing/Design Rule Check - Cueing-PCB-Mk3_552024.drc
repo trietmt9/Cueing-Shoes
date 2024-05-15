@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\pc\Documents\Lazer-light-cueing\Hardware\Laser-Cueing\Cueing-PCB-Mk3_552024.PcbDoc
-Date     : 5/11/2024
-Time     : 3:42:13 PM
+Date     : 5/15/2024
+Time     : 2:50:43 PM
 
 Processing Rule : Clearance Constraint (Gap=0.2mm) (All),(All)
    Violation between Clearance Constraint: (0.185mm < 0.2mm) Between Pad U8-1(95.09mm,70.353mm) on Top Layer And Pad U8-24(94.545mm,69.808mm) on Top Layer 
@@ -260,6 +260,7 @@ Rule Violations :50
 Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
    Violation between Silk To Silk Clearance Constraint: (0.103mm < 0.254mm) Between Text "*" (101.86mm,106.873mm) on Top Overlay And Track (98.819mm,106.553mm)(100.825mm,106.553mm) on Top Overlay Silk Text to Silk Clearance [0.103mm]
    Violation between Silk To Silk Clearance Constraint: (0.103mm < 0.254mm) Between Text "*" (79.254mm,110.043mm) on Bottom Overlay And Track (76.213mm,110.363mm)(78.219mm,110.363mm) on Bottom Overlay Silk Text to Silk Clearance [0.103mm]
+   Violation between Silk To Silk Clearance Constraint: (0.189mm < 0.254mm) Between Text "+" (113.652mm,118.687mm) on Top Overlay And Track (112.522mm,116.84mm)(112.522mm,119.38mm) on Top Overlay Silk Text to Silk Clearance [0.189mm]
    Violation between Silk To Silk Clearance Constraint: (0.246mm < 0.254mm) Between Text "C19" (81.45mm,102.37mm) on Bottom Overlay And Track (79.807mm,103.645mm)(80.975mm,103.645mm) on Bottom Overlay Silk Text to Silk Clearance [0.246mm]
    Violation between Silk To Silk Clearance Constraint: (0.251mm < 0.254mm) Between Text "C19" (81.45mm,102.37mm) on Bottom Overlay And Track (80.975mm,103.645mm)(80.975mm,106.363mm) on Bottom Overlay Silk Text to Silk Clearance [0.251mm]
    Violation between Silk To Silk Clearance Constraint: (0.253mm < 0.254mm) Between Text "C2" (74.51mm,86.761mm) on Top Overlay And Track (74.674mm,88.061mm)(76.452mm,88.061mm) on Top Overlay Silk Text to Silk Clearance [0.253mm]
@@ -272,19 +273,15 @@ Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
    Violation between Silk To Silk Clearance Constraint: (0.154mm < 0.254mm) Between Text "R6" (96.103mm,115.089mm) on Top Overlay And Track (96.063mm,114.884mm)(98.781mm,114.884mm) on Top Overlay Silk Text to Silk Clearance [0.154mm]
    Violation between Silk To Silk Clearance Constraint: (0.207mm < 0.254mm) Between Text "R7" (99.925mm,115.082mm) on Top Overlay And Track (99.889mm,113.716mm)(99.889mm,114.884mm) on Top Overlay Silk Text to Silk Clearance [0.207mm]
    Violation between Silk To Silk Clearance Constraint: (0.147mm < 0.254mm) Between Text "R7" (99.925mm,115.082mm) on Top Overlay And Track (99.889mm,114.884mm)(102.607mm,114.884mm) on Top Overlay Silk Text to Silk Clearance [0.147mm]
-Rule Violations :14
+Rule Violations :15
 
 Processing Rule : Net Antennae (Tolerance=0mm) (All)
-   Violation between Net Antennae: Via (119.253mm,64.516mm) from Top Layer to Bottom Layer 
-   Violation between Net Antennae: Via (119.634mm,118.364mm) from Top Layer to Bottom Layer 
-   Violation between Net Antennae: Via (58.42mm,118.364mm) from Top Layer to Bottom Layer 
-   Violation between Net Antennae: Via (58.42mm,64.516mm) from Top Layer to Bottom Layer 
-Rule Violations :4
+Rule Violations :0
 
 Processing Rule : Room Peripherial (Bounding Region = (178.943mm, 61.087mm, 319.151mm, 93.599mm) (InComponentClass('Peripherial'))
    Violation between Room Definition: Between Component NRF24-NRF24L01 Module (83.82mm,73.914mm) on Top Layer And Room Peripherial (Bounding Region = (178.943mm, 61.087mm, 319.151mm, 93.599mm) (InComponentClass('Peripherial')) 
    Violation between Room Definition: Between LCC Component U8-ICM-20948 (93.545mm,71.353mm) on Top Layer And Room Peripherial (Bounding Region = (178.943mm, 61.087mm, 319.151mm, 93.599mm) (InComponentClass('Peripherial')) 
-   Violation between Room Definition: Between Room Peripherial (Bounding Region = (178.943mm, 61.087mm, 319.151mm, 93.599mm) (InComponentClass('Peripherial')) And SIP Component JDY-1-JP 1x5 2.54 (108.966mm,73.914mm) on Bottom Layer 
+   Violation between Room Definition: Between Room Peripherial (Bounding Region = (178.943mm, 61.087mm, 319.151mm, 93.599mm) (InComponentClass('Peripherial')) And SIP Component JDY-1-JP 1x5 2.54 (118.237mm,73.406mm) on Bottom Layer 
    Violation between Room Definition: Between Room Peripherial (Bounding Region = (178.943mm, 61.087mm, 319.151mm, 93.599mm) (InComponentClass('Peripherial')) And SIP Component JP6-JP 1x5 2.54 (104.775mm,72.898mm) on Top Layer 
    Violation between Room Definition: Between Room Peripherial (Bounding Region = (178.943mm, 61.087mm, 319.151mm, 93.599mm) (InComponentClass('Peripherial')) And SMT Small Component C24-104 (97.826mm,71.501mm) on Top Layer 
    Violation between Room Definition: Between Room Peripherial (Bounding Region = (178.943mm, 61.087mm, 319.151mm, 93.599mm) (InComponentClass('Peripherial')) And SMT Small Component C25-104 (89.267mm,71.501mm) on Top Layer 
@@ -323,7 +320,7 @@ Processing Rule : Room PWR_SRC (Bounding Region = (178.943mm, 94.869mm, 324.231m
    Violation between Room Definition: Between Component U7-MAX1555EZK+T (103.346mm,92.5mm) on Top Layer And Room PWR_SRC (Bounding Region = (178.943mm, 94.869mm, 324.231mm, 109.601mm) (InComponentClass('PWR_SRC')) 
    Violation between Room Definition: Between Room PWR_SRC (Bounding Region = (178.943mm, 94.869mm, 324.231mm, 109.601mm) (InComponentClass('PWR_SRC')) And SIP Component Power Options-OS102011MS2QN1 (114.078mm,110.871mm) on Top Layer 
    Violation between Room Definition: Between Room PWR_SRC (Bounding Region = (178.943mm, 94.869mm, 324.231mm, 109.601mm) (InComponentClass('PWR_SRC')) And SIP Component USB-MINI_USB_Grounding (114.19mm,98.986mm) on Top Layer 
-   Violation between Room Definition: Between Room PWR_SRC (Bounding Region = (178.943mm, 94.869mm, 324.231mm, 109.601mm) (InComponentClass('PWR_SRC')) And Small Component Batterry-Batterry (109.982mm,118.115mm) on Top Layer 
+   Violation between Room Definition: Between Room PWR_SRC (Bounding Region = (178.943mm, 94.869mm, 324.231mm, 109.601mm) (InComponentClass('PWR_SRC')) And Small Component BT1-Battery (109.982mm,118.11mm) on Top Layer 
    Violation between Room Definition: Between Room PWR_SRC (Bounding Region = (178.943mm, 94.869mm, 324.231mm, 109.601mm) (InComponentClass('PWR_SRC')) And SMT Small Component C15-105 (105.235mm,108.915mm) on Top Layer 
    Violation between Room Definition: Between Room PWR_SRC (Bounding Region = (178.943mm, 94.869mm, 324.231mm, 109.601mm) (InComponentClass('PWR_SRC')) And SMT Small Component C16-105 (99.114mm,111.651mm) on Top Layer 
    Violation between Room Definition: Between Room PWR_SRC (Bounding Region = (178.943mm, 94.869mm, 324.231mm, 109.601mm) (InComponentClass('PWR_SRC')) And SMT Small Component C17-105 (72.263mm,77.712mm) on Bottom Layer 
@@ -388,6 +385,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Al
 Rule Violations :0
 
 
-Violations Detected : 330
+Violations Detected : 327
 Waived Violations : 0
 Time Elapsed        : 00:00:02

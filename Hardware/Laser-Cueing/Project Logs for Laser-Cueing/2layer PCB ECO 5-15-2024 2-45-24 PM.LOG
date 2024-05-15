@@ -1,0 +1,4 @@
+Change Component Designator: OldDesignator=Battery NewDesignator=BT1
+Change Component Designator: OldDesignator=JDY-18 NewDesignator=JDY-1
+Change Component Description : Designator=U8 Old Description=Accelerometer, Gyroscope, Magnetometer, 9 Axis Sensor I²C, SPI Output New Description=Accelerometer, Gyroscope, Magnetometer, 9 Axis Sensor I²C, SPI Output 
+Added Pin To Net: NetName=GND Pin=U7-2
