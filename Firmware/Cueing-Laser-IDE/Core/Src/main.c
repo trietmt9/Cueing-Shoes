@@ -124,7 +124,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  LED2_Brightness(20);
+  LED2_Control(20);
   Servo3_setAngle(20);
   // NRF24_Transmit(&hspi1, &Tx_Data);
   // HAL_Delay(1000);
