@@ -187,8 +187,8 @@ typedef enum
     _179_DEGREE,
     _180_DEGREE
 }angle_t;
-void Servo1_setAngle(uint8_t angle);
-void Servo2_setAngle(uint8_t angle);
-void Servo3_setAngle(uint8_t angle);
-void Servo4_setAngle(uint8_t angle);
+void Servo1_setAngle(angle_t angle);
+void Servo2_setAngle(angle_t angle);
+void Servo3_setAngle(angle_t angle);
+void Servo4_setAngle(angle_t angle);
 #endif
