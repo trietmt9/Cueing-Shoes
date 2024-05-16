@@ -1,7 +1,7 @@
 #include<Servo.h>
 extern TIM_TypeDef htim4;
 
-void Servo1_setAngle(uint8_t angle)
+void Servo1_setAngle(angle_t angle)
 {
     uint8_t pwm;
     pwm = (angle*10)/180;
@@ -9,7 +9,7 @@ void Servo1_setAngle(uint8_t angle)
     HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_1);
 }
 
-void Servo2_setAngle(uint8_t angle)
+void Servo2_setAngle(angle_t angle)
 {
     uint8_t pwm;
     pwm = (angle*10)/180;
@@ -17,7 +17,7 @@ void Servo2_setAngle(uint8_t angle)
     HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_2);
 }
 
-void Servo3_setAngle(uint8_t angle)
+void Servo3_setAngle(angle_t angle)
 {
     uint8_t pwm;
     pwm = (angle*10)/180;
@@ -25,7 +25,7 @@ void Servo3_setAngle(uint8_t angle)
     HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_3);
 }
 
-void Servo4_setAngle(uint8_t angle)
+void Servo4_setAngle(angle_t angle)
 {
     uint8_t pwm;
     pwm = (angle*10)/180;
