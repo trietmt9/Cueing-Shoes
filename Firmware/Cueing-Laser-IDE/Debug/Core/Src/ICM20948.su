@@ -5,5 +5,5 @@
 ../Core/Src/ICM20948.c:106:6:SPI_WriteRegisters	24	static
 ../Core/Src/ICM20948.c:124:6:SPI_ReadRegisters	24	static
 ../Core/Src/ICM20948.c:140:6:WHO_AM_I_CHECK	24	static
-../Core/Src/ICM20948.c:152:6:ICM20948_Read	40	static
-../Core/Src/ICM20948.c:184:6:ICM20948_Init	32	static
+../Core/Src/ICM20948.c:152:6:ICM20948_Read	48	static
+../Core/Src/ICM20948.c:189:6:ICM20948_Init	32	static

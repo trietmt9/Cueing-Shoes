@@ -174,6 +174,11 @@ void ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data)
     data->Gx = (double)data->RAW_Gx / 250;
     data->Gy = (double)data->RAW_Gy / 250;
     data->Gz = (double)data->RAW_Gz / 250;
+
+    // compute Roll Pitch angle
+    data->Roll = atan2(data->Ay, sqrt((data->Ax*data->Ax) + (data->Az*data->Az))) * 180 / M_PI;
+    data->Pitch = atan2(-data->Ax, sqrt((data->Ay*data->Ay) + (data->Az*data->Az))) * 180 / M_PI;
+
 }
 
 /**
@@ -226,7 +231,7 @@ void ICM20948_Init(SPI_HandleTypeDef *SPIx)
         temp_data |= (ACCEL_SMPLRT_DIV_1000<<ACCEL_SMPLRT_DIV_2);
         SPI_WriteRegisters(BANK_2, SPIx, ICM20948_REG_ACCEL_SMPLRT_DIV_2, &temp_data, sizeof(temp_data));
 
-        // Select accelerometer at 4g 
+        // Select accelerometer at 8g 
         // Enable low-pass filter 
         temp_data = 0;
         temp_data |= (DLPF_ENABLED << ACCEL_FCHOICE)|(ACCEL_FS_8G << ACCEL_FS_SEL)|(ACCEL_111_4Hz_136Hz << ACCEL_DLPFCFG);

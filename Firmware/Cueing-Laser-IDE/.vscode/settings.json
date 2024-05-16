@@ -4,6 +4,8 @@
         "icm20948.h": "c",
         "stdint.h": "c",
         "stm32f446xx.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "stm32f4xx_hal.h": "c",
+        "stm32f4xx_hal_conf.h": "c"
     }
 }

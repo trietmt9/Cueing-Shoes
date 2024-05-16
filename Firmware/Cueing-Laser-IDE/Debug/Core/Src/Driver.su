@@ -1,0 +1,4 @@
+../Core/Src/Driver.c:3:6:LED1_Brightness	16	static
+../Core/Src/Driver.c:9:6:LED2_Brightness	16	static
+../Core/Src/Driver.c:15:6:LED3_Brightness	16	static
+../Core/Src/Driver.c:21:6:Vibrator_Control	16	static

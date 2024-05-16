@@ -1,3 +1,8 @@
+/*
+ * @file ICM20948.h
+ * Created on: April/15/2024
+ * Author: trietmt9 
+*/
 #ifndef __ICM20948__H
 #define __ICM20948__H
 #include "main.h"
@@ -6,10 +11,12 @@
 #include "stdint.h"
 #include "stdio.h"
 #include "ICM20948_Sample_Rate_DIV.h"
-
+#include "math.h"
 /*********************** GENERAL MACROS ***********************/
 #define SPI_TIMEOUT                             100
 #define SAMPLE_RATE                             1000
+#define M_PI                                    3.14159265358979323846
+
 /*********************** GYROSCOPE, ACCELEROMETER AND TEMPERATURE REGISTERS MACROS ***********************/
         /************* USER BANK 0 REGISTERS MAP *************/
 #define ICM20948_REG_WHO_AM_I                                0x00U 
@@ -607,13 +614,16 @@ typedef struct
         int16_t RAW_Ay;
         int16_t RAW_Az;
 
-        double Gx;
-        double Gy;
-        double Gz;
-        double Ax;
-        double Ay;
-        double Az;
+        float Gx;
+        float Gy;
+        float Gz;
+        float Ax;
+        float Ay;
+        float Az;
         
+        float Roll;
+        float Pitch;
+        float Yaw;
 }gyro_accel_data_t;
 
 /********************* Gyroscope and Accelerometer control functions *********************/

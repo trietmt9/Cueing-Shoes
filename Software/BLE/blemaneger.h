@@ -16,10 +16,11 @@ public:
 
     QStringList devices() const;
 
-public slots:
+public
+        slots:
     void startScan();
 
-signals:
+    signals:
     void devicesChanged();
 
 private:

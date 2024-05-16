@@ -164,7 +164,6 @@ void NRF24_Rx_Mode(SPI_HandleTypeDef* SPIx, uint8_t *Address, uint8_t pipe)
     switch(pipe)
     {
         case PIPE_0:
-            
             // Enable Pipe 0 
             pipe_select = 0;
             pipe_select |= ( 1 << ERX_P0);
@@ -209,7 +208,6 @@ void NRF24_Rx_Mode(SPI_HandleTypeDef* SPIx, uint8_t *Address, uint8_t pipe)
             pipe_select = 0;
             pipe_select |= ( 1 << ERX_P5);
             SPI_Write_Byte(SPIx, NRF24L01_REG_EN_RXADDR, &pipe_select);
-            
             // Set Pipe 5 address
             SPI_Write_Byte(SPIx,NRF24L01_REG_RX_ADDR_P5, Address);
             

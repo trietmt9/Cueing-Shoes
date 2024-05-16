@@ -1,0 +1,78 @@
+Net Status Report
+Filename     : C:\Users\pc\Documents\Lazer-light-cueing\Hardware\Laser-Cueing\2layer.PcbDoc
+Date         : 5/15/2024
+Time         : 8:27:08 PM
+Time Elapsed : 00:00:00
+
+Nets, Layer, Length
+    +1.8V, Signal Layers Only, 69.1243mm
+    +3.3V_STM32, Signal Layers Only, 118.7681mm
+    +5V, Signal Layers Only, 144.9069mm
+    +AVCC, Signal Layers Only, 71.3747mm
+    +V_Bat, Signal Layers Only, 95.4987mm
+    +V_USB, Signal Layers Only, 52.5255mm
+    0.4V, Signal Layers Only, 32.1992mm
+    Boot, Signal Layers Only, 43.2095mm
+    GND, Signal Layers Only, 162.0666mm
+    IMU_CS, Signal Layers Only, 39.0344mm
+    IMU_INT, Signal Layers Only, 14.8937mm
+    IMU_MISO, Signal Layers Only, 15.1482mm
+    IMU_MOSI, Signal Layers Only, 16.614mm
+    IMU_SCK, Signal Layers Only, 36.1388mm
+    INPUT_1, Signal Layers Only, 10.7207mm
+    INPUT_2, Signal Layers Only, 31.5991mm
+    LED1, Signal Layers Only, 13.9492mm
+    LED2, Signal Layers Only, 13.7274mm
+    LED3, Signal Layers Only, 11.428mm
+    NRF24_CE, Signal Layers Only, 23.2543mm
+    NRF24_CSN, Signal Layers Only, 26.3077mm
+    NRF24_INT, Signal Layers Only, 39.519mm
+    NRST, Signal Layers Only, 37.4825mm
+    NetBoot_1, Signal Layers Only, 8.316mm
+    NetC16_1, Signal Layers Only, 2.4469mm
+    NetC20_1, Signal Layers Only, 2.1165mm
+    NetC22_1, Signal Layers Only, 4.6465mm
+    NetC26_1, Signal Layers Only, 4.6874mm
+    NetD1_1, Signal Layers Only, 2.3575mm
+    NetD1_2, Signal Layers Only, 6.3299mm
+    NetD2_2, Signal Layers Only, 1.733mm
+    NetD6_1, Signal Layers Only, 4.1707mm
+    NetJP1_2, Signal Layers Only, 3.2935mm
+    OSC_IN, Signal Layers Only, 19.3322mm
+    OSC_OUT, Signal Layers Only, 22.5729mm
+    PA0, Signal Layers Only, 23.1064mm
+    PA1, Signal Layers Only, 23.3171mm
+    PB5, Signal Layers Only, 38.8677mm
+    PB6, Signal Layers Only, 35.664mm
+    PB7, Signal Layers Only, 32.1635mm
+    PB8, Signal Layers Only, 32.8388mm
+    PB9, Signal Layers Only, 29.8159mm
+    PC0, Signal Layers Only, 21.2128mm
+    PC1, Signal Layers Only, 21.2697mm
+    PC10, Signal Layers Only, 64.1851mm
+    PC11, Signal Layers Only, 58.6032mm
+    PC12, Signal Layers Only, 53.5937mm
+    PC13, Signal Layers Only, 25.0632mm
+    PC2, Signal Layers Only, 29.6447mm
+    PC3, Signal Layers Only, 16.1248mm
+    PC6, Signal Layers Only, 13.5257mm
+    PC7, Signal Layers Only, 10.6311mm
+    PC8, Signal Layers Only, 7.8064mm
+    PC9, Signal Layers Only, 5.3372mm
+    PD2, Signal Layers Only, 47.2234mm
+    SPI_MISO, Signal Layers Only, 44.7382mm
+    SPI_MOSI, Signal Layers Only, 84.9204mm
+    SPI_SCK, Signal Layers Only, 65.7994mm
+    S_IMU_CS, Signal Layers Only, 30.2863mm
+    S_IMU_INT, Signal Layers Only, 63.4972mm
+    TCK, Signal Layers Only, 31.8789mm
+    TDI, Signal Layers Only, 24.8944mm
+    TDO, Signal Layers Only, 31.2712mm
+    TMS, Signal Layers Only, 37.2191mm
+    TRST, Signal Layers Only, 31.2058mm
+    UART_Rx, Signal Layers Only, 52.6393mm
+    UART_Tx, Signal Layers Only, 52.0546mm
+    USB_N, Signal Layers Only, 16.8971mm
+    USB_P, Signal Layers Only, 16.8971mm
+    Vibrator, Signal Layers Only, 15.9379mm
+count : 70
