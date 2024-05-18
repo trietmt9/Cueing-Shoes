@@ -1,0 +1,25 @@
+Removed Member From Class: ClassName=ADC Member=R13
+Removed Member From Class: ClassName=STM32_MCU Member=R13
+Removed Member From Class: ClassName=ADC Member=R14
+Removed Member From Class: ClassName=STM32_MCU Member=R14
+Change Component Comment : Designator=R10 Old Comment=10k New Comment=4.7k
+Change component parameters: Designator = "R10" ("R10"); Footprint = "tro smd 0603"; UniqueID = "\EZJHBOYQ" ("\EZJHBOYQ")
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH006327"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "Tr? 0603 5% 4.7k"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=STM32_MCU Member=Component C6 103
+Added Member To Class: ClassName=STM32_MCU Member=Component C9 103
+Added Member To Class: ClassName=STM32_MCU Member=Component C11 225
+Added Member To Class: ClassName=ADC Member=Component C13 105
+Added Member To Class: ClassName=STM32_MCU Member=Component R3 0R
+Added Member To Class: ClassName=STM32_MCU Member=Component R5 1k
+Added Member To Class: ClassName=STM32_MCU Member=Component R8 4.7k
+Added Member To Class: ClassName=STM32_MCU Member=Component R9 4.7k
+Added Member To Class: ClassName=STM32_MCU Member=Component R10 4.7k
+Added Member To Class: ClassName=ADC Member=Component R11 3.9k
+Added Member To Class: ClassName=ADC Member=Component R12 3.9k
+Added Member To Class: ClassName=Peripherial Member=Component R24 2.2k
+Added Member To Class: ClassName=Peripherial Member=Component R25 2.2k
