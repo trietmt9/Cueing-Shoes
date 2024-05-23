@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
 #include "spi.h"
 #include "tim.h"
 #include "gpio.h"
@@ -107,10 +108,11 @@ int main(void)
   MX_SPI1_Init();
   MX_TIM3_Init();
   MX_TIM4_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
   
-  // ICM20948_Init(&hspi1);
-  // Filter_init(&low_pass_filter);
+  ICM20948_Init(&hspi1);
+  Filter_init(&low_pass_filter);
 //  NRF24_Init(&hspi1, 76, RF_PWR_MIN);
 //  NRF24_Tx_Mode(&hspi1, &Tx_Address);
   
@@ -124,8 +126,17 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  LED2_Control(20);
-  Servo3_setAngle(20);
+
+  ICM20948_Read(&hspi1, &data);
+  ax = data.Roll;
+  ay = data.Pitch;
+
+	// for(uint8_t i=40; i < 181; i++ )
+	// 	{
+	// 		Servo3_setAngle(i);
+	// 		HAL_Delay(10);
+	// 		if(i == 180) i = 40;
+	// 	}
   // NRF24_Transmit(&hspi1, &Tx_Data);
   // HAL_Delay(1000);
 

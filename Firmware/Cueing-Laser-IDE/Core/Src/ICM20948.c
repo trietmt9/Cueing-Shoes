@@ -26,7 +26,7 @@ inline static void CS_SELECT()
  *
  * This function deactivates the chip select pin (GPIOA4) by setting it to GPIO_PIN_SET.
  */
-inline static void CS_DEACTIVATE(void)
+inline static void CS_UNSELECT(void)
 {
     HAL_GPIO_WritePin(IMU_CS_GPIO_Port, IMU_CS_Pin, GPIO_PIN_SET);
 }

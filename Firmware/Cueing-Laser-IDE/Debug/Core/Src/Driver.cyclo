@@ -1,4 +1,4 @@
-../Core/Src/Driver.c:3:6:LED1_Brightness	1
-../Core/Src/Driver.c:9:6:LED2_Brightness	1
-../Core/Src/Driver.c:15:6:LED3_Brightness	1
-../Core/Src/Driver.c:21:6:Vibrator_Control	1
+../Core/Src/Driver.c:19:6:LED1_Brightness	1
+../Core/Src/Driver.c:30:6:LED2_Brightness	1
+../Core/Src/Driver.c:41:6:LED3_Brightness	1
+../Core/Src/Driver.c:52:6:Vibrator_Control	1

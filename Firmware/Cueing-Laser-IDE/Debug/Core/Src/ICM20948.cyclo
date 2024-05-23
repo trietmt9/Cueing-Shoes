@@ -1,4 +1,5 @@
 ../Core/Src/ICM20948.c:18:20:CS_SELECT	1
+../Core/Src/ICM20948.c:29:20:CS_UNSELECT	1
 ../Core/Src/ICM20948.c:49:6:SPI_WriteByte	1
 ../Core/Src/ICM20948.c:70:6:SPI_ReadByte	1
 ../Core/Src/ICM20948.c:87:6:USER_BANK_SELECTION	1

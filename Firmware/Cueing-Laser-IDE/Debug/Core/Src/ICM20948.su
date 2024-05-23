@@ -1,4 +1,5 @@
 ../Core/Src/ICM20948.c:18:20:CS_SELECT	8	static
+../Core/Src/ICM20948.c:29:20:CS_UNSELECT	8	static
 ../Core/Src/ICM20948.c:49:6:SPI_WriteByte	24	static
 ../Core/Src/ICM20948.c:70:6:SPI_ReadByte	24	static
 ../Core/Src/ICM20948.c:87:6:USER_BANK_SELECTION	24	static
