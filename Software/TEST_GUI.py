@@ -1,35 +1,64 @@
 from PyQt6 import QtWidgets
-from PyQt6.QtWidgets import QApplication, QMainWindow 
-import sys 
+from PyQt6.QtGui import QImage,QPixmap
+from PyQt6.QtCore import QThread,pyqtSignal as Signal
+import cv2,imutils
+import sys
 
-class MainWindow(QMainWindow):
+class MyThread(QThread):
+    frame_signal = Signal(QImage)
+
+    def run(self):
+        self.cap = cv2.VideoCapture(0)
+        while self.cap.isOpened():
+            _,frame = self.cap.read()
+            frame = self.cvimage_to_label(frame)
+            self.frame_signal.emit(frame)
+    
+    def cvimage_to_label(self,image):
+        image = imutils.resize(image,width = 640)
+        image = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
+        image = QImage(image,
+                       image.shape[1],
+                       image.shape[0],
+                       QImage.Format.Format_RGB888)
+        return image
+
+class MainApp(QtWidgets.QMainWindow):
     def __init__(self):
-        super(MainWindow,self).__init__()
-        x_cordinate = 400
-        y_cordinate = 80
-        height = 1000
-        width = 800
-        self.setGeometry(x_cordinate, y_cordinate, width, height)
-        self.setWindowTitle("BLE connection")
-        self.__initUI()
-    def __initUI(self):
-        self.label = QtWidgets.QLabel(self)
-        self.label.setText("Hello World!")
-        self.label.move(370, 270)
-        self.button1 = QtWidgets.QPushButton(self)
-        self.button1.setText("Scanner")
-        self.button1.clicked.connect(self.clicked)
-        self.button1.move(370,300)
-    def clicked(self):
-        self.label.setText("You pressed the button")
-        self.update()
-    def update(self):
-        self.label.adjustSize()
-def mainWindow():
+        super().__init__()
+        self.init_ui()
+        self.show()
     
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
+    def init_ui(self):
+        self.setFixedSize(640,640)
+        self.setWindowTitle("Camera FeedBack")
+
+        widget = QtWidgets.QWidget(self)
+
+        layout = QtWidgets.QVBoxLayout()
+        widget.setLayout(layout)
+
+        self.label = QtWidgets.QLabel()
+        layout.addWidget(self.label)
+
+        self.open_btn = QtWidgets.QPushButton("Open The Camera", clicked=self.open_camera)
+        layout.addWidget(self.open_btn)
+
+        self.camera_thread = MyThread()
+        self.camera_thread.frame_signal.connect(self.setImage)
+
+        self.setCentralWidget(widget)
+    
+    def open_camera(self):        
+        self.camera_thread.start()
+        print(self.camera_thread.isRunning())
+
+    def setImage(self,image):
+        self.label.setPixmap(QPixmap.fromImage(image))
+
+
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication([])
+    main_window = MainApp()
     sys.exit(app.exec())
-    
-mainWindow()
