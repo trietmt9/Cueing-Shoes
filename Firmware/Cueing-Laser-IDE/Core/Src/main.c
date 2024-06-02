@@ -59,7 +59,7 @@ FIR_Filter low_pass_filter;
 float ax, ay, az;
 float gx, gy, gz;
 float Roll, Pitch;
-float filtered_ax;
+float filtered_Roll, filtered_Pitch;
 char buffer[30];
 char Tx_Address[6] = {0xEE, 0xFE, 0xAE,0xBE, 0xCE, 0xDE};
 char Tx_Data[] = "Hello, world!";
@@ -113,9 +113,10 @@ int main(void)
   
   ICM20948_Init(&hspi1);
   Filter_init(&low_pass_filter);
+
 //  NRF24_Init(&hspi1, 76, RF_PWR_MIN);
 //  NRF24_Tx_Mode(&hspi1, &Tx_Address);
-  
+//  Servo3_setAngle(180);
 
   /* USER CODE END 2 */
 
@@ -127,16 +128,21 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-  ICM20948_Read(&hspi1, &data);
-  ax = data.Roll;
-  ay = data.Pitch;
+   ICM20948_Read(&hspi1, &data);
+   ax = data.Roll;
+   ay = data.Pitch;
+   Filter_update(&low_pass_filter,ax);
+   filtered_Roll = low_pass_filter.output;
 
-	// for(uint8_t i=40; i < 181; i++ )
-	// 	{
-	// 		Servo3_setAngle(i);
-	// 		HAL_Delay(10);
-	// 		if(i == 180) i = 40;
-	// 	}
+   Filter_update(&low_pass_filter,ay);
+   filtered_Pitch = low_pass_filter.output;
+
+	 for(uint8_t i=0; i < 181; i++ )
+	 	{
+	 		Servo3_setAngle(i);
+	 		HAL_Delay(10);
+	 		if(i == 180) i = 0;
+	 	}
   // NRF24_Transmit(&hspi1, &Tx_Data);
   // HAL_Delay(1000);
 

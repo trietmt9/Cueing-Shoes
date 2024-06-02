@@ -171,9 +171,9 @@ void ICM20948_Read(SPI_HandleTypeDef* SPIx, gyro_accel_data_t* data)
     data->RAW_Gz = (int16_t)(gyro_data[4]<<8|gyro_data[5]);
 
     // Convert gyroscope raw data to true gyroscope data
-    data->Gx = (double)data->RAW_Gx / 250;
-    data->Gy = (double)data->RAW_Gy / 250;
-    data->Gz = (double)data->RAW_Gz / 250;
+    data->Gx = (double)data->RAW_Gx / 500;
+    data->Gy = (double)data->RAW_Gy / 500;
+    data->Gz = (double)data->RAW_Gz / 500;
 
     // compute Roll Pitch angle
     data->Roll = atan2(data->Ay, sqrt((data->Ax*data->Ax) + (data->Az*data->Az))) * 180 / M_PI;

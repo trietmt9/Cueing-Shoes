@@ -1,4 +1,4 @@
 ../Core/Src/Servo.c:21:6:Servo1_setAngle	24	static
 ../Core/Src/Servo.c:35:6:Servo2_setAngle	24	static
 ../Core/Src/Servo.c:49:6:Servo3_setAngle	24	static
-../Core/Src/Servo.c:63:6:Servo4_setAngle	24	static
+../Core/Src/Servo.c:64:6:Servo4_setAngle	24	static

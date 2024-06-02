@@ -6,6 +6,7 @@
         "stm32f446xx.h": "c",
         "main.h": "c",
         "stm32f4xx_hal.h": "c",
-        "stm32f4xx_hal_conf.h": "c"
+        "stm32f4xx_hal_conf.h": "c",
+        "icm20948_sample_rate_div.h": "c"
     }
 }
