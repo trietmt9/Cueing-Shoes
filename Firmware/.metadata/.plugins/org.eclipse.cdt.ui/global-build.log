@@ -117,3 +117,650 @@ Finished building: default.size.stdout
  
 Finished building: Cueing-Laser-IDE.list
  
+12:31:34 **** Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  33744	    552	   2344	  36640	   8f20	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+12:36:52 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  31264	    468	   2284	  34016	   84e0	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+13:40:26 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/ICM20948.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ICM20948.d" -MT"Core/Src/ICM20948.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ICM20948.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  33744	    552	   2344	  36640	   8f20	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+13:56:38 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  31264	    468	   2284	  34016	   84e0	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+13:57:25 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34320	    552	   2344	  37216	   9160	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+14:12:35 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34280	    552	   2344	  37176	   9138	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+14:13:14 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34320	    552	   2344	  37216	   9160	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+15:52:05 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Servo.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Servo.d" -MT"Core/Src/Servo.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Servo.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/Servo.c: In function 'Servo1_setAngle':
+../Core/Src/Servo.c:25:23: warning: passing argument 1 of 'HAL_TIM_PWM_Start' from incompatible pointer type [-Wincompatible-pointer-types]
+   25 |     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
+      |                       ^~~~~~
+      |                       |
+      |                       TIM_TypeDef *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Servo.h:4,
+                 from ../Core/Src/Servo.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1940:56: note: expected 'TIM_HandleTypeDef *' but argument is of type 'TIM_TypeDef *'
+ 1940 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
+      |                                     ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/Servo.c: In function 'Servo2_setAngle':
+../Core/Src/Servo.c:39:23: warning: passing argument 1 of 'HAL_TIM_PWM_Start' from incompatible pointer type [-Wincompatible-pointer-types]
+   39 |     HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_2);
+      |                       ^~~~~~
+      |                       |
+      |                       TIM_TypeDef *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Servo.h:4,
+                 from ../Core/Src/Servo.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1940:56: note: expected 'TIM_HandleTypeDef *' but argument is of type 'TIM_TypeDef *'
+ 1940 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
+      |                                     ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/Servo.c: In function 'Servo3_setAngle':
+../Core/Src/Servo.c:53:23: warning: passing argument 1 of 'HAL_TIM_PWM_Start' from incompatible pointer type [-Wincompatible-pointer-types]
+   53 |     HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_3);
+      |                       ^~~~~~
+      |                       |
+      |                       TIM_TypeDef *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Servo.h:4,
+                 from ../Core/Src/Servo.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1940:56: note: expected 'TIM_HandleTypeDef *' but argument is of type 'TIM_TypeDef *'
+ 1940 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
+      |                                     ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/Servo.c:50:13: warning: variable 'pwm' set but not used [-Wunused-but-set-variable]
+   50 |     uint8_t pwm;
+      |             ^~~
+../Core/Src/Servo.c: In function 'Servo4_setAngle':
+../Core/Src/Servo.c:67:23: warning: passing argument 1 of 'HAL_TIM_PWM_Start' from incompatible pointer type [-Wincompatible-pointer-types]
+   67 |     HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_4);
+      |                       ^~~~~~
+      |                       |
+      |                       TIM_TypeDef *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Servo.h:4,
+                 from ../Core/Src/Servo.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1940:56: note: expected 'TIM_HandleTypeDef *' but argument is of type 'TIM_TypeDef *'
+ 1940 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
+      |                                     ~~~~~~~~~~~~~~~~~~~^~~~
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34280	    552	   2344	  37176	   9138	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+15:52:46 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34280	    552	   2344	  37176	   9138	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+15:53:16 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34280	    552	   2344	  37176	   9138	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+15:53:38 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34280	    552	   2344	  37176	   9138	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+15:54:10 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34280	    552	   2344	  37176	   9138	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+15:54:44 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34280	    552	   2344	  37176	   9138	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+15:55:08 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34280	    552	   2344	  37176	   9138	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+15:55:38 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34280	    552	   2344	  37176	   9138	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+15:56:06 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34280	    552	   2344	  37176	   9138	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+15:56:33 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34280	    552	   2344	  37176	   9138	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+16:03:26 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Servo.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Servo.d" -MT"Core/Src/Servo.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Servo.o"
+../Core/Src/Servo.c: In function 'Servo1_setAngle':
+../Core/Src/Servo.c:25:23: warning: passing argument 1 of 'HAL_TIM_PWM_Start' from incompatible pointer type [-Wincompatible-pointer-types]
+   25 |     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
+      |                       ^~~~~~
+      |                       |
+      |                       TIM_TypeDef *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Servo.h:4,
+                 from ../Core/Src/Servo.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1940:56: note: expected 'TIM_HandleTypeDef *' but argument is of type 'TIM_TypeDef *'
+ 1940 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
+      |                                     ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/Servo.c: In function 'Servo2_setAngle':
+../Core/Src/Servo.c:39:23: warning: passing argument 1 of 'HAL_TIM_PWM_Start' from incompatible pointer type [-Wincompatible-pointer-types]
+   39 |     HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_2);
+      |                       ^~~~~~
+      |                       |
+      |                       TIM_TypeDef *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Servo.h:4,
+                 from ../Core/Src/Servo.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1940:56: note: expected 'TIM_HandleTypeDef *' but argument is of type 'TIM_TypeDef *'
+ 1940 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
+      |                                     ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/Servo.c: In function 'Servo3_setAngle':
+../Core/Src/Servo.c:54:23: warning: passing argument 1 of 'HAL_TIM_PWM_Start' from incompatible pointer type [-Wincompatible-pointer-types]
+   54 |     HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_3);
+      |                       ^~~~~~
+      |                       |
+      |                       TIM_TypeDef *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Servo.h:4,
+                 from ../Core/Src/Servo.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1940:56: note: expected 'TIM_HandleTypeDef *' but argument is of type 'TIM_TypeDef *'
+ 1940 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
+      |                                     ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/Servo.c:50:13: warning: variable 'pwm' set but not used [-Wunused-but-set-variable]
+   50 |     uint8_t pwm;
+      |             ^~~
+../Core/Src/Servo.c: In function 'Servo4_setAngle':
+../Core/Src/Servo.c:68:23: warning: passing argument 1 of 'HAL_TIM_PWM_Start' from incompatible pointer type [-Wincompatible-pointer-types]
+   68 |     HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_4);
+      |                       ^~~~~~
+      |                       |
+      |                       TIM_TypeDef *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Servo.h:4,
+                 from ../Core/Src/Servo.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1940:56: note: expected 'TIM_HandleTypeDef *' but argument is of type 'TIM_TypeDef *'
+ 1940 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
+      |                                     ~~~~~~~~~~~~~~~~~~~^~~~
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34288	    552	   2344	  37184	   9140	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+16:03:53 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34288	    552	   2344	  37184	   9140	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+16:04:22 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Servo.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Servo.d" -MT"Core/Src/Servo.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Servo.o"
+../Core/Src/Servo.c: In function 'Servo1_setAngle':
+../Core/Src/Servo.c:25:23: warning: passing argument 1 of 'HAL_TIM_PWM_Start' from incompatible pointer type [-Wincompatible-pointer-types]
+   25 |     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
+      |                       ^~~~~~
+      |                       |
+      |                       TIM_TypeDef *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Servo.h:4,
+                 from ../Core/Src/Servo.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1940:56: note: expected 'TIM_HandleTypeDef *' but argument is of type 'TIM_TypeDef *'
+ 1940 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
+      |                                     ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/Servo.c: In function 'Servo2_setAngle':
+../Core/Src/Servo.c:39:23: warning: passing argument 1 of 'HAL_TIM_PWM_Start' from incompatible pointer type [-Wincompatible-pointer-types]
+   39 |     HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_2);
+      |                       ^~~~~~
+      |                       |
+      |                       TIM_TypeDef *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Servo.h:4,
+                 from ../Core/Src/Servo.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1940:56: note: expected 'TIM_HandleTypeDef *' but argument is of type 'TIM_TypeDef *'
+ 1940 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
+      |                                     ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/Servo.c: In function 'Servo3_setAngle':
+../Core/Src/Servo.c:54:23: warning: passing argument 1 of 'HAL_TIM_PWM_Start' from incompatible pointer type [-Wincompatible-pointer-types]
+   54 |     HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_3);
+      |                       ^~~~~~
+      |                       |
+      |                       TIM_TypeDef *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Servo.h:4,
+                 from ../Core/Src/Servo.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1940:56: note: expected 'TIM_HandleTypeDef *' but argument is of type 'TIM_TypeDef *'
+ 1940 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
+      |                                     ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/Servo.c: In function 'Servo4_setAngle':
+../Core/Src/Servo.c:68:23: warning: passing argument 1 of 'HAL_TIM_PWM_Start' from incompatible pointer type [-Wincompatible-pointer-types]
+   68 |     HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_4);
+      |                       ^~~~~~
+      |                       |
+      |                       TIM_TypeDef *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Servo.h:4,
+                 from ../Core/Src/Servo.c:11:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1940:56: note: expected 'TIM_HandleTypeDef *' but argument is of type 'TIM_TypeDef *'
+ 1940 | HAL_StatusTypeDef HAL_TIM_PWM_Start(TIM_HandleTypeDef *htim, uint32_t Channel);
+      |                                     ~~~~~~~~~~~~~~~~~~~^~~~
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34288	    552	   2344	  37184	   9140	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+16:04:44 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34288	    552	   2344	  37184	   9140	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+16:04:54 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34288	    552	   2344	  37184	   9140	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+16:05:23 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34328	    552	   2344	  37224	   9168	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+16:05:57 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34328	    552	   2344	  37224	   9168	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
+16:06:32 **** Incremental Build of configuration Debug for project Cueing-Laser-IDE ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/NRF24L01.h:149: warning: "TX_FULL" redefined
+  149 | #define TX_FULL                                         0x05U
+      | 
+../Core/Inc/NRF24L01.h:105: note: this is the location of the previous definition
+  105 | #define TX_FULL                                         0x00U
+      | 
+arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cueing-Laser-IDE.elf
+ 
+arm-none-eabi-size  Cueing-Laser-IDE.elf 
+arm-none-eabi-objdump -h -S Cueing-Laser-IDE.elf  > "Cueing-Laser-IDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  34328	    552	   2344	  37224	   9168	Cueing-Laser-IDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cueing-Laser-IDE.list
+ 
