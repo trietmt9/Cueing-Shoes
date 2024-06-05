@@ -1,0 +1,29 @@
+Removed Pin From Net: NetName=GND Pin=PWM1-1
+Removed Pin From Net: NetName=+5V Pin=PWM1-2
+Removed Pin From Net: NetName=PB6 Pin=PWM1-3
+Removed Pin From Net: NetName=GND Pin=PWM2-1
+Removed Pin From Net: NetName=+5V Pin=PWM2-2
+Removed Pin From Net: NetName=GND Pin=PWM3-1
+Removed Pin From Net: NetName=+5V Pin=PWM3-2
+Removed Pin From Net: NetName=GND Pin=PWM4-1
+Removed Pin From Net: NetName=+5V Pin=PWM4-2
+Removed Member From Class: ClassName=STM32_MCU Member=I/O Port
+Removed Member From Class: ClassName=STM32_MCU Member=PWM1
+Removed Member From Class: ClassName=STM32_MCU Member=PWM2
+Removed Member From Class: ClassName=STM32_MCU Member=PWM3
+Removed Member From Class: ClassName=STM32_MCU Member=PWM4
+Change Component Designator: OldDesignator=ADC NewDesignator=ADC1
+Change Component Designator: OldDesignator=Driver NewDesignator=Driver1
+Change Component Designator: OldDesignator=SWD/JTAG NewDesignator=SWD/JTAG1
+Added Component: Designator=Servo(JP 1x3 DT)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000903"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Jump Ðon Ð?c 2.54MM 1x40P Th?ng 11MM"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=Servo-1
+Added Pin To Net: NetName=+5V Pin=Servo-2
+Added Pin To Net: NetName=PB6 Pin=Servo-3
+Change Net Name : Old Net Name=NetBoot1_1 New Net Name=NetBoot_1
+Added Member To Class: ClassName=STM32_MCU Member=Component Servo JP 1x3 2.54

@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=USB Old Footprint=MINI_USB New Footprint=micro_USB shilding
+Change Component Designator: OldDesignator=ADC NewDesignator=ADC1
+Change Component Designator: OldDesignator=Battery NewDesignator=BT1
+Change Component Designator: OldDesignator=Driver NewDesignator=Driver1
+Change Component Designator: OldDesignator=SWD/JTAG NewDesignator=SWD/JTAG1

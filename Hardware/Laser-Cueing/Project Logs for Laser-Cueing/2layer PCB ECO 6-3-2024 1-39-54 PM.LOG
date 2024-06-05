@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=+3.3V_STM32 Pin=JP1-1
+Removed Member From Class: ClassName=STM32_MCU Member=JP1
