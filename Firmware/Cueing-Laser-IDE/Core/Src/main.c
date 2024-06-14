@@ -56,10 +56,10 @@ uint8_t who_am_i;
 uint8_t reg;
 gyro_accel_data_t data;
 FIR_Filter low_pass_filter;
-float ax, ay, az;
-float gx, gy, gz;
-float Roll, Pitch;
-float filtered_Roll, filtered_Pitch;
+float Accelerometer[3];
+float GyroScope[3];
+float MotionCapture[3];
+float Filter_Data[3];
 char buffer[30];
 char Tx_Address[6] = {0xEE, 0xFE, 0xAE,0xBE, 0xCE, 0xDE};
 char Tx_Data[] = "Hello, world!";
@@ -129,13 +129,13 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
    ICM20948_Read(&hspi1, &data);
-   ax = data.Roll;
-   ay = data.Pitch;
-   Filter_update(&low_pass_filter,ax);
-   filtered_Roll = low_pass_filter.output;
+   MotionCapture[0] = data.Roll;
+   MotionCapture[1] = data.Pitch;
+   Filter_update(&low_pass_filter,MotionCapture[0]);
+   Filter_Data[0] = low_pass_filter.output;
 
-   Filter_update(&low_pass_filter,ay);
-   filtered_Pitch = low_pass_filter.output;
+   Filter_update(&low_pass_filter,MotionCapture[1]);
+   Filter_Data[1] = low_pass_filter.output;
 
 	 for(uint8_t i=0; i < 181; i++ )
 	 	{
