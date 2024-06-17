@@ -29,7 +29,7 @@ inline static void NRF24_DISABLE(void)
     HAL_GPIO_WritePin(NRF24_CE_GPIO_Port, NRF24_CE_Pin, GPIO_PIN_RESET);
 }
 
-void SPI_Write_Byte(SPI_HandleTypeDef *SPIx, uint8_t reg, uint8_t Data)
+void SPI_Write_Byte(SPI_HandleTypeDef *SPIx, uint8_t reg, uint8_t* Data)
 {
     uint8_t temp_reg[2];
     temp_reg[0] = (reg | NRF24L01_CMD_WRITE_REGISTER);
@@ -307,7 +307,7 @@ void NRF24_Retries(SPI_HandleTypeDef *SPIx, retries_time_t retries_times, retran
     SPI_Write_Byte(SPIx, NRF24L01_REG_SETUP_RETR, &temp_data);
 }
 
-void NRF24_PAYLOADSIZE(SPI_HandleTypeDef *SPIx, payload_size_t size)
+void NRF24_PAYLOADSIZE(SPI_HandleTypeDef *SPIx, payload_size_t* size)
 { 
     SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P0, size);
     SPI_Write_Byte(SPIx, NRF24L01_REG_RX_PW_P1, size);
