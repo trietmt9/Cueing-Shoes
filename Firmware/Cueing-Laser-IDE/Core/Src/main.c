@@ -128,25 +128,25 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-   ICM20948_Read(&hspi1, &data);
-   // Capture Roll and Pitch angle 
-   MotionCapture[0] = data.Roll;
-   MotionCapture[1] = data.Pitch;
+  ICM20948_Read(&hspi1, &data);
+  // Capture Roll and Pitch angle 
+  MotionCapture[0] = data.Roll;
+  MotionCapture[1] = data.Pitch;
 
-   // Apply FIR filter for both angle
-   Filter_update(&low_pass_filter,MotionCapture[0]);
-   Filter_Data[0] = low_pass_filter.output;
+  // Apply FIR filter for both angle
+  Filter_update(&low_pass_filter,MotionCapture[0]);
+  Filter_Data[0] = low_pass_filter.output;
 
-   Filter_update(&low_pass_filter,MotionCapture[1]);
-   Filter_Data[1] = low_pass_filter.output;
+  Filter_update(&low_pass_filter,MotionCapture[1]);
+  Filter_Data[1] = low_pass_filter.output;
 
   
-	 for(uint8_t i=0; i < 181; i++ )
-	 	{
-	 		Servo3_setAngle(i);
-	 		HAL_Delay(10);
-	 		if(i == 180) i = 0;
-	 	}
+	for(uint8_t i=0; i < 181; i++ )
+		{
+			Servo3_setAngle(i);
+			HAL_Delay(10);
+			if(i == 180) i = 0;
+		}
   // NRF24_Transmit(&hspi1, &Tx_Data);
   // HAL_Delay(1000);
 

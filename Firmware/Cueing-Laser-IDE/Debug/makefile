@@ -60,8 +60,8 @@ all: main-build
 main-build: Cueing-Laser-IDE.elf secondary-outputs
 
 # Tool invocations
-Cueing-Laser-IDE.elf Cueing-Laser-IDE.map: $(OBJS) $(USER_OBJS) C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Lazer-light-cueing\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Cueing-Laser-IDE.elf Cueing-Laser-IDE.map: $(OBJS) $(USER_OBJS) C:\Users\pc\Documents\Cueing-Shoes\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Cueing-Laser-IDE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\pc\Documents\Cueing-Shoes\Firmware\Cueing-Laser-IDE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cueing-Laser-IDE.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

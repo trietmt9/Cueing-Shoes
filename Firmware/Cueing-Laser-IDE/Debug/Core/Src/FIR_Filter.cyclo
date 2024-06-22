@@ -1,2 +1,4 @@
-../Core/Src/FIR_Filter.c:12:6:Filter_init	2
-../Core/Src/FIR_Filter.c:28:7:Filter_update	4
+../Core/Src/FIR_Filter.c:13:6:Hamming_window	2
+../Core/Src/FIR_Filter.c:21:6:Window_Coeficient	2
+../Core/Src/FIR_Filter.c:29:6:Filter_init	2
+../Core/Src/FIR_Filter.c:50:7:Filter_update	4
