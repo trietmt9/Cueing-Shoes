@@ -1,8 +1,8 @@
 #ifndef __FIR__FILTER__H
 #define __FIR__FILTER__H
 #include "stdint.h"
-
-#define FIR_FILTER_LENGTH                       16
+#include "math.h"
+#define FIR_FILTER_LENGTH                       8
 #define M_PI                                    3.14159265358979323846
 typedef struct
 {

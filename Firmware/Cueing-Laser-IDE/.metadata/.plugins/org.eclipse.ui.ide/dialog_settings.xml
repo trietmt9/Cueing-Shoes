@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\pc\Documents\Cueing-Shoes\Firmware\Cueing-Laser-IDE"/>
 			<item value="/home/triet/Documents/Cueing-Shoes/Firmware/Cueing-Laser-IDE"/>
 		</list>
 	</section>

@@ -7,7 +7,7 @@
 */
 #include "FIR_Filter.h"
 
-static float FIR_IMPULSE_RESPONSE[FIR_FILTER_LENGTH] = {}; // Impulse response h(j)
+static float FIR_IMPULSE_RESPONSE[FIR_FILTER_LENGTH]; // Impulse response h(j)
 
 // Apply Hamming Window Method
 void Hamming_window(float* window, uint8_t size)
@@ -44,7 +44,7 @@ void Filter_init(FIR_Filter *fir)
     // Apply Hamming window method for impulse response 
     float Window;
     Hamming_window(&Window, FIR_FILTER_LENGTH);
-    Window_Coeficient(&FIR_IMPULSE_RESPONSE, &Window, FIR_FILTER_LENGTH);
+    Window_Coeficient((float*)&FIR_IMPULSE_RESPONSE, &Window, FIR_FILTER_LENGTH);
 }
 
 float Filter_update(FIR_Filter* fir, float input)

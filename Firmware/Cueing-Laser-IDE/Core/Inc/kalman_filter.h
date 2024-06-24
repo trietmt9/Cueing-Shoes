@@ -1,5 +1,5 @@
 #include <stm32f4xx.h>
-
+#include "stdint.h"
 typedef struct
 {
     float theta; // bias

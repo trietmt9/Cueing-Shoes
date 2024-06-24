@@ -614,6 +614,9 @@ typedef struct
         int16_t RAW_Ay;
         int16_t RAW_Az;
 
+        float Gx_Callib;
+        float Gy_Callib;
+        float Gz_Callib;
         float Gx;
         float Gy;
         float Gz;
