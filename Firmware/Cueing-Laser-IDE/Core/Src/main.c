@@ -91,6 +91,30 @@ kalman_t Kalman =
   .Q_theta_dot = 0.001f,
   .R = 0.000001f
 };
+
+void IMU_Read(float* dt)
+{
+  ICM20948_Read(&hspi1, &data);
+ // Capture Roll and Pitch angle
+  MotionCapture[0] = data.Roll;
+  MotionCapture[1] = data.Pitch;
+
+ // Apply Kalman filter for both angle
+  Filter_Data[0] = Kalman_Filter(&Kalman, data.Gx, data.Roll, *dt);
+  Filter_Data[1] = Kalman_Filter(&Kalman, data.Gy, data.Pitch, *dt);
+  Roll = Filter_Data[0];
+  Pitch = Filter_Data[1];
+}
+
+void Servo_Test()
+{
+  	for(uint8_t i=0; i < 181; i++ )
+		{
+			Servo3_setAngle(i);
+			HAL_Delay(10);
+			if(i == 180) i = 0;
+		}
+}
 /* USER CODE END 0 */
 
 /**
@@ -146,26 +170,9 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-
-  ICM20948_Read(&hspi1, &data);
- // Capture Roll and Pitch angle
-  MotionCapture[0] = data.Roll;
-  MotionCapture[1] = data.Pitch;
-
-//
- // Apply Kalman filter for both angle
-  Filter_Data[0] = Kalman_Filter(&Kalman, data.Gx, data.Roll, dt);
-  Filter_Data[1] = Kalman_Filter(&Kalman, data.Gy, data.Pitch, dt);
-  Roll = Filter_Data[0];
-  Pitch = Filter_Data[1];
-	// for(uint8_t i=0; i < 181; i++ )
-	// 	{
-	// 		Servo3_setAngle(i);
-	// 		HAL_Delay(10);
-	// 		if(i == 180) i = 0;
-	// 	}
-  // NRF24_Transmit(&hspi1, &Tx_Data);
-  // HAL_Delay(1000);
+  IMU_Read(&dt);
+  Servo_Test();
+  NRF24_Transmit(&hspi1, &Tx_Data);
   T0 = T1;
   }
   /* USER CODE END 3 */
