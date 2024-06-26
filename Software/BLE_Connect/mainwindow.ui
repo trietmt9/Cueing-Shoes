@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>30</y>
-      <width>382</width>
-      <height>401</height>
+      <y>20</y>
+      <width>391</width>
+      <height>411</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="BLELayout">
@@ -47,7 +47,7 @@
          <property name="maximumSize">
           <size>
            <width>60</width>
-           <height>16777215</height>
+           <height>50</height>
           </size>
          </property>
          <property name="text">
@@ -60,7 +60,7 @@
          <property name="maximumSize">
           <size>
            <width>75</width>
-           <height>16777215</height>
+           <height>50</height>
           </size>
          </property>
          <property name="text">
@@ -122,6 +122,12 @@
          </item>
          <item>
           <widget class="QPushButton" name="pushButton">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>50</height>
+            </size>
+           </property>
            <property name="text">
             <string>Send</string>
            </property>
@@ -141,18 +147,18 @@
      <rect>
       <x>420</x>
       <y>40</y>
-      <width>291</width>
-      <height>241</height>
+      <width>301</width>
+      <height>281</height>
      </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>360</y>
+      <x>410</x>
+      <y>400</y>
       <width>80</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -162,10 +168,10 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>500</x>
-      <y>360</y>
+      <x>640</x>
+      <y>400</y>
       <width>80</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
