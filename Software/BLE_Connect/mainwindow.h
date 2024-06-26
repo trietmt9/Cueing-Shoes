@@ -2,6 +2,22 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QLabel>
+#include <QComboBox>
+#include <QLayout>
+#include <QPushButton>
+#include <QGroupBox>
+#include <QLineEdit>
+#include <QString>
+#include <QDebug>
+#include <QtWidgets>
+#include <qregularexpression.h>
+#include <QBluetoothDeviceDiscoveryAgent>
+#include <QBluetoothDeviceInfo>
+#include <QBluetoothAddress>
+#include <QLowEnergyController>
+#include <QString>
+#include <QObject>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,8 +32,18 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void DeviceDiscover(const QBluetoothDeviceInfo &device);
+    void AddDevice(const QBluetoothDeviceInfo &device);
+private slots:
+    void on_ConnectButton_clicked();
+
+    void on_ScanButton_clicked();
+
+signals:
+    void deviceChanged();
 
 private:
     Ui::MainWindow *ui;
+    QBluetoothDeviceDiscoveryAgent *m_deviceDiscoveryAgent  = new QBluetoothDeviceDiscoveryAgent;
 };
 #endif // MAINWINDOW_H
