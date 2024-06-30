@@ -1,0 +1,11 @@
+Added Component: Designator=Power Options(SW_OS102011MS2QN1)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "{'manufacturer': u'C&K'}"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "OS102011MS2QN1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+V_Bat Pin=Power Options-1
+Added Pin To Net: NetName=+5V Pin=Power Options-2
+Added Pin To Net: NetName=+V_USB Pin=Power Options-3
+Added Member To Class: ClassName=PowerSrc Member=Component Power Options OS102011MS2QN1

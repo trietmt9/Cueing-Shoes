@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=+3.3V_STM32 Pin=C26-1
+Removed Pin From Net: NetName=GND Pin=C26-2
+Removed Pin From Net: NetName=GND Pin=C27-2
+Removed Pin From Net: NetName=+3.3V_STM32 Pin=U7-1
+Removed Pin From Net: NetName=GND Pin=U7-2
+Removed Pin From Net: NetName=+3.3V_STM32 Pin=U7-3
+Removed Member From Class: ClassName=PowerSrc Member=C26
+Removed Member From Class: ClassName=PowerSrc Member=C27
+Removed Member From Class: ClassName=PowerSrc Member=U7
+Change Component Designator: OldDesignator=Driver NewDesignator=JP1
+Change Component Designator: OldDesignator=JDY-18 NewDesignator=JDY-1
+Change Component Designator: OldDesignator=NRF24L01 NewDesignator=NRF1
+Change Component Designator: OldDesignator=Servo NewDesignator=Servo1
+Change Component Designator: OldDesignator=SWD/JTAG NewDesignator=SWD/JTAG1
+Added Member To Class: ClassName=MCU Member=Component C1 18pF
+Added Member To Class: ClassName=MCU Member=Component C2 18pF

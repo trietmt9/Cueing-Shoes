@@ -1,0 +1,18 @@
+Removed Member From Class: ClassName=Driver Member=D3
+Removed Member From Class: ClassName=ADC Member=R12
+Removed Member From Class: ClassName=PowerSrc Member=R12
+Removed Member From Class: ClassName=ADC Member=R13
+Removed Member From Class: ClassName=PowerSrc Member=R13
+Change Component Designator: OldDesignator=Battery NewDesignator=BT1
+Change Component Designator: OldDesignator=JDY-18 NewDesignator=JDY-1
+Change Component Designator: OldDesignator=NRF24L01 NewDesignator=NRF1
+Change Component Designator: OldDesignator=SWD/JTAG NewDesignator=SWD/JTAG1
+Added Member To Class: ClassName=PowerSrc Member=Component C26 10pF
+Added Member To Class: ClassName=Driver Member=Component D2 LL103A-GS08
+Added Member To Class: ClassName=PowerSrc Member=Component D4 AVRL161A1R1NTA
+Added Member To Class: ClassName=PowerSrc Member=Component D6 AVRL161A1R1NTA
+Added Member To Class: ClassName=ADC Member=Component R14 3.9k
+Added Member To Class: ClassName=ADC Member=Component R15 3.9k
+Added Member To Class: ClassName=PowerSrc Member=Component R16 1k
+Added Member To Class: ClassName=PowerSrc Member=Component R17 1k
+Added Member To Class: ClassName=PowerSrc Member=Component U7 MAX1555EZK+T

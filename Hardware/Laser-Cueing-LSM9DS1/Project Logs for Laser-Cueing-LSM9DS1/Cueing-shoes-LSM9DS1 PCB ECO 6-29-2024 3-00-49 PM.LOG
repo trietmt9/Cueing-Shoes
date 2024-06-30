@@ -1,0 +1,7 @@
+Added Component: Designator=D7(MELF_SOD-80_VIS)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5V Pin=D7-1
+Added Pin To Net: NetName=Vibrator Pin=D7-2
+Added Member To Class: ClassName=Driver Member=Component D7 LL103A-GS08

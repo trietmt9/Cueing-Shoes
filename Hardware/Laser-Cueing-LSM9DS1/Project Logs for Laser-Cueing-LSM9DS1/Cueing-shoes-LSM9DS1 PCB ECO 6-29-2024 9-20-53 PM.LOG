@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=IMU_CS_A/G Pin=U1-25
+Removed Pin From Net: NetName=IMU_CS_M Pin=U1-26
+Change Component Designator: OldDesignator=ADC NewDesignator=ADC1
+Change Component Designator: OldDesignator=Battery NewDesignator=BT1
+Change Component Designator: OldDesignator=Boot NewDesignator=Boot1
+Change Component Designator: OldDesignator=Driver NewDesignator=JP1
+Change Component Designator: OldDesignator=JDY-18 NewDesignator=JDY-1
+Change Component Designator: OldDesignator=NRF24L01 NewDesignator=NRF1
+Change Component Designator: OldDesignator=Servo NewDesignator=Servo1
+Change Component Designator: OldDesignator=SWD/JTAG NewDesignator=SWD/JTAG1
+Added Pin To Net: NetName=IMU_CS_M Pin=U1-25
+Added Pin To Net: NetName=IMU_CS_A/G Pin=U1-26

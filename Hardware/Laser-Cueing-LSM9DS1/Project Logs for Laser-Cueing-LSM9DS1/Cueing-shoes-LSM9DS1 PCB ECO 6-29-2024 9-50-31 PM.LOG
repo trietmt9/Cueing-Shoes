@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=NRF24_CE Pin=U1-17
+Removed Pin From Net: NetName=NRF24_CSN Pin=U1-20
+Removed Pin From Net: NetName=IMU_CS_M Pin=U1-25
+Removed Pin From Net: NetName=IMU_CS_A/G Pin=U1-26
+Change Component Designator: OldDesignator=Boot1 NewDesignator=Boot
+Change Component Designator: OldDesignator=JDY-1 NewDesignator=JDY-18
+Added Pin To Net: NetName=IMU_CS_M Pin=U1-17
+Added Pin To Net: NetName=IMU_CS_A/G Pin=U1-20
+Added Pin To Net: NetName=NRF24_CSN Pin=U1-25
+Added Pin To Net: NetName=NRF24_CE Pin=U1-26
+Change Net Name : Old Net Name=NetBoot1_1 New Net Name=NetBoot_1

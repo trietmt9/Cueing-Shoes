@@ -1,0 +1,47 @@
+Added Component: Designator=U?(QFP50P1200X1200X160-64N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "{'manufacturer': u'STMicroelectronics'}"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "STM32F446RET6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3.3V_STM32 Pin=U?-1
+Added Pin To Net: NetName=OSC_IN Pin=U?-5
+Added Pin To Net: NetName=OSC_OUT Pin=U?-6
+Added Pin To Net: NetName=NRST Pin=U?-7
+Added Pin To Net: NetName=PC2 Pin=U?-10
+Added Pin To Net: NetName=PC3 Pin=U?-11
+Added Pin To Net: NetName=GND Pin=U?-12
+Added Pin To Net: NetName=+3.3V_STM32 Pin=U?-13
+Added Pin To Net: NetName=NetD1_2 Pin=U?-16
+Added Pin To Net: NetName=NRF24_CE Pin=U?-17
+Added Pin To Net: NetName=GND Pin=U?-18
+Added Pin To Net: NetName=+3.3V_STM32 Pin=U?-19
+Added Pin To Net: NetName=NRF24_CSN Pin=U?-20
+Added Pin To Net: NetName=SPI_SCK Pin=U?-21
+Added Pin To Net: NetName=SPI_MISO Pin=U?-22
+Added Pin To Net: NetName=SPI_MOSI Pin=U?-23
+Added Pin To Net: NetName=NRF24_INT Pin=U?-24
+Added Pin To Net: NetName=IMU_CS_A/G Pin=U?-25
+Added Pin To Net: NetName=IMU_CS_M Pin=U?-26
+Added Pin To Net: NetName=NetC11_1 Pin=U?-30
+Added Pin To Net: NetName=GND Pin=U?-31
+Added Pin To Net: NetName=+3.3V_STM32 Pin=U?-32
+Added Pin To Net: NetName=PC6 Pin=U?-37
+Added Pin To Net: NetName=PC7 Pin=U?-38
+Added Pin To Net: NetName=UART_Tx Pin=U?-42
+Added Pin To Net: NetName=UART_Rx Pin=U?-43
+Added Pin To Net: NetName=USB_N Pin=U?-44
+Added Pin To Net: NetName=USB_P Pin=U?-45
+Added Pin To Net: NetName=TMS Pin=U?-46
+Added Pin To Net: NetName=GND Pin=U?-47
+Added Pin To Net: NetName=+3.3V_STM32 Pin=U?-48
+Added Pin To Net: NetName=TCK Pin=U?-49
+Added Pin To Net: NetName=TDI Pin=U?-50
+Added Pin To Net: NetName=TDO Pin=U?-55
+Added Pin To Net: NetName=TRST Pin=U?-56
+Added Pin To Net: NetName=PB6 Pin=U?-58
+Added Pin To Net: NetName=Boot Pin=U?-60
+Added Pin To Net: NetName=GND Pin=U?-63
+Added Pin To Net: NetName=+3.3V_STM32 Pin=U?-64
+Added Member To Class: ClassName=MCU Member=Component U? STM32F446RET6
