@@ -9,7 +9,7 @@ double Kalman_Filter(kalman_t *KalmanData, double Gyro, double Accel, float dt)
     KalmanData->P[0][0] += dt * (dt * KalmanData->P[1][1] - KalmanData->P[0][1] - KalmanData->P[1][0] + KalmanData->Q_theta_dot);
     KalmanData->P[0][1] -= KalmanData->P[1][1] * dt;
     KalmanData->P[1][0] -= KalmanData->P[1][1] * dt;
-    KalmanData->P[1][1] += KalmanData->Q_theta * dt;
+    KalmanData->P[1][1] += KalmanData->Q_theta * dt;    
 
     // Measurement Update "Correct"
     double S = KalmanData->P[0][0] + KalmanData->R; // Innovation (or residual) covariance
