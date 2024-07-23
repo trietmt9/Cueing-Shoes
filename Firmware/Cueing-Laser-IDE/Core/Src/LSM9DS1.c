@@ -19,10 +19,6 @@
  *
  * @return None.
  *
- * @note This function assumes that the GPIO and SPI peripherals have been properly initialized and configured.
- *
- * @note The function sets the CS pin to low before initiating the SPI communication, writes the register address and data,
- * and then sets the CS pin back to high to complete the write operation.
  */
 void SPI_WriteRegisters(SPI_HandleTypeDef *SPIx, uint8_t csPin, uint8_t Register, uint8_t* pData, uint8_t Data_length)
 {
@@ -43,9 +39,6 @@ void SPI_WriteRegisters(SPI_HandleTypeDef *SPIx, uint8_t csPin, uint8_t Register
  *
  * @return None.
  *
- * @note This function assumes that the GPIO and SPI peripherals have been properly initialized and configured.
- * @note The function sets the CS pin to low before initiating the SPI communication, reads the register data,
- * and then sets the CS pin back to high to complete the read operation.
  */
 void SPI_ReadRegisters(SPI_HandleTypeDef *SPIx, uint8_t csPin, uint8_t reg, uint8_t* pData, uint8_t Data_length)
 {
@@ -64,9 +57,6 @@ void SPI_ReadRegisters(SPI_HandleTypeDef *SPIx, uint8_t csPin, uint8_t reg, uint
  *
  * @return None.
  *
- * @note This function assumes that the GPIO and SPI peripherals have been properly initialized and configured.
- * @note The function sets the CS pin to low before initiating the SPI communication, reads the "Who Am I" register data,
- * and then sets the CS pin back to high to complete the read operation.
  */
 void IsWhoAmI(SPI_HandleTypeDef *SPIx, uint8_t* who_am_i)
 {
@@ -91,8 +81,8 @@ void LSM9DS1_Read(SPI_HandleTypeDef *SPIx, data_t *pData)
   uint8_t gData[6];
   SPI_ReadRegisters(SPIx, IMU_AG_CS_Pin, OUT_X_H_G, gData, 6);
   pData->RawData_t.Gx_RAW  = (int16_t)((gData[0] << 8) | gData[1]);
-  pData->RawData_t.Gx_RAW  = (int16_t)((gData[2] << 8) | gData[3]);
-  pData->RawData_t.Gx_RAW  = (int16_t)((gData[4] << 8) | gData[5]);
+  pData->RawData_t.Gy_RAW  = (int16_t)((gData[2] << 8) | gData[3]);
+  pData->RawData_t.Gy_RAW  = (int16_t)((gData[4] << 8) | gData[5]);
   
   pData->Data_t.Gx = pData->RawData_t.Gx_RAW/2000;
   pData->Data_t.Gy = pData->RawData_t.Gy_RAW/2000;
@@ -119,11 +109,11 @@ void LSM9DS1_Init(SPI_HandleTypeDef* SPIx)
 {
 	int8_t who_am_i, temp;
   sWhoAmI(SPIx,&who_am_i);
-  //
+  // Setup bandwidth and DPS of IMU's gyroscope 
   temp = 0;
   temp = 0x78;
   SPI_WriteRegisters(SPIx, IMU_AG_CS_Pin, CTRL_REG1_G, &temp, sizeof(temp));
-  //
+  // Configure output and interrupts selection 
   temp = 0;
   temp = 0x00;
   SPI_WriteRegisters(SPIx, IMU_AG_CS_Pin, CTRL_REG2_G, &temp, sizeof(temp));
