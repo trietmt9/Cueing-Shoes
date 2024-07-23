@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "ICM20948.h"
+#include "LSM9DS1.h"
 #include "FIR_Filter.h"
 #include "stdint.h"
 #include "string.h"
@@ -55,14 +55,13 @@ SPI_HandleTypeDef hspi1;
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
 
-HCD_HandleTypeDef hhcd_USB_OTG_FS;
-
 /* USER CODE BEGIN PV */
 uint8_t who_am_i;
 uint8_t reg;
 uint32_t analog[2];
-gyro_accel_data_t data;
+//gyro_accel_data_t data;
 FIR_Filter low_pass_filter;
+data_t pData;
 float Accelerometer[3];
 float GyroScope[3];
 float MotionCapture[3];
@@ -71,7 +70,6 @@ float Roll, Pitch;
 float dt;
 char buffer[30];
 char Tx_Address[6] = {0xEE, 0xFE, 0xAE,0xBE, 0xCE, 0xDE};
-char Tx_Data[] = "Hello, world!";
 uint32_t T0, T1;
 int callib = 0;
 /* USER CODE END PV */
@@ -84,7 +82,6 @@ static void MX_SPI1_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM4_Init(void);
 static void MX_ADC1_Init(void);
-static void MX_USB_OTG_FS_HCD_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -98,7 +95,15 @@ kalman_t Kalman =
   .R = 0.000001f
 };
 
-
+ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+ {
+	 LSM9DS1_Read(&hspi1, &pData);
+	 MotionCapture[0] = pData.Data_t.Ax;
+	 MotionCapture[1] = pData.Data_t.Ay;
+	 MotionCapture[2] = pData.Data_t.Az;
+	 LED_Brightness(100);
+	 Vibrator_Control(100);
+ }
 /* USER CODE END 0 */
 
 /**
@@ -135,51 +140,33 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM4_Init();
   MX_ADC1_Init();
-  MX_USB_OTG_FS_HCD_Init();
   /* USER CODE BEGIN 2 */
   
-//   ICM20948_Init(&hspi1);
 
-//  NRF24_Init(&hspi1, 76, RF_PWR_MIN);
-//  NRF24_Tx_Mode(&hspi1, &Tx_Address);
-//  Servo3_setAngle(180);
-
-//  HAL_ADC_Start_DMA(&hadc1,analog,2);
+  LSM9DS1_Init(&hspi1);
+// NRF24_Init(&hspi1, 76, RF_PWR_MIN);
+// NRF24_Tx_Mode(&hspi1, &Tx_Address);
+ Servo_setAngle(180);
+//  Servo_setAngle(_0_DEGREE);
+  HAL_ADC_Start_DMA(&hadc1,analog,2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-//  T0 = HAL_GetTick();
   while (1)
   {
-//  T1 = HAL_GetTick();
-//  dt =(float)(T1 - T0)/1000.0f;
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//    ICM20948_Read(&hspi1, &data);
-//   // Capture Roll and Pitch angle
-//    MotionCapture[0] = data.Roll;
-//    MotionCapture[1] = data.Pitch;
+
+  // Capture Roll and Pitch angle
+
 
  // Apply Kalman filter for both angle
-  // Filter_Data[0] = Kalman_Filter(&Kalman, data.Gx, data.Roll, dt);
-  // Filter_Data[1] = Kalman_Filter(&Kalman, data.Gy, data.Pitch, dt);
-  // Roll = Filter_Data[0];
-  // Pitch = Filter_Data[1];
-// HAL_GPIO_WritePin(GPIOA,GPIO_PIN_2, 1);
-// HAL_Delay(500);
-// HAL_GPIO_WritePin(GPIOA,GPIO_PIN_2, 0);
-// HAL_Delay(500);
-	for(uint8_t i=0; i < 181; i++ )
-		{
-			Servo1_setAngle(i);
-			HAL_Delay(100);
-			if(i == 180) i = 0;
-		}
-//	  Servo1_setAngle(90);
-//  NRF24_Transmit(&hspi1, &Tx_Data);
-//  T0 = T1;
+
+//  NRF24_Transmit(&hspi1, &analog[0]);
+//  NRF24_Transmit(&hspi1, &analog[1]);
   }
   /* USER CODE END 3 */
 }
@@ -196,7 +183,7 @@ void SystemClock_Config(void)
   /** Configure the main internal regulator output voltage
   */
   __HAL_RCC_PWR_CLK_ENABLE();
-  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE3);
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
@@ -206,7 +193,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 8;
-  RCC_OscInitStruct.PLL.PLLN = 72;
+  RCC_OscInitStruct.PLL.PLLN = 180;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 3;
   RCC_OscInitStruct.PLL.PLLR = 2;
@@ -215,16 +202,23 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 
+  /** Activate the Over-Drive mode
+  */
+  if (HAL_PWREx_EnableOverDrive() != HAL_OK)
+  {
+    Error_Handler();
+  }
+
   /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
   {
     Error_Handler();
   }
@@ -251,7 +245,7 @@ static void MX_ADC1_Init(void)
   /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
   */
   hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = ENABLE;
   hadc1.Init.ContinuousConvMode = ENABLE;
@@ -314,7 +308,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_HIGH;
   hspi1.Init.CLKPhase = SPI_PHASE_2EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -420,7 +414,7 @@ static void MX_TIM4_Init(void)
 
   /* USER CODE END TIM4_Init 1 */
   htim4.Instance = TIM4;
-  htim4.Init.Prescaler = 800-1;
+  htim4.Init.Prescaler = 9000-1;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim4.Init.Period = 200-1;
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -452,53 +446,10 @@ static void MX_TIM4_Init(void)
   {
     Error_Handler();
   }
-  if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
-  {
-    Error_Handler();
-  }
   /* USER CODE BEGIN TIM4_Init 2 */
 
   /* USER CODE END TIM4_Init 2 */
   HAL_TIM_MspPostInit(&htim4);
-
-}
-
-/**
-  * @brief USB_OTG_FS Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USB_OTG_FS_HCD_Init(void)
-{
-
-  /* USER CODE BEGIN USB_OTG_FS_Init 0 */
-
-  /* USER CODE END USB_OTG_FS_Init 0 */
-
-  /* USER CODE BEGIN USB_OTG_FS_Init 1 */
-
-  /* USER CODE END USB_OTG_FS_Init 1 */
-  hhcd_USB_OTG_FS.Instance = USB_OTG_FS;
-  hhcd_USB_OTG_FS.Init.Host_channels = 12;
-  hhcd_USB_OTG_FS.Init.speed = HCD_SPEED_FULL;
-  hhcd_USB_OTG_FS.Init.dma_enable = DISABLE;
-  hhcd_USB_OTG_FS.Init.phy_itface = HCD_PHY_EMBEDDED;
-  hhcd_USB_OTG_FS.Init.Sof_enable = DISABLE;
-  if (HAL_HCD_Init(&hhcd_USB_OTG_FS) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USB_OTG_FS_Init 2 */
-
-  /* USER CODE END USB_OTG_FS_Init 2 */
 
 }
 
@@ -536,7 +487,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2|IMU_CS_M_Pin|IMU_CS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2|IMU_M_CS_Pin|IMU_AG_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(NRF24_CS_GPIO_Port, NRF24_CS_Pin, GPIO_PIN_RESET);
@@ -544,8 +495,8 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(NRF24_CE_GPIO_Port, NRF24_CE_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PA2 IMU_CS_M_Pin IMU_CS_Pin */
-  GPIO_InitStruct.Pin = GPIO_PIN_2|IMU_CS_M_Pin|IMU_CS_Pin;
+  /*Configure GPIO pins : PA2 IMU_M_CS_Pin IMU_AG_CS_Pin */
+  GPIO_InitStruct.Pin = GPIO_PIN_2|IMU_M_CS_Pin|IMU_AG_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

@@ -8,6 +8,8 @@
         "stm32f4xx_hal.h": "c",
         "stm32f4xx_hal_conf.h": "c",
         "icm20948_sample_rate_div.h": "c",
-        "kalman_filter.h": "c"
+        "kalman_filter.h": "c",
+        "driver.h": "c",
+        "lsm9ds1.h": "c"
     }
 }

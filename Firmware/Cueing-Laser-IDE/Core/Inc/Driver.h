@@ -23,8 +23,6 @@ typedef enum
     MAX_BEAM = 100
 }PWM_signal;
 
-void LED1_Control(PWM_signal brightness);
-void LED2_Control(PWM_signal brightness);
-void LED3_Control(PWM_signal brightness);
+void LED_Brightness(PWM_signal brightness);
 void Vibrator_Control(PWM_signal pwm);
 #endif

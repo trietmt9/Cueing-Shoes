@@ -1,0 +1,5 @@
+../Core/Src/LSM9DS1.c:11:6:SPI_WriteRegisters	24	static
+../Core/Src/LSM9DS1.c:18:6:SPI_ReadRegisters	24	static
+../Core/Src/LSM9DS1.c:26:6:IsWhoAmI	24	static
+../Core/Src/LSM9DS1.c:30:6:LSM9DS1_Read	40	static
+../Core/Src/LSM9DS1.c:52:6:LSM9DS1_Init	32	static

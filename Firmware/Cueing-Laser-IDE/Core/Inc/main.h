@@ -59,10 +59,10 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define IMU_CS_M_Pin GPIO_PIN_3
-#define IMU_CS_M_GPIO_Port GPIOA
-#define IMU_CS_Pin GPIO_PIN_4
-#define IMU_CS_GPIO_Port GPIOA
+#define IMU_M_CS_Pin GPIO_PIN_3
+#define IMU_M_CS_GPIO_Port GPIOA
+#define IMU_AG_CS_Pin GPIO_PIN_4
+#define IMU_AG_CS_GPIO_Port GPIOA
 #define NRF24_INT_Pin GPIO_PIN_4
 #define NRF24_INT_GPIO_Port GPIOC
 #define NRF24_CS_Pin GPIO_PIN_5
