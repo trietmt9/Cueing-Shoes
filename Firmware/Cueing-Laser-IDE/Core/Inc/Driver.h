@@ -25,7 +25,7 @@ typedef enum
 
 typedef enum
 {
-    FOG_NOT_DETECTED = 0,
+    FOG_NOT_DETECTED = 60,
     WEAK = 70,
     MEDIUM = 80, 
     STRONG = 100
