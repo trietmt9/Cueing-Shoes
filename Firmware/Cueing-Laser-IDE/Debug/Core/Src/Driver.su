@@ -1,2 +1,2 @@
 ../Core/Src/Driver.c:19:6:Vibrator_Control	16	static
-../Core/Src/Driver.c:30:6:LED_Brightness	16	static
+../Core/Src/Driver.c:30:6:Laser_Brightness	16	static

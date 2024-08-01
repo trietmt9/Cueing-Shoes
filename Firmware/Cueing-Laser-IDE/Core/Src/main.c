@@ -51,8 +51,6 @@ ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
 
 SPI_HandleTypeDef hspi1;
-DMA_HandleTypeDef hdma_spi1_rx;
-DMA_HandleTypeDef hdma_spi1_tx;
 
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
@@ -73,7 +71,9 @@ float dt;
 char buffer[30];
 char Tx_Address[6] = {0xEE, 0xFE, 0xAE,0xBE, 0xCE, 0xDE};
 uint32_t T0, T1;
+uint8_t timeFoG;
 int callib = 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -90,21 +90,19 @@ static void MX_ADC1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-kalman_t Kalman =
-{
-  .Q_theta = 0.003f,
-  .Q_theta_dot = 0.001f,
-  .R = 0.000001f
-};
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
-	LSM9DS1_Read(&hspi1, &pData);
-	MotionCapture[0] = pData.Data_t.Ax;
-	MotionCapture[1] = pData.Data_t.Ay;
-	MotionCapture[2] = pData.Data_t.Az;
-	LED_Brightness(100);
-	Vibrator_Control(100);
+  Laser_Brightness(MAX_BEAM);
+  Vibrator_Control(FOG_NOT_DETECTED);
+  LSM9DS1_Read(&hspi1, &pData);
+  MotionCapture[0] = pData.Data_t.Ax;
+  MotionCapture[1] = pData.Data_t.Ay;
+  MotionCapture[2] = pData.Data_t.Az;
+  if(timeFoG >= 3 && timeFoG < 5 ) Vibrator_Control(WEAK);
+  else if(timeFoG >= 5 && timeFoG < 8) Vibrator_Control(MEDIUM);
+  else if (timeFoG >= 8) Vibrator_Control(STRONG);
+
 }
 /* USER CODE END 0 */
 
@@ -143,7 +141,8 @@ int main(void)
   MX_TIM4_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-
+  LSM9DS1_Init(&hspi1);
+  HAL_ADC_Start_DMA(&hadc1, analog, 2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -151,10 +150,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
-//  NRF24_Transmit(&hspi1, &analog[0]);
-//  NRF24_Transmit(&hspi1, &analog[1]);
+    if(analog[0] < 1000)
+    {
+      timeFoG++;
+    }
+      /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
@@ -454,12 +454,6 @@ static void MX_DMA_Init(void)
   /* DMA2_Stream0_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA2_Stream0_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA2_Stream0_IRQn);
-  /* DMA2_Stream2_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA2_Stream2_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA2_Stream2_IRQn);
-  /* DMA2_Stream3_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA2_Stream3_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA2_Stream3_IRQn);
 
 }
 

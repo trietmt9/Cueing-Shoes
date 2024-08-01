@@ -16,7 +16,7 @@ extern TIM_TypeDef htim3;
  *
  * @param[in] brightness The brightness level of LED1.
  */
-void Vibrator_Control(PWM_signal pwm)
+void Vibrator_Control(Vibrate_percentage pwm)
 {
     TIM3->CCR1 = pwm;
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
@@ -27,7 +27,7 @@ void Vibrator_Control(PWM_signal pwm)
  *
  * @param[in] brightness The brightness level of LED2.
  */
-void LED_Brightness(PWM_signal brightness)
+void Laser_Brightness(Brightness brightness)
 {
     TIM3->CCR2 = brightness;
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);

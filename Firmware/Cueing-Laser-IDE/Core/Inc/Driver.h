@@ -21,8 +21,16 @@ typedef enum
     MID_BEAM = 40,
     HIGH_BEAM = 80,
     MAX_BEAM = 100
-}PWM_signal;
+}Brightness;
 
-void LED_Brightness(PWM_signal brightness);
-void Vibrator_Control(PWM_signal pwm);
+typedef enum
+{
+    FOG_NOT_DETECTED = 0,
+    WEAK = 70,
+    MEDIUM = 80, 
+    STRONG = 100
+}Vibrate_percentage;
+
+void Laser_Brightness(Brightness brightness);
+void Vibrator_Control(Vibrate_percentage pwm);
 #endif

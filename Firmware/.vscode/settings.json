@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "fir_filter.h": "c"
+        "fir_filter.h": "c",
+        "driver.h": "c",
+        "stm32f446xx.h": "c"
     }
 }

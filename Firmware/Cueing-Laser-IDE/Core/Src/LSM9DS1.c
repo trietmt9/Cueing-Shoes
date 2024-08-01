@@ -107,8 +107,8 @@ void LSM9DS1_Read(SPI_HandleTypeDef *SPIx, data_t *pData)
  */
 void LSM9DS1_Init(SPI_HandleTypeDef* SPIx)
 {
-	int8_t who_am_i, temp;
-  sWhoAmI(SPIx,&who_am_i);
+  uint8_t who_am_i, temp;
+  IsWhoAmI(SPIx,&who_am_i);
   // Setup bandwidth and DPS of IMU's gyroscope 
   temp = 0;
   temp = 0x78;

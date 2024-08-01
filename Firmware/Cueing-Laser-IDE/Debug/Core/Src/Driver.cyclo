@@ -1,2 +1,2 @@
 ../Core/Src/Driver.c:19:6:Vibrator_Control	1
-../Core/Src/Driver.c:30:6:LED_Brightness	1
+../Core/Src/Driver.c:30:6:Laser_Brightness	1
